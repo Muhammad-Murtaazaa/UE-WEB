@@ -1,0 +1,680 @@
+import React, { useState } from 'react';
+import { 
+  Search, 
+  Filter, 
+  Info, 
+  FileText, 
+  CheckCircle2, 
+  Layers, 
+  Sliders, 
+  X, 
+  Eye, 
+  Sparkles,
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Maximize2,
+  Tag
+} from 'lucide-react';
+import { PRODUCTS_CATEGORIES } from '../data/productsData';
+
+export default function ProductsCatalogue({ initialCategoryId = 'all', openQuoteModal }) {
+  const [selectedCategoryFilter, setSelectedCategoryFilter] = useState(initialCategoryId);
+  const [selectedFabricFilter, setSelectedFabricFilter] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [modalProduct, setModalProduct] = useState(null);
+  const [modalImageIdx, setModalImageIdx] = useState(0);
+
+  const fabricTags = [
+    { id: 'all', label: 'All Materials' },
+    { id: 'cotton', label: '100% Cotton' },
+    { id: 'fleece', label: 'Heavy Fleece' },
+    { id: 'denim', label: 'Denim & Twill' },
+    { id: 'performance', label: 'Performance / Dry-Fit' }
+  ];
+
+  const filteredCategories = PRODUCTS_CATEGORIES.filter((cat) => {
+    const matchesCategory = selectedCategoryFilter === 'all' || cat.id === selectedCategoryFilter;
+    
+    let matchesFabric = true;
+    if (selectedFabricFilter === 'cotton') {
+      matchesFabric = cat.fabricOptions.some(f => f.toLowerCase().includes('cotton'));
+    } else if (selectedFabricFilter === 'fleece') {
+      matchesFabric = cat.fabricOptions.some(f => f.toLowerCase().includes('fleece') || f.toLowerCase().includes('terry'));
+    } else if (selectedFabricFilter === 'denim') {
+      matchesFabric = cat.fabricOptions.some(f => f.toLowerCase().includes('denim') || f.toLowerCase().includes('twill'));
+    } else if (selectedFabricFilter === 'performance') {
+      matchesFabric = cat.fabricOptions.some(f => f.toLowerCase().includes('polyester') || f.toLowerCase().includes('spandex') || f.toLowerCase().includes('mesh'));
+    }
+
+    const matchesSearch = 
+      cat.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      cat.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      cat.fabricOptions.some(f => f.toLowerCase().includes(searchQuery.toLowerCase())) ||
+      cat.customizations.some(c => c.toLowerCase().includes(searchQuery.toLowerCase()));
+
+    return matchesCategory && matchesFabric && matchesSearch;
+  });
+
+  const handleOpenDetailModal = (category, initialIdx = 0) => {
+    setModalProduct(category);
+    setModalImageIdx(initialIdx);
+  };
+
+  const handleNextModalImage = (e) => {
+    e.stopPropagation();
+    if (!modalProduct) return;
+    setModalImageIdx((prev) => (prev + 1) % modalProduct.images.length);
+  };
+
+  const handlePrevModalImage = (e) => {
+    e.stopPropagation();
+    if (!modalProduct) return;
+    setModalImageIdx((prev) => (prev - 1 + modalProduct.images.length) % modalProduct.images.length);
+  };
+
+  return (
+    <div style={{ backgroundColor: '#EDECE6', minHeight: '85vh', paddingBottom: '6rem' }}>
+      
+      {/* Vercel Styled Header Banner */}
+      <div className="bg-dot-grid-dark" style={{ 
+        backgroundColor: '#0A1128', 
+        color: '#ffffff', 
+        paddingTop: '5rem', 
+        paddingBottom: '4.5rem',
+        borderBottom: '1px solid #1E294B'
+      }}>
+        <div className="container-custom" style={{ maxWidth: '880px', margin: '0 auto', textAlign: 'center' }}>
+          <span className="badge-pill badge-cobalt" style={{ marginBottom: '1rem', backgroundColor: '#1546D9', color: '#ffffff' }}>
+            Digital Sourcing Catalogue
+          </span>
+          <h1 style={{ 
+            fontSize: 'clamp(2.3rem, 4vw, 3.4rem)', 
+            fontWeight: '800', 
+            letterSpacing: '-0.035em',
+            lineHeight: '1.18',
+            marginBottom: '1rem'
+          }}>
+            Garment Manufacturing Capabilities
+          </h1>
+          <p style={{ fontSize: '1.1rem', color: '#94a3b8', lineHeight: '1.75' }}>
+            Browse our 9 core custom apparel categories. All garments are custom manufactured to your requested fabric composition, weight (GSM), sizing chart, and branding details.
+          </p>
+        </div>
+      </div>
+
+      <div className="container-custom" style={{ paddingTop: '3.5rem' }}>
+        
+        {/* Important Product Page Disclaimer Banner */}
+        <div style={{
+          backgroundColor: '#FAF9F5',
+          border: '1px solid #DCDAD1',
+          borderLeft: '5px solid #1546D9',
+          borderRadius: '14px',
+          padding: '1.35rem 1.75rem',
+          marginBottom: '2.5rem',
+          display: 'flex',
+          alignItems: 'flex-start',
+          gap: '1.15rem',
+          boxShadow: 'var(--shadow-sm)'
+        }}>
+          <Info size={24} color="#1546D9" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <div>
+            <div style={{ fontSize: '0.94rem', fontWeight: '800', color: '#0A1128', marginBottom: '0.3rem' }}>
+              Important Capability Disclaimer
+            </div>
+            <div style={{ fontSize: '0.88rem', color: '#4B5565', lineHeight: '1.65' }}>
+              Product images shown are representative of our product capabilities. Final products are developed according to buyer specifications, approved samples and order requirements. Uzair Sharif Enterprises does not stock pre-made garments.
+            </div>
+          </div>
+        </div>
+
+        {/* Filters and Search Console */}
+        <div style={{ 
+          backgroundColor: '#FAF9F5',
+          border: '1px solid #DCDAD1',
+          borderRadius: '16px',
+          padding: '1.5rem',
+          marginBottom: '2.75rem',
+          boxShadow: 'var(--shadow-sm)'
+        }}>
+          
+          {/* Row 1: Search & Total Result Counter */}
+          <div style={{ 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            alignItems: 'center', 
+            flexWrap: 'wrap', 
+            gap: '1rem',
+            marginBottom: '1.25rem',
+            paddingBottom: '1.25rem',
+            borderBottom: '1px solid #E6E4DC'
+          }}>
+            <div style={{ position: 'relative', flex: 1, maxWidth: '420px', minWidth: '260px' }}>
+              <Search size={16} color="#6E798A" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
+              <input 
+                type="text"
+                placeholder="Search category, fabric (e.g. combed cotton, fleece)..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                style={{
+                  width: '100%',
+                  padding: '0.65rem 1rem 0.65rem 2.4rem',
+                  borderRadius: '10px',
+                  border: '1px solid #DCDAD1',
+                  fontSize: '0.88rem',
+                  outline: 'none',
+                  backgroundColor: '#FFFFFF',
+                  color: '#0A1128'
+                }}
+              />
+            </div>
+
+            <div style={{ fontSize: '0.85rem', color: '#4B5565', fontWeight: '600' }}>
+              Displaying <strong style={{ color: '#1546D9' }}>{filteredCategories.length}</strong> of {PRODUCTS_CATEGORIES.length} Categories (27 Representative Photos)
+            </div>
+          </div>
+
+          {/* Row 2: Category Filters */}
+          <div style={{ marginBottom: '1rem' }}>
+            <div style={{ fontSize: '0.74rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A', letterSpacing: '0.04em', marginBottom: '0.5rem' }}>
+              Filter by Apparel Category
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem' }}>
+              <button
+                onClick={() => setSelectedCategoryFilter('all')}
+                style={{
+                  padding: '0.45rem 0.9rem',
+                  borderRadius: '8px',
+                  fontSize: '0.82rem',
+                  fontWeight: '600',
+                  border: '1px solid',
+                  borderColor: selectedCategoryFilter === 'all' ? '#1546D9' : '#DCDAD1',
+                  backgroundColor: selectedCategoryFilter === 'all' ? '#1546D9' : '#FFFFFF',
+                  color: selectedCategoryFilter === 'all' ? '#FFFFFF' : '#0A1128',
+                  cursor: 'pointer',
+                  transition: 'all 0.15s ease'
+                }}
+              >
+                All Categories
+              </button>
+              {PRODUCTS_CATEGORIES.map(cat => (
+                <button
+                  key={cat.id}
+                  onClick={() => setSelectedCategoryFilter(cat.id)}
+                  style={{
+                    padding: '0.45rem 0.9rem',
+                    borderRadius: '8px',
+                    fontSize: '0.82rem',
+                    fontWeight: '600',
+                    border: '1px solid',
+                    borderColor: selectedCategoryFilter === cat.id ? '#1546D9' : '#DCDAD1',
+                    backgroundColor: selectedCategoryFilter === cat.id ? '#1546D9' : '#FFFFFF',
+                    color: selectedCategoryFilter === cat.id ? '#FFFFFF' : '#0A1128',
+                    cursor: 'pointer',
+                    transition: 'all 0.15s ease'
+                  }}
+                >
+                  {cat.name}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 3: Fabric Type Filters */}
+          <div>
+            <div style={{ fontSize: '0.74rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A', letterSpacing: '0.04em', marginBottom: '0.5rem' }}>
+              Filter by Base Material Group
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem' }}>
+              {fabricTags.map(f => (
+                <button
+                  key={f.id}
+                  onClick={() => setSelectedFabricFilter(f.id)}
+                  style={{
+                    padding: '0.35rem 0.75rem',
+                    borderRadius: '6px',
+                    fontSize: '0.78rem',
+                    fontWeight: '600',
+                    border: '1px solid',
+                    borderColor: selectedFabricFilter === f.id ? '#0A1128' : '#DCDAD1',
+                    backgroundColor: selectedFabricFilter === f.id ? '#0A1128' : '#FFFFFF',
+                    color: selectedFabricFilter === f.id ? '#FFFFFF' : '#4B5565',
+                    cursor: 'pointer',
+                    transition: 'all 0.15s ease'
+                  }}
+                >
+                  {f.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+        </div>
+
+        {/* 9 Categories Digital Cards Grid */}
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fill, minmax(370px, 1fr))', 
+          gap: '2.5rem' 
+        }}>
+          {filteredCategories.map((category) => (
+            <div 
+              key={category.id}
+              className="card-vercel"
+              style={{
+                borderRadius: '18px',
+                overflow: 'hidden',
+                display: 'flex',
+                flexDirection: 'column',
+                backgroundColor: '#FAF9F5',
+                border: '1px solid #DCDAD1',
+                boxShadow: 'var(--shadow-sm)'
+              }}
+            >
+              {/* Image Banner Showcase */}
+              <div style={{ position: 'relative', height: '280px', backgroundColor: '#0A1128' }}>
+                <img 
+                  src={category.images[0].url} 
+                  alt={category.name}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+                
+                {/* 3 Photos Indicator Pill */}
+                <div style={{
+                  position: 'absolute',
+                  top: '0.85rem',
+                  right: '0.85rem',
+                  backgroundColor: 'rgba(10, 17, 40, 0.88)',
+                  backdropFilter: 'blur(8px)',
+                  color: '#ffffff',
+                  fontSize: '0.72rem',
+                  fontWeight: '700',
+                  padding: '0.3rem 0.7rem',
+                  borderRadius: '6px',
+                  border: '1px solid rgba(255, 255, 255, 0.15)'
+                }}>
+                  3 Photos Available
+                </div>
+
+                <div style={{
+                  position: 'absolute',
+                  top: '0.85rem',
+                  left: '0.85rem',
+                  backgroundColor: '#1546D9',
+                  color: '#ffffff',
+                  fontSize: '0.72rem',
+                  fontWeight: '700',
+                  padding: '0.3rem 0.7rem',
+                  borderRadius: '6px'
+                }}>
+                  Made to Order
+                </div>
+
+                {/* Quick view button over image */}
+                <button
+                  onClick={() => handleOpenDetailModal(category, 0)}
+                  style={{
+                    position: 'absolute',
+                    bottom: '0.85rem',
+                    right: '0.85rem',
+                    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                    color: '#0A1128',
+                    border: 'none',
+                    borderRadius: '8px',
+                    padding: '0.45rem 0.85rem',
+                    fontSize: '0.78rem',
+                    fontWeight: '700',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.4rem',
+                    boxShadow: '0 4px 12px rgba(10, 17, 40, 0.18)'
+                  }}
+                >
+                  <Eye size={14} color="#1546D9" /> View All 3 Angles
+                </button>
+              </div>
+
+              {/* 3 Small Thumbnails Strip */}
+              <div style={{ 
+                display: 'grid', 
+                gridTemplateColumns: 'repeat(3, 1fr)', 
+                gap: '2px', 
+                backgroundColor: '#DCDAD1',
+                borderBottom: '1px solid #DCDAD1'
+              }}>
+                {category.images.map((img, i) => (
+                  <div 
+                    key={i} 
+                    onClick={() => handleOpenDetailModal(category, i)}
+                    style={{ height: '75px', cursor: 'pointer', position: 'relative', overflow: 'hidden' }}
+                    title={`Click to inspect Photo ${i + 1}`}
+                  >
+                    <img 
+                      src={img.url} 
+                      alt={img.caption}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                    <div style={{
+                      position: 'absolute',
+                      bottom: '2px',
+                      left: '4px',
+                      fontSize: '0.65rem',
+                      color: '#ffffff',
+                      backgroundColor: 'rgba(10, 17, 40, 0.75)',
+                      padding: '1px 4px',
+                      borderRadius: '3px'
+                    }}>
+                      P{i + 1}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Card Body */}
+              <div style={{ padding: '1.75rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.35rem' }}>
+                  <h2 style={{ fontSize: '1.35rem', fontWeight: '800', color: '#0A1128', letterSpacing: '-0.01em' }}>
+                    {category.name}
+                  </h2>
+                  <span style={{ fontSize: '0.82rem', fontWeight: '700', color: '#1546D9' }}>
+                    {category.gsmRange}
+                  </span>
+                </div>
+
+                <div style={{ fontSize: '0.84rem', fontWeight: '600', color: '#6E798A', marginBottom: '0.75rem' }}>
+                  {category.subtitle}
+                </div>
+
+                <p style={{ fontSize: '0.88rem', color: '#4B5565', lineHeight: '1.6', marginBottom: '1.25rem' }}>
+                  {category.description}
+                </p>
+
+                {/* Technical Specifications Breakdown */}
+                <div style={{ 
+                  backgroundColor: '#FFFFFF', 
+                  borderRadius: '12px', 
+                  padding: '1.1rem', 
+                  border: '1px solid #E6E4DC',
+                  marginBottom: '1.5rem',
+                  fontSize: '0.82rem'
+                }}>
+                  <div style={{ marginBottom: '0.5rem' }}>
+                    <strong style={{ color: '#0A1128' }}>Fabrics: </strong>
+                    <span style={{ color: '#4B5565' }}>{category.fabricOptions.slice(0, 3).join(', ')}...</span>
+                  </div>
+                  <div style={{ marginBottom: '0.5rem' }}>
+                    <strong style={{ color: '#0A1128' }}>Fits: </strong>
+                    <span style={{ color: '#4B5565' }}>{category.fitOptions.join(', ')}</span>
+                  </div>
+                  <div>
+                    <strong style={{ color: '#0A1128' }}>Branding: </strong>
+                    <span style={{ color: '#1546D9', fontWeight: '600' }}>Custom Embroidery, Prints, Labels, Packaging</span>
+                  </div>
+                </div>
+
+                {/* Representative Label Note */}
+                <div style={{ fontSize: '0.72rem', color: '#6E798A', marginBottom: '1.25rem', fontStyle: 'italic' }}>
+                  * Representative photo. Final garments are cut & sewn to your approved tech pack.
+                </div>
+
+                {/* Actions */}
+                <div style={{ marginTop: 'auto', display: 'flex', gap: '0.75rem' }}>
+                  <button
+                    onClick={() => handleOpenDetailModal(category, 0)}
+                    className="btn-secondary"
+                    style={{ flex: 1, padding: '0.7rem', fontSize: '0.85rem' }}
+                  >
+                    <span>Full Specs</span>
+                  </button>
+                  <button
+                    onClick={() => openQuoteModal(category.name)}
+                    className="btn-cobalt"
+                    style={{ flex: 1, padding: '0.7rem', fontSize: '0.85rem' }}
+                  >
+                    <FileText size={15} />
+                    <span>Request Quote</span>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+
+      {/* Product Deep-Dive Lightbox Modal */}
+      {modalProduct && (
+        <div style={{
+          position: 'fixed',
+          inset: 0,
+          backgroundColor: 'rgba(10, 17, 40, 0.85)',
+          backdropFilter: 'blur(12px)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 100,
+          padding: '1.5rem'
+        }} className="fade-in">
+          <div style={{
+            backgroundColor: '#FAF9F5',
+            borderRadius: '24px',
+            maxWidth: '960px',
+            width: '100%',
+            maxHeight: '92vh',
+            overflowY: 'auto',
+            border: '1px solid #DCDAD1',
+            boxShadow: '0 25px 60px rgba(10, 17, 40, 0.35)',
+            position: 'relative'
+          }}>
+            {/* Modal Header */}
+            <div style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              padding: '1.35rem 2rem',
+              borderBottom: '1px solid #1E294B',
+              backgroundColor: '#0A1128',
+              color: '#ffffff',
+              borderTopLeftRadius: '24px',
+              borderTopRightRadius: '24px'
+            }}>
+              <div>
+                <span className="badge-pill badge-cobalt" style={{ marginBottom: '0.35rem', backgroundColor: '#1546D9', color: '#ffffff' }}>
+                  Representative Capability Profile
+                </span>
+                <h3 style={{ fontSize: '1.45rem', fontWeight: '800', letterSpacing: '-0.02em', margin: 0 }}>
+                  {modalProduct.name} — Technical Overview
+                </h3>
+              </div>
+              <button
+                onClick={() => setModalProduct(null)}
+                style={{
+                  background: 'rgba(255,255,255,0.1)',
+                  border: 'none',
+                  borderRadius: '50%',
+                  width: '38px',
+                  height: '38px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  cursor: 'pointer',
+                  color: '#ffffff'
+                }}
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            {/* Modal Body: Image Stage + Specs */}
+            <div style={{ padding: '2rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem' }}>
+                
+                {/* Image Stage with Controls */}
+                <div>
+                  <div style={{ 
+                    borderRadius: '16px', 
+                    overflow: 'hidden', 
+                    height: '350px', 
+                    backgroundColor: '#0A1128',
+                    marginBottom: '1rem',
+                    border: '1px solid #DCDAD1',
+                    position: 'relative'
+                  }}>
+                    <img 
+                      src={modalProduct.images[modalImageIdx].url} 
+                      alt={modalProduct.images[modalImageIdx].caption}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                    />
+
+                    {/* Left/Right Lightbox Arrows */}
+                    <button
+                      onClick={handlePrevModalImage}
+                      style={{
+                        position: 'absolute',
+                        left: '10px',
+                        top: '50%',
+                        transform: 'translateY(-50%)',
+                        backgroundColor: 'rgba(10, 17, 40, 0.75)',
+                        border: 'none',
+                        color: '#ffffff',
+                        width: '36px',
+                        height: '36px',
+                        borderRadius: '50%',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}
+                    >
+                      <ChevronLeft size={20} />
+                    </button>
+
+                    <button
+                      onClick={handleNextModalImage}
+                      style={{
+                        position: 'absolute',
+                        right: '10px',
+                        top: '50%',
+                        transform: 'translateY(-50%)',
+                        backgroundColor: 'rgba(10, 17, 40, 0.75)',
+                        border: 'none',
+                        color: '#ffffff',
+                        width: '36px',
+                        height: '36px',
+                        borderRadius: '50%',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}
+                    >
+                      <ChevronRight size={20} />
+                    </button>
+                  </div>
+
+                  <div style={{ fontSize: '0.82rem', color: '#4B5565', marginBottom: '1.25rem', fontStyle: 'italic', lineHeight: '1.5' }}>
+                    <strong>Photo {modalImageIdx + 1} of 3:</strong> {modalProduct.images[modalImageIdx].caption}
+                  </div>
+
+                  {/* 3 Thumbnails Selector */}
+                  <div style={{ display: 'flex', gap: '0.75rem' }}>
+                    {modalProduct.images.map((img, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setModalImageIdx(idx)}
+                        style={{
+                          flex: 1,
+                          height: '75px',
+                          borderRadius: '8px',
+                          overflow: 'hidden',
+                          border: modalImageIdx === idx ? '2px solid #1546D9' : '1px solid #DCDAD1',
+                          cursor: 'pointer',
+                          padding: 0
+                        }}
+                      >
+                        <img 
+                          src={img.url} 
+                          alt="thumbnail"
+                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Specs Detail Column */}
+                <div>
+                  <div style={{ marginBottom: '1.25rem' }}>
+                    <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A', letterSpacing: '0.04em' }}>
+                      Weight / GSM Range
+                    </div>
+                    <div style={{ fontSize: '1.2rem', fontWeight: '800', color: '#1546D9' }}>
+                      {modalProduct.gsmRange}
+                    </div>
+                  </div>
+
+                  <div style={{ marginBottom: '1.25rem' }}>
+                    <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A', letterSpacing: '0.04em', marginBottom: '0.4rem' }}>
+                      Available Fabrics & Blends
+                    </div>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                      {modalProduct.fabricOptions.map((f, i) => (
+                        <li key={i} style={{ fontSize: '0.85rem', color: '#0A1128', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                          <CheckCircle2 size={15} color="#1546D9" /> {f}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div style={{ marginBottom: '1.25rem' }}>
+                    <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A', letterSpacing: '0.04em', marginBottom: '0.4rem' }}>
+                      Fit & Grading Profiles
+                    </div>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem' }}>
+                      {modalProduct.fitOptions.map((fit, i) => (
+                        <span key={i} className="badge-pill badge-slate" style={{ backgroundColor: '#EDECE6', border: '1px solid #DCDAD1', color: '#0A1128' }}>
+                          {fit}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ marginBottom: '1.5rem' }}>
+                    <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A', letterSpacing: '0.04em', marginBottom: '0.4rem' }}>
+                      Custom Branding & Finishing
+                    </div>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                      {modalProduct.customizations.map((c, i) => (
+                        <li key={i} style={{ fontSize: '0.82rem', color: '#4B5565', display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
+                          <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#1546D9' }}></span> {c}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <button
+                    onClick={() => {
+                      const categoryName = modalProduct.name;
+                      setModalProduct(null);
+                      openQuoteModal(categoryName);
+                    }}
+                    className="btn-cobalt"
+                    style={{ width: '100%', padding: '0.9rem', fontSize: '0.96rem' }}
+                  >
+                    <FileText size={16} /> Request Quotation for {modalProduct.name}
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      )}
+
+    </div>
+  );
+}
