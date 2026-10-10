@@ -121,7 +121,7 @@ export default function App() {
         openQuoteModal={() => openQuoteModal('')} 
       />
 
-      {/* Floating WhatsApp Desk (Bottom-Left) */}
+      {/* Floating WhatsApp Desk (Bottom-Right) */}
       <WhatsAppButton />
 
       {/* Global Request a Quote Engine Modal */}

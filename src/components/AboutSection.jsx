@@ -16,12 +16,12 @@ export default function AboutSection({ openQuoteModal }) {
   return (
     <div style={{ backgroundColor: '#FAF7F5', minHeight: '80vh', paddingBottom: '5rem' }}>
       {/* Page Header */}
-      <div style={{ 
-        backgroundColor: '#1A0A10', 
+      <div className="bg-dot-grid-dark" style={{ 
+        background: 'linear-gradient(180deg, #360C1E 0%, #240713 100%)', 
         color: '#ffffff', 
         paddingTop: '5rem', 
         paddingBottom: '5rem',
-        borderBottom: '1px solid #331623'
+        borderBottom: '1px solid #541731'
       }}>
         <div className="container-custom" style={{ textAlign: 'center', maxWidth: '840px', margin: '0 auto' }}>
           <span className="badge-pill badge-cobalt" style={{ marginBottom: '1rem', backgroundColor: '#800020', color: '#ffffff' }}>
@@ -90,8 +90,12 @@ export default function AboutSection({ openQuoteModal }) {
               backgroundColor: '#FFFFFF'
             }}>
               <img 
-                src="https://images.unsplash.com/photo-1574634534894-89d7576c8259?q=80&w=1000&auto=format&fit=crop" 
+                src="/images/hero/hero-milling.jpg" 
                 alt="Textile Weaving & Quality Inspection in Pakistan"
+                onError={(e) => {
+                  const fallback = "https://images.unsplash.com/photo-1574634534894-89d7576c8259?q=80&w=1000&auto=format&fit=crop";
+                  if (e.currentTarget.src !== fallback) e.currentTarget.src = fallback;
+                }}
                 style={{ width: '100%', height: '380px', objectFit: 'cover', display: 'block' }}
               />
               <div style={{ padding: '1rem 1.25rem', backgroundColor: '#FFFFFF', borderTop: '1px solid #EAE1DD' }}>

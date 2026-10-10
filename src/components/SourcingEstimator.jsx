@@ -33,11 +33,11 @@ export default function SourcingEstimator({ openQuoteModal }) {
 
   return (
     <section style={{ 
-      backgroundColor: '#1A0A10', 
+      background: 'linear-gradient(180deg, #2D0A18 0%, #1F0510 100%)', 
       color: '#FAF7F5',
       paddingTop: '5.5rem', 
       paddingBottom: '5.5rem',
-      borderBottom: '1px solid #441F2F',
+      borderBottom: '1px solid #541731',
       position: 'relative',
       overflow: 'hidden'
     }} className="bg-dot-grid-dark">

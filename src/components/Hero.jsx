@@ -27,7 +27,8 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
       hub: 'Faisalabad Textile Hub, Pakistan',
       tag: '01 Fabric & Knit Engineering',
       desc: 'Combed cotton, custom GSM single jersey, pique, and heavy fleece engineered to buyer composition.',
-      imageUrl: 'https://images.unsplash.com/photo-1574634534894-89d7576c8259?q=80&w=2000&auto=format&fit=crop'
+      imageUrl: '/images/hero/hero-milling.jpg',
+      fallbackUrl: 'https://images.unsplash.com/photo-1574634534894-89d7576c8259?q=80&w=2000&auto=format&fit=crop'
     },
     {
       id: 'cutting',
@@ -35,7 +36,8 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
       hub: 'Lahore Apparel Cluster, Pakistan',
       tag: '02 Tech Pack Alignment',
       desc: 'Computerized pattern grading and laser marker cutting ensuring strict tolerance across all sizes.',
-      imageUrl: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=2000&auto=format&fit=crop'
+      imageUrl: '/images/hero/hero-cutting.jpg',
+      fallbackUrl: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=2000&auto=format&fit=crop'
     },
     {
       id: 'stitching',
@@ -43,7 +45,8 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
       hub: 'Specialized Partner Facilities, Pakistan',
       tag: '03 Assembly & Branding',
       desc: 'High-density screen printing, multi-head embroidery, and private label damask neck trims.',
-      imageUrl: 'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?q=80&w=2000&auto=format&fit=crop'
+      imageUrl: '/images/hero/hero-stitching.jpg',
+      fallbackUrl: 'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?q=80&w=2000&auto=format&fit=crop'
     },
     {
       id: 'inspection',
@@ -51,7 +54,8 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
       hub: 'Export Quality Audit Desk, Pakistan',
       tag: '04 Standards Verification',
       desc: 'Color fastness, pull test on hardware, measurement audits, and needle detection sweep.',
-      imageUrl: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=2000&auto=format&fit=crop'
+      imageUrl: '/images/hero/hero-inspection.jpg',
+      fallbackUrl: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=2000&auto=format&fit=crop'
     },
     {
       id: 'export',
@@ -59,7 +63,8 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
       hub: 'Karachi Seaport Terminals, Pakistan',
       tag: '05 Global Logistics',
       desc: '5-ply heavy export cartons, custom barcoding, moisture desiccant, and FOB ocean freight clearance.',
-      imageUrl: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=2000&auto=format&fit=crop'
+      imageUrl: '/images/hero/hero-export.jpg',
+      fallbackUrl: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=2000&auto=format&fit=crop'
     }
   ];
 
@@ -109,9 +114,9 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
     <section style={{ 
       position: 'relative', 
       minHeight: '90vh',
-      backgroundColor: '#1A0A10',
+      backgroundColor: '#240713',
       color: '#FFFFFF',
-      borderBottom: '1px solid #441F2F',
+      borderBottom: '1px solid #541731',
       overflow: 'hidden',
       display: 'flex',
       flexDirection: 'column',
@@ -138,6 +143,11 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
               <img 
                 src={slide.imageUrl} 
                 alt={slide.title}
+                onError={(e) => {
+                  if (slide.fallbackUrl && e.currentTarget.src !== slide.fallbackUrl) {
+                    e.currentTarget.src = slide.fallbackUrl;
+                  }
+                }}
                 style={{ 
                   width: '100%', 
                   height: '100%', 
@@ -153,7 +163,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
         <div style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(180deg, rgba(26, 10, 16, 0.45) 0%, rgba(26, 10, 16, 0.25) 45%, rgba(26, 10, 16, 0.65) 100%)',
+          background: 'linear-gradient(180deg, rgba(36, 7, 19, 0.45) 0%, rgba(36, 7, 19, 0.25) 45%, rgba(36, 7, 19, 0.65) 100%)',
           pointerEvents: 'none'
         }} />
 
@@ -161,7 +171,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
         <div style={{
           position: 'absolute',
           inset: 0,
-          background: 'radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.05) 0%, rgba(26, 10, 16, 0.50) 100%)',
+          background: 'radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.05) 0%, rgba(36, 7, 19, 0.50) 100%)',
           pointerEvents: 'none'
         }} />
       </div>

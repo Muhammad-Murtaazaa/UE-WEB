@@ -86,12 +86,12 @@ export default function CapabilitiesSection({ openQuoteModal }) {
     <div style={{ backgroundColor: '#FAF7F5', minHeight: '85vh', paddingBottom: '6rem' }}>
       
       {/* Header Banner */}
-      <div style={{ 
-        backgroundColor: '#1A0A10', 
+      <div className="bg-dot-grid-dark" style={{ 
+        background: 'linear-gradient(180deg, #360C1E 0%, #240713 100%)', 
         color: '#ffffff', 
         paddingTop: '5rem', 
         paddingBottom: '4.5rem',
-        borderBottom: '1px solid #441F2F'
+        borderBottom: '1px solid #541731'
       }}>
         <div className="container-custom" style={{ maxWidth: '860px', margin: '0 auto', textAlign: 'center' }}>
           <span className="badge-pill badge-cobalt" style={{ marginBottom: '1rem', backgroundColor: '#800020', color: '#ffffff', border: '1px solid #A0183A' }}>

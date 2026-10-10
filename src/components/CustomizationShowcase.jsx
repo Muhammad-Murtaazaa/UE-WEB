@@ -611,7 +611,7 @@ export default function CustomizationShowcase({ openQuoteModal }) {
 
         {/* Specification callout banner */}
         <div style={{
-          backgroundColor: '#1A0A10',
+          background: 'linear-gradient(180deg, #2D0A18 0%, #1F0510 100%)',
           color: '#FAF7F5',
           borderRadius: '20px',
           padding: '3rem 2rem',
@@ -619,8 +619,8 @@ export default function CustomizationShowcase({ openQuoteModal }) {
           flexDirection: 'column',
           alignItems: 'center',
           textAlign: 'center',
-          boxShadow: '0 20px 45px rgba(26,10,16,0.3)',
-          border: '1px solid #441F2F',
+          boxShadow: '0 20px 45px rgba(36, 7, 19, 0.35)',
+          border: '1px solid #541731',
           marginTop: '1.5rem'
         }} className={`reveal-init ${isVisible ? 'reveal-active delay-3' : ''}`}>
           <div style={{

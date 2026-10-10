@@ -36,12 +36,12 @@ export default function ContactSection({ openQuoteModal }) {
     <div style={{ backgroundColor: '#FAF7F5', minHeight: '85vh', paddingBottom: '6rem' }}>
       
       {/* Header Banner */}
-      <div style={{ 
-        backgroundColor: '#1A0A10', 
+      <div className="bg-dot-grid-dark" style={{ 
+        background: 'linear-gradient(180deg, #360C1E 0%, #240713 100%)', 
         color: '#ffffff', 
         paddingTop: '5rem', 
         paddingBottom: '4.5rem',
-        borderBottom: '1px solid #331623'
+        borderBottom: '1px solid #541731'
       }}>
         <div className="container-custom" style={{ maxWidth: '860px', margin: '0 auto', textAlign: 'center' }}>
           <span className="badge-pill badge-cobalt" style={{ marginBottom: '1rem', backgroundColor: '#800020', color: '#ffffff' }}>
@@ -102,13 +102,10 @@ export default function ContactSection({ openQuoteModal }) {
                 </div>
                 <div>
                   <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#8C7A82' }}>
-                    Official Business Emails
+                    Official Business Email
                   </div>
                   <div style={{ marginTop: '0.2rem' }}>
-                    <a href={`mailto:${COMPANY_DETAILS.emailSales}`} style={{ color: '#1A0A10', fontWeight: '700', textDecoration: 'none', display: 'block', fontSize: '0.95rem' }}>
-                      {COMPANY_DETAILS.emailSales}
-                    </a>
-                    <a href={`mailto:${COMPANY_DETAILS.emailInfo}`} style={{ color: '#800020', fontWeight: '600', textDecoration: 'none', fontSize: '0.85rem' }}>
+                    <a href={`mailto:${COMPANY_DETAILS.emailInfo}`} style={{ color: '#1A0A10', fontWeight: '700', textDecoration: 'none', display: 'block', fontSize: '0.98rem' }}>
                       {COMPANY_DETAILS.emailInfo}
                     </a>
                   </div>

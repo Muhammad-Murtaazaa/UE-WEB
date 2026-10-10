@@ -7,15 +7,18 @@ export const PRODUCTS_CATEGORIES = [
     badge: 'Custom Production Only',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/t-shirts-1.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop',
         caption: '100% Combed Cotton Crewneck — 180 GSM (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/t-shirts-2.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1000&auto=format&fit=crop',
         caption: 'Heavyweight Drop Shoulder Oversized Fit — 260 GSM (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/t-shirts-3.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1000&auto=format&fit=crop',
         caption: 'Garment Dye & Acid Wash Finish Capabilities (Representative Sample)'
       }
     ],
@@ -32,15 +35,18 @@ export const PRODUCTS_CATEGORIES = [
     badge: 'Custom Production Only',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1625910513413-580d859b813b?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/polo-shirts-1.jpg',
+        fallbackUrl: '/images/products/polo-shirts-2.jpg',
         caption: 'Classic Honeycomb Pique Polo — 220 GSM (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/polo-shirts-2.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?q=80&w=1000&auto=format&fit=crop',
         caption: 'Fine Gauge Mercerized Luxury Cotton Polo (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/polo-shirts-3.jpg',
+        fallbackUrl: '/images/products/polo-shirts-2.jpg',
         caption: 'Engineered Rib Collar & Custom Engraved Buttons (Representative Sample)'
       }
     ],
@@ -57,15 +63,18 @@ export const PRODUCTS_CATEGORIES = [
     badge: 'Custom Production Only',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/hoodies-sweatshirts-1.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=1000&auto=format&fit=crop',
         caption: 'Heavyweight 400 GSM Brushed Fleece Pullover Hoodie (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/hoodies-sweatshirts-2.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1000&auto=format&fit=crop',
         caption: 'Minimalist Clean Crewneck Sweatshirt — 350 GSM French Terry (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/hoodies-sweatshirts-3.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1000&auto=format&fit=crop',
         caption: 'Full-Zip Hoodie with Custom Metal Hardware & Eyelets (Representative Sample)'
       }
     ],
@@ -82,15 +91,18 @@ export const PRODUCTS_CATEGORIES = [
     badge: 'Custom Production Only',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1548883354-7622d03aca27?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/jackets-1.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1548883354-7622d03aca27?q=80&w=1000&auto=format&fit=crop',
         caption: 'Classic Bomber Jacket with Custom Contrast Lining (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/jackets-2.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=1000&auto=format&fit=crop',
         caption: 'Lightweight Technical Windbreaker Shell Jacket (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/jackets-3.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop',
         caption: 'Structured Utility Coach Jacket with Branded Snaps (Representative Sample)'
       }
     ],
@@ -107,15 +119,18 @@ export const PRODUCTS_CATEGORIES = [
     badge: 'Custom Production Only',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1552902865-b72c031ac5ea?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/trousers-bottoms-1.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1552902865-b72c031ac5ea?q=80&w=1000&auto=format&fit=crop',
         caption: 'Tapered Heavy Fleece Joggers with Deep Welt Pockets (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/trousers-bottoms-2.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=1000&auto=format&fit=crop',
         caption: 'Cotton Twill Chino Trousers with Clean Stitching (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1517445312882-bc9910d016b7?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/trousers-bottoms-3.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1517445312882-bc9910d016b7?q=80&w=1000&auto=format&fit=crop',
         caption: 'Multi-Pocket Tactical Utility Cargo Bottoms (Representative Sample)'
       }
     ],
@@ -132,15 +147,18 @@ export const PRODUCTS_CATEGORIES = [
     badge: 'Custom Production Only',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/jeans-denim-1.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1000&auto=format&fit=crop',
         caption: '5-Pocket Indigo Denim Jeans with Vintage Hand-Sand Wash (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/jeans-denim-2.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?q=80&w=1000&auto=format&fit=crop',
         caption: 'Classic Raw Indigo Denim Trucker Jacket (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1582552938357-32b906df40cb?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/jeans-denim-3.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1582552938357-32b906df40cb?q=80&w=1000&auto=format&fit=crop',
         caption: 'Precision Chain-Stitch Hem & Custom Embossed Leather Patch (Representative Sample)'
       }
     ],
@@ -157,15 +175,18 @@ export const PRODUCTS_CATEGORIES = [
     badge: 'Custom Production Only',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/sportswear-1.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1000&auto=format&fit=crop',
         caption: 'Dry-Fit Breathable Training Athletic T-Shirt (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1483721310020-03333e577078?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/sportswear-2.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1483721310020-03333e577078?q=80&w=1000&auto=format&fit=crop',
         caption: 'Poly-Spandex Athletic Tracksuit 2-Piece Set (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/sportswear-3.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000&auto=format&fit=crop',
         caption: 'Ergonomic Flatlock Stitching & Reflective Branding (Representative Sample)'
       }
     ],
@@ -182,15 +203,18 @@ export const PRODUCTS_CATEGORIES = [
     badge: 'Custom Production Only',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/workwear-1.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop',
         caption: 'Reinforced Industrial Service Work Shirt (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1621609764095-b32bbe35cf3a?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/workwear-2.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1621609764095-b32bbe35cf3a?q=80&w=1000&auto=format&fit=crop',
         caption: 'Multi-Tool Pocket Heavy Twill Cargo Work Trousers (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/workwear-3.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1000&auto=format&fit=crop',
         caption: 'High-Visibility / Utility Overalls with Reflective Tape (Representative Sample)'
       }
     ],
@@ -207,15 +231,18 @@ export const PRODUCTS_CATEGORIES = [
     badge: 'Custom Production Only',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/kidswear-1.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=1000&auto=format&fit=crop',
         caption: 'Soft Organic Combed Cotton Kids Crewneck Tee (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/kidswear-2.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=1000&auto=format&fit=crop',
         caption: 'Cozy Brushed Cotton Kids Fleece Hoodie (Representative Sample)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1503919545889-aef636e10ad4?q=80&w=1000&auto=format&fit=crop',
+        url: '/images/products/kidswear-3.jpg',
+        fallbackUrl: 'https://images.unsplash.com/photo-1503919545889-aef636e10ad4?q=80&w=1000&auto=format&fit=crop',
         caption: 'Coordinated Children’s 2-Piece Knitwear Set (Representative Sample)'
       }
     ],
@@ -231,8 +258,9 @@ export const COMPANY_DETAILS = {
   tagline: 'Pakistan-Based Garment Exporter & Supply Partner',
   specialization: 'Custom Apparel • Private Label • Global Supply Network',
   country: 'Pakistan',
-  emailSales: 'sales@uzairsharifenterprises.com',
+  emailSales: 'info@uzairsharifenterprises.com',
   emailInfo: 'info@uzairsharifenterprises.com',
+  email: 'info@uzairsharifenterprises.com',
   domain: 'uzairsharifenterprises.com',
   whatsappRaw: '03281672473',
   whatsappIntl: '+923281672473',

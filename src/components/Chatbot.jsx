@@ -95,7 +95,7 @@ export default function Chatbot({ openQuoteModal }) {
     } else if (lower.includes('price') || lower.includes('cost') || lower.includes('rate')) {
       reply = "Because we do not sell ready-made stock, unit pricing depends on your exact fabric GSM, order quantity, embellishments (printing/embroidery), and destination Incoterms. Click 'Request a Quote' to receive an itemized quotation!";
     } else if (lower.includes('whatsapp') || lower.includes('call') || lower.includes('phone')) {
-      reply = `You can reach our export desk directly on WhatsApp at ${COMPANY_DETAILS.whatsappRaw} (+92 328 1672473) or email sales@uzairsharifenterprises.com.`;
+      reply = `You can reach our export desk directly on WhatsApp at ${COMPANY_DETAILS.whatsappRaw} (+92 328 1672473) or email ${COMPANY_DETAILS.emailInfo}.`;
     }
 
     setTimeout(() => {
@@ -106,7 +106,7 @@ export default function Chatbot({ openQuoteModal }) {
   };
 
   const handleCopyEmail = () => {
-    navigator.clipboard?.writeText(COMPANY_DETAILS.emailSales);
+    navigator.clipboard?.writeText(COMPANY_DETAILS.emailInfo);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };

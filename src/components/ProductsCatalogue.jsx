@@ -78,11 +78,11 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
       
       {/* Vercel Styled Header Banner */}
       <div className="bg-dot-grid-dark" style={{ 
-        backgroundColor: '#1A0A10', 
+        background: 'linear-gradient(180deg, #360C1E 0%, #240713 100%)', 
         color: '#ffffff', 
         paddingTop: '5rem', 
         paddingBottom: '4.5rem',
-        borderBottom: '1px solid #441F2F'
+        borderBottom: '1px solid #541731'
       }}>
         <div className="container-custom" style={{ maxWidth: '880px', margin: '0 auto', textAlign: 'center' }}>
           <span className="badge-pill badge-cobalt" style={{ marginBottom: '1rem', backgroundColor: '#800020', color: '#ffffff', border: '1px solid #A0183A' }}>
@@ -263,10 +263,15 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
               }}
             >
               {/* Primary Image Cover with Overlays */}
-              <div style={{ position: 'relative', height: '280px', backgroundColor: '#1A0A10' }}>
+              <div style={{ position: 'relative', height: '280px', backgroundColor: '#240713' }}>
                 <img 
                   src={category.images[0].url} 
                   alt={category.name}
+                  onError={(e) => {
+                    if (category.images[0].fallbackUrl && e.currentTarget.src !== category.images[0].fallbackUrl) {
+                      e.currentTarget.src = category.images[0].fallbackUrl;
+                    }
+                  }}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
                 
@@ -343,6 +348,11 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                     <img 
                       src={img.url} 
                       alt={img.caption}
+                      onError={(e) => {
+                        if (img.fallbackUrl && e.currentTarget.src !== img.fallbackUrl) {
+                          e.currentTarget.src = img.fallbackUrl;
+                        }
+                      }}
                       style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     />
                     <div style={{
@@ -461,8 +471,8 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
               justifyContent: 'space-between',
               alignItems: 'center',
               padding: '1.35rem 2rem',
-              borderBottom: '1px solid #441F2F',
-              backgroundColor: '#1A0A10',
+              borderBottom: '1px solid #541731',
+              background: 'linear-gradient(180deg, #360C1E 0%, #240713 100%)',
               color: '#ffffff',
               borderTopLeftRadius: '24px',
               borderTopRightRadius: '24px'
@@ -504,7 +514,7 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                     borderRadius: '16px', 
                     overflow: 'hidden', 
                     height: '350px', 
-                    backgroundColor: '#1A0A10',
+                    backgroundColor: '#240713',
                     marginBottom: '1rem',
                     border: '1px solid #EAE1DD',
                     position: 'relative'
@@ -512,6 +522,12 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                     <img 
                       src={modalProduct.images[modalImageIdx].url} 
                       alt={modalProduct.images[modalImageIdx].caption}
+                      onError={(e) => {
+                        const fb = modalProduct.images[modalImageIdx].fallbackUrl;
+                        if (fb && e.currentTarget.src !== fb) {
+                          e.currentTarget.src = fb;
+                        }
+                      }}
                       style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                     />
 
@@ -596,6 +612,11 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                         <img 
                           src={img.url} 
                           alt="thumbnail" 
+                          onError={(e) => {
+                            if (img.fallbackUrl && e.currentTarget.src !== img.fallbackUrl) {
+                              e.currentTarget.src = img.fallbackUrl;
+                            }
+                          }}
                           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
                       </button>

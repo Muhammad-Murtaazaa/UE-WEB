@@ -9,7 +9,7 @@ export default function WhatsAppButton() {
       style={{
         position: 'fixed',
         bottom: '24px',
-        left: '24px',
+        right: '24px',
         zIndex: 90
       }}
       onMouseEnter={() => setIsHovered(true)}
@@ -21,16 +21,16 @@ export default function WhatsAppButton() {
           style={{
             position: 'absolute',
             bottom: '100%',
-            left: '0',
+            right: '0',
             marginBottom: '12px',
-            backgroundColor: '#1A0A10',
+            backgroundColor: '#240713',
             color: '#ffffff',
             borderRadius: '10px',
             padding: '0.55rem 0.85rem',
             fontSize: '0.76rem',
-            boxShadow: '0 10px 25px rgba(0,0,0,0.25)',
+            boxShadow: '0 10px 25px rgba(0,0,0,0.3)',
             whiteSpace: 'nowrap',
-            border: '1px solid #441F2F',
+            border: '1px solid #541731',
             pointerEvents: 'none',
             display: 'flex',
             flexDirection: 'column',

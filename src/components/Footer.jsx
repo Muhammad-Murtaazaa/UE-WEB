@@ -29,9 +29,9 @@ export default function Footer({ setActivePage, openQuoteModal }) {
 
   return (
     <footer style={{
-      backgroundColor: '#1A0A10',
+      background: 'linear-gradient(180deg, #2D0A18 0%, #1A050E 100%)',
       color: '#ffffff',
-      borderTop: '1px solid #441F2F',
+      borderTop: '1px solid #4F162C',
       paddingTop: '5rem',
       paddingBottom: '2.5rem'
     }}>
@@ -154,10 +154,7 @@ export default function Footer({ setActivePage, openQuoteModal }) {
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', color: '#D1C4C8' }}>
                 <Mail size={16} color="#A0183A" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div>
-                  <a href={`mailto:${COMPANY_DETAILS.emailSales}`} style={{ color: '#ffffff', textDecoration: 'none', display: 'block' }}>
-                    {COMPANY_DETAILS.emailSales}
-                  </a>
-                  <a href={`mailto:${COMPANY_DETAILS.emailInfo}`} style={{ color: '#B8A8AD', textDecoration: 'none', display: 'block' }}>
+                  <a href={`mailto:${COMPANY_DETAILS.emailInfo}`} style={{ color: '#ffffff', textDecoration: 'none', display: 'block', fontWeight: '600' }}>
                     {COMPANY_DETAILS.emailInfo}
                   </a>
                 </div>

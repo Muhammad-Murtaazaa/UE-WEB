@@ -306,7 +306,7 @@ export default function ProcessTimeline({ openQuoteModal }) {
             >
               {/* Card Top Banner with Progress & Controls */}
               <div style={{
-                backgroundColor: '#1A0A10',
+                background: 'linear-gradient(180deg, #360C1E 0%, #240713 100%)',
                 color: '#FFFFFF',
                 padding: '1.25rem 2rem',
                 display: 'flex',
@@ -314,7 +314,7 @@ export default function ProcessTimeline({ openQuoteModal }) {
                 alignItems: 'center',
                 flexWrap: 'wrap',
                 gap: '1rem',
-                borderBottom: '1px solid #441F2F'
+                borderBottom: '1px solid #541731'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
                   <div style={{
@@ -559,11 +559,11 @@ export default function ProcessTimeline({ openQuoteModal }) {
                         width: '44px', 
                         height: '44px', 
                         borderRadius: '12px', 
-                        backgroundColor: '#1A0A10', 
+                        backgroundColor: '#360C1E', 
                         display: 'flex', 
                         alignItems: 'center', 
                         justifyContent: 'center',
-                        boxShadow: '0 3px 8px rgba(26,10,16,0.2)'
+                        boxShadow: '0 3px 8px rgba(54,12,30,0.3)'
                       }}>
                         <IconComponent size={22} color="#F0CBD3" />
                       </div>

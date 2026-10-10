@@ -59,11 +59,11 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
 
       {/* Top Professional Notice Bar */}
       <div style={{ 
-        backgroundColor: '#1A0A10', 
+        backgroundColor: '#240713', 
         color: '#D1C4C8', 
         fontSize: '0.78rem', 
         padding: '0.45rem 1.5rem',
-        borderBottom: '1px solid #441F2F'
+        borderBottom: '1px solid #4F162C'
       }}>
         <div className="container-custom" style={{ 
           display: 'flex', 
@@ -89,10 +89,10 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
             <a 
-              href="mailto:sales@uzairsharifenterprises.com" 
+              href="mailto:info@uzairsharifenterprises.com" 
               style={{ color: '#FAF7F5', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.35rem' }}
             >
-              <Mail size={12} color="#800020" /> sales@uzairsharifenterprises.com
+              <Mail size={12} color="#800020" /> info@uzairsharifenterprises.com
             </a>
             <span style={{ color: '#5E5055' }}>•</span>
             <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', color: '#D1C4C8' }}>
@@ -122,19 +122,19 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
           }}
         >
           <div style={{ 
-            width: '42px', 
-            height: '42px', 
-            borderRadius: '10px', 
-            backgroundColor: '#1A0A10',
-            border: '1px solid #441F2F',
+            width: '45px', 
+            height: '45px', 
+            borderRadius: '11px', 
+            backgroundColor: '#240713',
+            border: '1px solid #4F162C',
             display: 'flex', 
             alignItems: 'center', 
             justifyContent: 'center',
-            boxShadow: '0 2px 8px rgba(26, 10, 16, 0.2)'
+            boxShadow: '0 2px 8px rgba(36, 7, 19, 0.25)'
           }}>
             <span style={{ 
               fontWeight: '800', 
-              fontSize: '1.05rem', 
+              fontSize: '1.12rem', 
               color: '#FAF7F5',
               letterSpacing: '-0.02em'
             }}>
@@ -144,15 +144,15 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
           <div>
             <div style={{ 
               fontWeight: '800', 
-              fontSize: '1.05rem', 
+              fontSize: '1.22rem', 
               color: '#1A0A10', 
-              lineHeight: '1.2',
-              letterSpacing: '-0.015em'
+              lineHeight: '1.18',
+              letterSpacing: '-0.02em'
             }}>
               Uzair Sharif Enterprises
             </div>
             <div style={{ 
-              fontSize: '0.72rem', 
+              fontSize: '0.75rem', 
               color: '#5E5055', 
               fontWeight: '600',
               display: 'flex',

@@ -111,13 +111,13 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory = '' }
 
         {/* Modal Top Header */}
         <div style={{
-          backgroundColor: '#1A0A10',
+          background: 'linear-gradient(180deg, #360C1E 0%, #240713 100%)',
           color: '#ffffff',
           padding: '1.5rem 2rem',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          borderBottom: '1px solid #441F2F',
+          borderBottom: '1px solid #541731',
           borderTopLeftRadius: '24px',
           borderTopRightRadius: '24px'
         }}>

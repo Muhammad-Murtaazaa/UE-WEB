@@ -10,10 +10,10 @@
   --bg-card: #FFFFFF;
   --bg-card-warm: #FCF9F7;
   
-  /* High-Contrast Dark Elements (Deep Obsidian Maroon) */
-  --bg-dark: #1A0A10;
-  --bg-dark-card: #251019;
-  --bg-dark-elevated: #331623;
+  /* High-Contrast Dark Elements (Rich Dark Maroon close to black) */
+  --bg-dark: #240713;
+  --bg-dark-card: #330C1C;
+  --bg-dark-elevated: #441227;
   
   /* Text */
   --text-main: #1A0A10;
@@ -24,7 +24,7 @@
   /* Borders */
   --border-light: #EAE1DD;
   --border-subtle: #F2EAE6;
-  --border-dark: #441F2F;
+  --border-dark: #541731;
   
   /* Maroon Palette */
   --accent-cobalt: #800020;

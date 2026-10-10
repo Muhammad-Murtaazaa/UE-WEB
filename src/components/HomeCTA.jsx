@@ -153,14 +153,14 @@ export default function HomeCTA({ openQuoteModal }) {
 
         {/* Section 9 — Home — Final CTA Card */}
         <div style={{
-          backgroundColor: '#1A0A10',
+          background: 'linear-gradient(180deg, #2D0A18 0%, #1F0510 100%)',
           borderRadius: '26px',
           padding: 'clamp(2.75rem, 5vw, 4.5rem) clamp(1.75rem, 4vw, 4rem)',
           color: '#FAF7F5',
           position: 'relative',
           overflow: 'hidden',
-          boxShadow: '0 25px 50px -12px rgba(26, 10, 16, 0.35)',
-          border: '1px solid #441F2F'
+          boxShadow: '0 25px 50px -12px rgba(36, 7, 19, 0.4)',
+          border: '1px solid #541731'
         }} className={`reveal-init ${isVisible ? 'reveal-active delay-2' : ''}`}>
           {/* Maroon Ambient Spotlight */}
           <div style={{

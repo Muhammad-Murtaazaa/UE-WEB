@@ -315,10 +315,15 @@ export default function ProductCategoriesPreview({ onSelectCategory, openQuoteMo
                   }}
                 >
                   {/* Image Stage with 3 Interactive Thumbnails */}
-                  <div style={{ position: 'relative', height: '260px', backgroundColor: '#1A0A10', overflow: 'hidden' }}>
+                  <div style={{ position: 'relative', height: '260px', backgroundColor: '#240713', overflow: 'hidden' }}>
                     <img 
                       src={currentImg.url} 
                       alt={`${category.name} - ${currentImg.caption}`}
+                      onError={(e) => {
+                        if (currentImg.fallbackUrl && e.currentTarget.src !== currentImg.fallbackUrl) {
+                          e.currentTarget.src = currentImg.fallbackUrl;
+                        }
+                      }}
                       style={{ 
                         width: '100%', 
                         height: '100%', 
@@ -377,6 +382,11 @@ export default function ProductCategoriesPreview({ onSelectCategory, openQuoteMo
                           <img 
                             src={img.url} 
                             alt="thumbnail" 
+                            onError={(e) => {
+                              if (img.fallbackUrl && e.currentTarget.src !== img.fallbackUrl) {
+                                e.currentTarget.src = img.fallbackUrl;
+                              }
+                            }}
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                           />
                         </button>
@@ -501,10 +511,15 @@ export default function ProductCategoriesPreview({ onSelectCategory, openQuoteMo
                   }}
                 >
                   {/* Image Stage with 3 Interactive Thumbnails */}
-                  <div style={{ position: 'relative', height: '270px', backgroundColor: '#1A0A10', overflow: 'hidden' }}>
+                  <div style={{ position: 'relative', height: '270px', backgroundColor: '#240713', overflow: 'hidden' }}>
                     <img 
                       src={currentImg.url} 
                       alt={`${category.name} - ${currentImg.caption}`}
+                      onError={(e) => {
+                        if (currentImg.fallbackUrl && e.currentTarget.src !== currentImg.fallbackUrl) {
+                          e.currentTarget.src = currentImg.fallbackUrl;
+                        }
+                      }}
                       style={{ 
                         width: '100%', 
                         height: '100%', 
@@ -563,6 +578,11 @@ export default function ProductCategoriesPreview({ onSelectCategory, openQuoteMo
                           <img 
                             src={img.url} 
                             alt="thumbnail" 
+                            onError={(e) => {
+                              if (img.fallbackUrl && e.currentTarget.src !== img.fallbackUrl) {
+                                e.currentTarget.src = img.fallbackUrl;
+                              }
+                            }}
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                           />
                         </button>
