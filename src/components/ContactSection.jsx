@@ -33,18 +33,18 @@ export default function ContactSection({ openQuoteModal }) {
   };
 
   return (
-    <div style={{ backgroundColor: '#EDECE6', minHeight: '85vh', paddingBottom: '6rem' }}>
+    <div style={{ backgroundColor: '#FAF7F5', minHeight: '85vh', paddingBottom: '6rem' }}>
       
       {/* Header Banner */}
       <div style={{ 
-        backgroundColor: '#0A1128', 
+        backgroundColor: '#1A0A10', 
         color: '#ffffff', 
         paddingTop: '5rem', 
         paddingBottom: '4.5rem',
-        borderBottom: '1px solid #1E294B'
+        borderBottom: '1px solid #331623'
       }}>
         <div className="container-custom" style={{ maxWidth: '860px', margin: '0 auto', textAlign: 'center' }}>
-          <span className="badge-pill badge-cobalt" style={{ marginBottom: '1rem', backgroundColor: '#1546D9', color: '#ffffff' }}>
+          <span className="badge-pill badge-cobalt" style={{ marginBottom: '1rem', backgroundColor: '#800020', color: '#ffffff' }}>
             International Sales Desk
           </span>
           <h1 style={{ 
@@ -56,7 +56,7 @@ export default function ContactSection({ openQuoteModal }) {
           }}>
             Contact Uzair Sharif Enterprises
           </h1>
-          <p style={{ fontSize: '1.1rem', color: '#94a3b8', lineHeight: '1.7' }}>
+          <p style={{ fontSize: '1.1rem', color: '#d1c0c6', lineHeight: '1.7' }}>
             Get in touch directly with our commercial export management team in Pakistan for quotations, sampling inquiries, and sourcing partnerships.
           </p>
         </div>
@@ -73,10 +73,10 @@ export default function ContactSection({ openQuoteModal }) {
           
           {/* Left Column: Official Contact Coordinates */}
           <div>
-            <span className="badge-pill badge-slate" style={{ marginBottom: '1rem', backgroundColor: '#FAF9F5', border: '1px solid #DCDAD1', color: '#0A1128' }}>
+            <span className="badge-pill badge-slate" style={{ marginBottom: '1rem', backgroundColor: '#FFFFFF', border: '1px solid #EAE1DD', color: '#800020' }}>
               Corporate Entity Coordinates
             </span>
-            <h2 style={{ fontSize: '1.85rem', fontWeight: '800', color: '#0A1128', marginBottom: '1.25rem' }}>
+            <h2 style={{ fontSize: '1.85rem', fontWeight: '800', color: '#1A0A10', marginBottom: '1.25rem' }}>
               Uzair Sharif Enterprises (SMC-Private) Limited
             </h2>
             <p style={{ fontSize: '1rem', color: '#4B5565', lineHeight: '1.7', marginBottom: '2.5rem' }}>
@@ -86,29 +86,29 @@ export default function ContactSection({ openQuoteModal }) {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '2.5rem' }}>
               
               {/* Email Card */}
-              <div className="subtle-card" style={{ padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', backgroundColor: '#FAF9F5', borderColor: '#DCDAD1' }}>
+              <div className="subtle-card" style={{ padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', backgroundColor: '#FFFFFF', borderColor: '#EAE1DD' }}>
                 <div style={{ 
                   width: '46px', 
                   height: '46px', 
                   borderRadius: '10px', 
-                  backgroundColor: '#EBF0FE', 
-                  border: '1px solid #A4BCFD',
+                  backgroundColor: '#FDF2F4', 
+                  border: '1px solid #F0CBD3',
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center',
                   flexShrink: 0
                 }}>
-                  <Mail size={22} color="#1546D9" />
+                  <Mail size={22} color="#800020" />
                 </div>
                 <div>
-                  <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A' }}>
+                  <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#8C7A82' }}>
                     Official Business Emails
                   </div>
                   <div style={{ marginTop: '0.2rem' }}>
-                    <a href={`mailto:${COMPANY_DETAILS.emailSales}`} style={{ color: '#0A1128', fontWeight: '700', textDecoration: 'none', display: 'block', fontSize: '0.95rem' }}>
+                    <a href={`mailto:${COMPANY_DETAILS.emailSales}`} style={{ color: '#1A0A10', fontWeight: '700', textDecoration: 'none', display: 'block', fontSize: '0.95rem' }}>
                       {COMPANY_DETAILS.emailSales}
                     </a>
-                    <a href={`mailto:${COMPANY_DETAILS.emailInfo}`} style={{ color: '#1546D9', fontWeight: '600', textDecoration: 'none', fontSize: '0.85rem' }}>
+                    <a href={`mailto:${COMPANY_DETAILS.emailInfo}`} style={{ color: '#800020', fontWeight: '600', textDecoration: 'none', fontSize: '0.85rem' }}>
                       {COMPANY_DETAILS.emailInfo}
                     </a>
                   </div>
@@ -116,61 +116,61 @@ export default function ContactSection({ openQuoteModal }) {
               </div>
 
               {/* WhatsApp Card */}
-              <div className="subtle-card" style={{ padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', backgroundColor: '#FAF9F5', borderColor: '#DCDAD1' }}>
+              <div className="subtle-card" style={{ padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', backgroundColor: '#FFFFFF', borderColor: '#EAE1DD' }}>
                 <div style={{ 
                   width: '46px', 
                   height: '46px', 
                   borderRadius: '10px', 
-                  backgroundColor: '#EBF0FE', 
-                  border: '1px solid #A4BCFD',
+                  backgroundColor: '#FDF2F4', 
+                  border: '1px solid #F0CBD3',
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center',
                   flexShrink: 0
                 }}>
-                  <Phone size={22} color="#1546D9" />
+                  <Phone size={22} color="#800020" />
                 </div>
                 <div>
-                  <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A' }}>
+                  <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#8C7A82' }}>
                     Business WhatsApp & Direct Line
                   </div>
                   <a 
                     href={COMPANY_DETAILS.whatsappUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    style={{ color: '#0A1128', fontWeight: '700', textDecoration: 'none', display: 'block', fontSize: '1rem', marginTop: '0.2rem' }}
+                    style={{ color: '#1A0A10', fontWeight: '700', textDecoration: 'none', display: 'block', fontSize: '1rem', marginTop: '0.2rem' }}
                   >
                     {COMPANY_DETAILS.whatsappRaw} ({COMPANY_DETAILS.whatsappIntl})
                   </a>
-                  <span style={{ fontSize: '0.75rem', color: '#1546D9', fontWeight: '600' }}>
+                  <span style={{ fontSize: '0.75rem', color: '#800020', fontWeight: '600' }}>
                     Available for international buyer messaging
                   </span>
                 </div>
               </div>
 
               {/* Country of Operations */}
-              <div className="subtle-card" style={{ padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', backgroundColor: '#FAF9F5', borderColor: '#DCDAD1' }}>
+              <div className="subtle-card" style={{ padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', backgroundColor: '#FFFFFF', borderColor: '#EAE1DD' }}>
                 <div style={{ 
                   width: '46px', 
                   height: '46px', 
                   borderRadius: '10px', 
-                  backgroundColor: '#F4F3EE', 
-                  border: '1px solid #DCDAD1',
+                  backgroundColor: '#FAF7F5', 
+                  border: '1px solid #EAE1DD',
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center',
                   flexShrink: 0
                 }}>
-                  <MapPin size={22} color="#0A1128" />
+                  <MapPin size={22} color="#1A0A10" />
                 </div>
                 <div>
-                  <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A' }}>
+                  <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#8C7A82' }}>
                     Country of Incorporation & Operations
                   </div>
-                  <div style={{ fontWeight: '700', color: '#0A1128', fontSize: '0.98rem', marginTop: '0.2rem' }}>
+                  <div style={{ fontWeight: '700', color: '#1A0A10', fontSize: '0.98rem', marginTop: '0.2rem' }}>
                     Pakistan
                   </div>
-                  <span style={{ fontSize: '0.75rem', color: '#6E798A' }}>
+                  <span style={{ fontSize: '0.75rem', color: '#8C7A82' }}>
                     Textile & Garment Export Operations
                   </span>
                 </div>
@@ -180,14 +180,14 @@ export default function ContactSection({ openQuoteModal }) {
 
             {/* Response Time Guarantee */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.85rem', color: '#4B5565' }}>
-              <Clock size={16} color="#1546D9" />
+              <Clock size={16} color="#800020" />
               <span>Typical international buyer response turnaround: <strong>Within 24 Business Hours</strong></span>
             </div>
 
           </div>
 
           {/* Right Column: Direct Inquiry Form */}
-          <div className="subtle-card" style={{ padding: 'clamp(1.5rem, 4vw, 2.5rem)', borderRadius: '20px', backgroundColor: '#FAF9F5', borderColor: '#DCDAD1' }}>
+          <div className="subtle-card" style={{ padding: 'clamp(1.5rem, 4vw, 2.5rem)', borderRadius: '20px', backgroundColor: '#FFFFFF', borderColor: '#EAE1DD' }}>
             
             {submitted ? (
               <div style={{ textAlign: 'center', padding: '3rem 1rem' }} className="fade-in">
@@ -195,16 +195,16 @@ export default function ContactSection({ openQuoteModal }) {
                   width: '64px', 
                   height: '64px', 
                   borderRadius: '50%', 
-                  backgroundColor: '#EBF0FE', 
-                  border: '1px solid #A4BCFD',
+                  backgroundColor: '#FDF2F4', 
+                  border: '1px solid #F0CBD3',
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center',
                   margin: '0 auto 1.5rem auto'
                 }}>
-                  <CheckCircle2 size={36} color="#1546D9" />
+                  <CheckCircle2 size={36} color="#800020" />
                 </div>
-                <h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#0A1128', marginBottom: '0.6rem' }}>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1A0A10', marginBottom: '0.6rem' }}>
                   Inquiry Successfully Received
                 </h3>
                 <p style={{ fontSize: '0.95rem', color: '#4B5565', lineHeight: '1.6', marginBottom: '2rem', maxWidth: '420px', margin: '0 auto 2rem auto' }}>
@@ -221,10 +221,10 @@ export default function ContactSection({ openQuoteModal }) {
             ) : (
               <div>
                 <div style={{ marginBottom: '1.75rem' }}>
-                  <h3 style={{ fontSize: '1.45rem', fontWeight: '800', color: '#0A1128', marginBottom: '0.35rem' }}>
+                  <h3 style={{ fontSize: '1.45rem', fontWeight: '800', color: '#1A0A10', marginBottom: '0.35rem' }}>
                     Send an Inquiry
                   </h3>
-                  <p style={{ fontSize: '0.88rem', color: '#6E798A' }}>
+                  <p style={{ fontSize: '0.88rem', color: '#8C7A82' }}>
                     Fill out your basic product requirements to initiate communication.
                   </p>
                 </div>
@@ -244,7 +244,7 @@ export default function ContactSection({ openQuoteModal }) {
 
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
                     <div>
-                      <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#0A1128', marginBottom: '0.35rem' }}>
+                      <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#1A0A10', marginBottom: '0.35rem' }}>
                         Your Full Name*
                       </label>
                       <input 
@@ -257,9 +257,9 @@ export default function ContactSection({ openQuoteModal }) {
                           width: '100%',
                           padding: '0.7rem 0.9rem',
                           borderRadius: '8px',
-                          border: '1px solid #DCDAD1',
+                          border: '1px solid #EAE1DD',
                           backgroundColor: '#FFFFFF',
-                          color: '#0A1128',
+                          color: '#1A0A10',
                           fontSize: '0.9rem',
                           outline: 'none'
                         }}
@@ -267,7 +267,7 @@ export default function ContactSection({ openQuoteModal }) {
                     </div>
 
                     <div>
-                      <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#0A1128', marginBottom: '0.35rem' }}>
+                      <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#1A0A10', marginBottom: '0.35rem' }}>
                         Company / Brand Name*
                       </label>
                       <input 
@@ -280,9 +280,9 @@ export default function ContactSection({ openQuoteModal }) {
                           width: '100%',
                           padding: '0.7rem 0.9rem',
                           borderRadius: '8px',
-                          border: '1px solid #DCDAD1',
+                          border: '1px solid #EAE1DD',
                           backgroundColor: '#FFFFFF',
-                          color: '#0A1128',
+                          color: '#1A0A10',
                           fontSize: '0.9rem',
                           outline: 'none'
                         }}
@@ -292,7 +292,7 @@ export default function ContactSection({ openQuoteModal }) {
 
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
                     <div>
-                      <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#0A1128', marginBottom: '0.35rem' }}>
+                      <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#1A0A10', marginBottom: '0.35rem' }}>
                         Business Email*
                       </label>
                       <input 
@@ -305,9 +305,9 @@ export default function ContactSection({ openQuoteModal }) {
                           width: '100%',
                           padding: '0.7rem 0.9rem',
                           borderRadius: '8px',
-                          border: '1px solid #DCDAD1',
+                          border: '1px solid #EAE1DD',
                           backgroundColor: '#FFFFFF',
-                          color: '#0A1128',
+                          color: '#1A0A10',
                           fontSize: '0.9rem',
                           outline: 'none'
                         }}
@@ -315,7 +315,7 @@ export default function ContactSection({ openQuoteModal }) {
                     </div>
 
                     <div>
-                      <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#0A1128', marginBottom: '0.35rem' }}>
+                      <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#1A0A10', marginBottom: '0.35rem' }}>
                         Country / Destination*
                       </label>
                       <input 
@@ -328,9 +328,9 @@ export default function ContactSection({ openQuoteModal }) {
                           width: '100%',
                           padding: '0.7rem 0.9rem',
                           borderRadius: '8px',
-                          border: '1px solid #DCDAD1',
+                          border: '1px solid #EAE1DD',
                           backgroundColor: '#FFFFFF',
-                          color: '#0A1128',
+                          color: '#1A0A10',
                           fontSize: '0.9rem',
                           outline: 'none'
                         }}
@@ -340,7 +340,7 @@ export default function ContactSection({ openQuoteModal }) {
 
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
                     <div>
-                      <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#0A1128', marginBottom: '0.35rem' }}>
+                      <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#1A0A10', marginBottom: '0.35rem' }}>
                         Product Category*
                       </label>
                       <select
@@ -351,11 +351,11 @@ export default function ContactSection({ openQuoteModal }) {
                           width: '100%',
                           padding: '0.7rem 0.9rem',
                           borderRadius: '8px',
-                          border: '1px solid #DCDAD1',
+                          border: '1px solid #EAE1DD',
                           fontSize: '0.9rem',
                           outline: 'none',
                           backgroundColor: '#FFFFFF',
-                          color: '#0A1128'
+                          color: '#1A0A10'
                         }}
                       >
                         <option value="">Select a Category...</option>
@@ -366,7 +366,7 @@ export default function ContactSection({ openQuoteModal }) {
                     </div>
 
                     <div>
-                      <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#0A1128', marginBottom: '0.35rem' }}>
+                      <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#1A0A10', marginBottom: '0.35rem' }}>
                         Estimated Quantity*
                       </label>
                       <input 
@@ -379,9 +379,9 @@ export default function ContactSection({ openQuoteModal }) {
                           width: '100%',
                           padding: '0.7rem 0.9rem',
                           borderRadius: '8px',
-                          border: '1px solid #DCDAD1',
+                          border: '1px solid #EAE1DD',
                           backgroundColor: '#FFFFFF',
-                          color: '#0A1128',
+                          color: '#1A0A10',
                           fontSize: '0.9rem',
                           outline: 'none'
                         }}
@@ -390,7 +390,7 @@ export default function ContactSection({ openQuoteModal }) {
                   </div>
 
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#0A1128', marginBottom: '0.35rem' }}>
+                    <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#1A0A10', marginBottom: '0.35rem' }}>
                       Message & Requirements*
                     </label>
                     <textarea 
@@ -403,9 +403,9 @@ export default function ContactSection({ openQuoteModal }) {
                         width: '100%',
                         padding: '0.7rem 0.9rem',
                         borderRadius: '8px',
-                        border: '1px solid #DCDAD1',
+                        border: '1px solid #EAE1DD',
                         backgroundColor: '#FFFFFF',
-                        color: '#0A1128',
+                        color: '#1A0A10',
                         fontSize: '0.9rem',
                         outline: 'none',
                         resize: 'vertical'
@@ -421,15 +421,15 @@ export default function ContactSection({ openQuoteModal }) {
                     <Send size={16} /> Send Direct Inquiry
                   </button>
 
-                  <div style={{ textAlign: 'center', fontSize: '0.78rem', color: '#6E798A' }}>
+                  <div style={{ textAlign: 'center', fontSize: '0.78rem', color: '#8C7A82' }}>
                     Need to provide detailed technical specifications? Use our comprehensive{' '}
                     <span 
-                      onClick={openQuoteModal} 
-                      style={{ color: '#1546D9', fontWeight: '700', cursor: 'pointer', textDecoration: 'underline' }}
-                    >
-                      Request a Quote Engine
-                    </span>.
-                  </div>
+                    onClick={openQuoteModal} 
+                    style={{ color: '#800020', fontWeight: '700', cursor: 'pointer', textDecoration: 'underline' }}
+                  >
+                    Request a Quote Engine
+                  </span>.
+                </div>
 
                 </form>
               </div>

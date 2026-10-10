@@ -33,10 +33,10 @@ export default function HomeCTA({ openQuoteModal }) {
     <section 
       ref={sectionRef}
       style={{ 
-        backgroundColor: '#EDECE6', 
+        backgroundColor: '#FAF7F5', 
         paddingTop: '5.5rem', 
         paddingBottom: '5.5rem',
-        borderBottom: '1px solid #DCDAD1'
+        borderBottom: '1px solid #EAE1DD'
       }}
     >
       <div className="container-custom">
@@ -44,25 +44,25 @@ export default function HomeCTA({ openQuoteModal }) {
         {/* Buyer Frequently Asked Questions Section */}
         <div style={{ maxWidth: '880px', margin: '0 auto 5.5rem auto' }} className={`reveal-init ${isVisible ? 'reveal-active' : ''}`}>
           <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-            <span className="badge-pill badge-cobalt" style={{ marginBottom: '0.8rem' }}>
+            <span className="badge-pill badge-cobalt" style={{ marginBottom: '0.8rem', backgroundColor: '#FDF2F4', color: '#800020', border: '1px solid #F0CBD3' }}>
               International Buyer Verification
             </span>
             <h2 style={{ 
               fontSize: 'clamp(1.9rem, 3.2vw, 2.5rem)', 
               fontWeight: '800', 
-              color: '#0A1128',
+              color: '#1A0A10',
               letterSpacing: '-0.025em',
               marginBottom: '0.75rem'
             }}>
               Frequently Asked Questions
             </h2>
-            <p style={{ fontSize: '1rem', color: '#4B5565' }}>
+            <p style={{ fontSize: '1rem', color: '#5E5055' }}>
               Transparent answers regarding our Pakistan-based custom manufacturing and export supply operations.
             </p>
 
             {/* Quick Filter Search inside FAQ */}
             <div style={{ maxWidth: '380px', margin: '1.5rem auto 0 auto', position: 'relative' }}>
-              <Search size={16} color="#6E798A" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
+              <Search size={16} color="#8C7D82" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
               <input 
                 type="text" 
                 placeholder="Search FAQs (e.g. MOQ, samples, custom)..."
@@ -72,11 +72,11 @@ export default function HomeCTA({ openQuoteModal }) {
                   width: '100%',
                   padding: '0.65rem 1rem 0.65rem 2.3rem',
                   borderRadius: '10px',
-                  border: '1px solid #DCDAD1',
+                  border: '1px solid #EAE1DD',
                   fontSize: '0.86rem',
                   outline: 'none',
                   backgroundColor: '#FFFFFF',
-                  color: '#0A1128'
+                  color: '#1A0A10'
                 }}
               />
             </div>
@@ -90,11 +90,11 @@ export default function HomeCTA({ openQuoteModal }) {
                   key={faq.id}
                   style={{
                     border: '1px solid',
-                    borderColor: isOpen ? '#A4BCFD' : '#DCDAD1',
+                    borderColor: isOpen ? '#F0CBD3' : '#EAE1DD',
                     borderRadius: '14px',
-                    backgroundColor: isOpen ? '#FFFFFF' : '#F7F6F2',
+                    backgroundColor: isOpen ? '#FFFFFF' : '#FCF9F7',
                     transition: 'all 0.25s ease',
-                    boxShadow: isOpen ? '0 4px 15px rgba(21, 70, 217, 0.08)' : '0 1px 2px rgba(10, 17, 40, 0.02)',
+                    boxShadow: isOpen ? '0 4px 15px rgba(128, 0, 32, 0.08)' : '0 1px 2px rgba(26, 10, 16, 0.02)',
                     overflow: 'hidden'
                   }}
                 >
@@ -102,28 +102,29 @@ export default function HomeCTA({ openQuoteModal }) {
                     onClick={() => toggleFaq(faq.id)}
                     style={{
                       width: '100%',
-                      padding: '1.2rem 1.5rem',
+                      padding: '1.25rem 1.5rem',
                       display: 'flex',
-                      alignItems: 'center',
                       justifyContent: 'space-between',
+                      alignItems: 'center',
                       background: 'none',
                       border: 'none',
+                      textAlign: 'left',
                       cursor: 'pointer',
-                      textAlign: 'left'
+                      gap: '1rem'
                     }}
                   >
                     <span style={{ 
-                      fontSize: '1rem', 
+                      fontSize: '1.05rem', 
                       fontWeight: '700', 
-                      color: isOpen ? '#1546D9' : '#0A1128',
-                      lineHeight: '1.4',
-                      letterSpacing: '-0.01em'
+                      color: isOpen ? '#800020' : '#1A0A10',
+                      letterSpacing: '-0.01em',
+                      transition: 'color 0.15s ease'
                     }}>
-                      {faq.id}. {faq.question}
+                      {faq.question}
                     </span>
                     <span style={{ 
-                      marginLeft: '1rem', 
-                      color: isOpen ? '#1546D9' : '#6E798A',
+                      color: isOpen ? '#800020' : '#8C7D82',
+                      flexShrink: 0,
                       display: 'flex',
                       alignItems: 'center'
                     }}>
@@ -135,9 +136,9 @@ export default function HomeCTA({ openQuoteModal }) {
                     <div style={{ 
                       padding: '0 1.5rem 1.35rem 1.5rem', 
                       fontSize: '0.94rem', 
-                      color: '#4B5565', 
+                      color: '#5E5055', 
                       lineHeight: '1.7',
-                      borderTop: '1px solid #EDECE6'
+                      borderTop: '1px solid #F5EFEB'
                     }} className="fade-in">
                       <div style={{ paddingTop: '0.85rem' }}>
                         {faq.answer}
@@ -152,16 +153,16 @@ export default function HomeCTA({ openQuoteModal }) {
 
         {/* Section 9 — Home — Final CTA Card */}
         <div style={{
-          backgroundColor: '#0A1128',
+          backgroundColor: '#1A0A10',
           borderRadius: '26px',
           padding: 'clamp(2.75rem, 5vw, 4.5rem) clamp(1.75rem, 4vw, 4rem)',
-          color: '#EDECE6',
+          color: '#FAF7F5',
           position: 'relative',
           overflow: 'hidden',
-          boxShadow: '0 25px 50px -12px rgba(10, 17, 40, 0.35)',
-          border: '1px solid #1E294B'
+          boxShadow: '0 25px 50px -12px rgba(26, 10, 16, 0.35)',
+          border: '1px solid #441F2F'
         }} className={`reveal-init ${isVisible ? 'reveal-active delay-2' : ''}`}>
-          {/* Cobalt Ambient Spotlight */}
+          {/* Maroon Ambient Spotlight */}
           <div style={{
             position: 'absolute',
             top: '-25%',
@@ -169,16 +170,16 @@ export default function HomeCTA({ openQuoteModal }) {
             width: '400px',
             height: '400px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(21, 70, 217, 0.3) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(128, 0, 32, 0.35) 0%, transparent 70%)',
             pointerEvents: 'none'
           }} />
 
           <div style={{ maxWidth: '750px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
             <span style={{
               display: 'inline-block',
-              backgroundColor: 'rgba(21, 70, 217, 0.25)',
-              color: '#A4BCFD',
-              border: '1px solid #1546D9',
+              backgroundColor: 'rgba(128, 0, 32, 0.35)',
+              color: '#F0CBD3',
+              border: '1px solid #800020',
               padding: '0.35rem 0.95rem',
               borderRadius: '9999px',
               fontSize: '0.78rem',
@@ -202,7 +203,7 @@ export default function HomeCTA({ openQuoteModal }) {
 
             <p style={{ 
               fontSize: '1.12rem', 
-              color: '#CBD5E1', 
+              color: '#D1C4C8', 
               lineHeight: '1.75', 
               marginBottom: '2.5rem' 
             }}>
@@ -213,7 +214,7 @@ export default function HomeCTA({ openQuoteModal }) {
               <button 
                 onClick={openQuoteModal}
                 className="btn-cobalt"
-                style={{ padding: '0.95rem 2.4rem', fontSize: '1rem', borderRadius: '12px' }}
+                style={{ padding: '0.95rem 2.4rem', fontSize: '1rem', borderRadius: '12px', backgroundColor: '#800020', border: '1px solid #A0183A' }}
               >
                 <FileText size={18} />
                 <span>Request a Quote</span>
@@ -228,12 +229,12 @@ export default function HomeCTA({ openQuoteModal }) {
                   padding: '0.95rem 2rem', 
                   fontSize: '1rem', 
                   backgroundColor: 'transparent',
-                  color: '#EDECE6',
-                  borderColor: '#2D3E6B',
+                  color: '#FAF7F5',
+                  borderColor: '#5A2338',
                   borderRadius: '12px'
                 }}
               >
-                <Phone size={16} color="#60A5FA" />
+                <Phone size={16} color="#F0CBD3" />
                 <span>WhatsApp: {COMPANY_DETAILS.whatsappRaw}</span>
               </a>
             </div>
@@ -247,16 +248,16 @@ export default function HomeCTA({ openQuoteModal }) {
               flexWrap: 'wrap',
               gap: '2rem',
               fontSize: '0.82rem',
-              color: '#94A3B8'
+              color: '#B8A8AD'
             }}>
               <span style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-                <CheckCircle2 size={15} color="#60A5FA" /> Commercial Export Accountable
+                <CheckCircle2 size={15} color="#F0CBD3" /> Commercial Export Accountable
               </span>
               <span style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-                <CheckCircle2 size={15} color="#60A5FA" /> Official Domain Sales Communications
+                <CheckCircle2 size={15} color="#F0CBD3" /> Official Domain Sales Communications
               </span>
               <span style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-                <CheckCircle2 size={15} color="#60A5FA" /> Pakistan Textile Clusters
+                <CheckCircle2 size={15} color="#F0CBD3" /> Pakistan Textile Clusters
               </span>
             </div>
 

@@ -179,10 +179,10 @@ export default function CustomizationShowcase({ openQuoteModal }) {
     <section 
       ref={sectionRef}
       style={{ 
-        backgroundColor: '#FAF9F5', 
+        backgroundColor: '#FAF7F5', 
         paddingTop: '5.5rem', 
         paddingBottom: '5.5rem',
-        borderBottom: '1px solid #DCDAD1',
+        borderBottom: '1px solid #EAE1DD',
         overflow: 'hidden'
       }}
     >
@@ -197,21 +197,21 @@ export default function CustomizationShowcase({ openQuoteModal }) {
           marginBottom: '2.5rem' 
         }} className={`reveal-init ${isVisible ? 'reveal-active' : ''}`}>
           <div>
-            <span className="badge-pill badge-cobalt" style={{ marginBottom: '0.85rem' }}>
+            <span className="badge-pill badge-cobalt" style={{ marginBottom: '0.85rem', backgroundColor: '#FDF2F4', color: '#800020', border: '1px solid #F0CBD3' }}>
               Bespoke Manufacturing Engineering
             </span>
             <h2 style={{ 
               fontSize: 'clamp(2rem, 3.4vw, 2.7rem)', 
               fontWeight: '800', 
-              color: '#0A1128',
+              color: '#1A0A10',
               letterSpacing: '-0.025em',
               lineHeight: '1.2',
               marginBottom: '0.65rem'
             }}>
               Customized to Your Exact Specifications
             </h2>
-            <p style={{ fontSize: '1.05rem', color: '#4B5565', maxWidth: '680px', lineHeight: '1.65' }}>
-              Zero off-the-shelf ready garments. Every single parameter from yarn spin to export carton sealing is tailored to your brand’s technical pack.
+            <p style={{ fontSize: '1.05rem', color: '#5E5055', maxWidth: '680px', lineHeight: '1.65' }}>
+              Zero off-the-shelf ready garments. Every single parameter from fabric selection to export carton sealing is tailored to your brand’s technical pack.
             </p>
           </div>
 
@@ -220,8 +220,8 @@ export default function CustomizationShowcase({ openQuoteModal }) {
             {/* View Mode Switcher */}
             <div style={{
               display: 'inline-flex',
-              backgroundColor: '#EDECE6',
-              border: '1px solid #DCDAD1',
+              backgroundColor: '#FFFFFF',
+              border: '1px solid #EAE1DD',
               borderRadius: '10px',
               padding: '3px'
             }}>
@@ -237,8 +237,8 @@ export default function CustomizationShowcase({ openQuoteModal }) {
                   fontSize: '0.8rem',
                   fontWeight: '700',
                   cursor: 'pointer',
-                  backgroundColor: viewMode === 'carousel' ? '#1546D9' : 'transparent',
-                  color: viewMode === 'carousel' ? '#FFFFFF' : '#4B5565',
+                  backgroundColor: viewMode === 'carousel' ? '#800020' : 'transparent',
+                  color: viewMode === 'carousel' ? '#FFFFFF' : '#5E5055',
                   transition: 'all 0.15s ease'
                 }}
               >
@@ -257,8 +257,8 @@ export default function CustomizationShowcase({ openQuoteModal }) {
                   fontSize: '0.8rem',
                   fontWeight: '700',
                   cursor: 'pointer',
-                  backgroundColor: viewMode === 'grid' ? '#1546D9' : 'transparent',
-                  color: viewMode === 'grid' ? '#FFFFFF' : '#4B5565',
+                  backgroundColor: viewMode === 'grid' ? '#800020' : 'transparent',
+                  color: viewMode === 'grid' ? '#FFFFFF' : '#5E5055',
                   transition: 'all 0.15s ease'
                 }}
               >
@@ -278,9 +278,9 @@ export default function CustomizationShowcase({ openQuoteModal }) {
                     gap: '0.4rem',
                     padding: '0.45rem 0.85rem',
                     borderRadius: '8px',
-                    border: '1px solid #DCDAD1',
-                    backgroundColor: isAutoPlaying ? '#EBF0FE' : '#FFFFFF',
-                    color: isAutoPlaying ? '#1546D9' : '#4B5565',
+                    border: '1px solid #EAE1DD',
+                    backgroundColor: isAutoPlaying ? '#FDF2F4' : '#FFFFFF',
+                    color: isAutoPlaying ? '#800020' : '#5E5055',
                     fontSize: '0.78rem',
                     fontWeight: '700',
                     cursor: 'pointer',
@@ -292,88 +292,80 @@ export default function CustomizationShowcase({ openQuoteModal }) {
                     width: '7px',
                     height: '7px',
                     borderRadius: '50%',
-                    backgroundColor: isAutoPlaying ? '#1546D9' : '#94A3B8',
+                    backgroundColor: isAutoPlaying ? '#800020' : '#8C7D82',
                     display: 'inline-block',
-                    boxShadow: isAutoPlaying ? '0 0 8px #1546D9' : 'none'
+                    boxShadow: isAutoPlaying ? '0 0 8px #800020' : 'none'
                   }} />
                   {isAutoPlaying ? <Pause size={12} /> : <Play size={12} />}
                   <span>{isAutoPlaying ? 'Auto-Moving' : 'Paused'}</span>
                 </button>
 
-                <div style={{ display: 'flex', gap: '0.35rem' }}>
-                  <button
-                    onClick={() => scrollCarousel('left')}
-                    style={{
-                      width: '38px',
-                      height: '38px',
-                      borderRadius: '9px',
-                      backgroundColor: '#FFFFFF',
-                      border: '1px solid #DCDAD1',
-                      color: '#0A1128',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      cursor: 'pointer',
-                      boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
-                      transition: 'all 0.15s ease'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = '#1546D9';
-                      e.currentTarget.style.color = '#FFFFFF';
-                      e.currentTarget.style.borderColor = '#1546D9';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = '#FFFFFF';
-                      e.currentTarget.style.color = '#0A1128';
-                      e.currentTarget.style.borderColor = '#DCDAD1';
-                    }}
-                    aria-label="Previous specification"
-                  >
-                    <ChevronLeft size={18} />
-                  </button>
-                  <button
-                    onClick={() => scrollCarousel('right')}
-                    style={{
-                      width: '38px',
-                      height: '38px',
-                      borderRadius: '9px',
-                      backgroundColor: '#FFFFFF',
-                      border: '1px solid #DCDAD1',
-                      color: '#0A1128',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      cursor: 'pointer',
-                      boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
-                      transition: 'all 0.15s ease'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = '#1546D9';
-                      e.currentTarget.style.color = '#FFFFFF';
-                      e.currentTarget.style.borderColor = '#1546D9';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = '#FFFFFF';
-                      e.currentTarget.style.color = '#0A1128';
-                      e.currentTarget.style.borderColor = '#DCDAD1';
-                    }}
-                    aria-label="Next specification"
-                  >
-                    <ChevronRight size={18} />
-                  </button>
-                </div>
+                <button
+                  onClick={() => scrollCarousel('left')}
+                  style={{
+                    width: '34px',
+                    height: '34px',
+                    borderRadius: '8px',
+                    backgroundColor: '#FFFFFF',
+                    border: '1px solid #EAE1DD',
+                    color: '#1A0A10',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    cursor: 'pointer',
+                    transition: 'all 0.15s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#800020';
+                    e.currentTarget.style.color = '#FFFFFF';
+                    e.currentTarget.style.borderColor = '#800020';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#FFFFFF';
+                    e.currentTarget.style.color = '#1A0A10';
+                    e.currentTarget.style.borderColor = '#EAE1DD';
+                  }}
+                  aria-label="Previous specification"
+                >
+                  <ChevronLeft size={16} />
+                </button>
+
+                <button
+                  onClick={() => scrollCarousel('right')}
+                  style={{
+                    width: '34px',
+                    height: '34px',
+                    borderRadius: '8px',
+                    backgroundColor: '#FFFFFF',
+                    border: '1px solid #EAE1DD',
+                    color: '#1A0A10',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    cursor: 'pointer',
+                    transition: 'all 0.15s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#800020';
+                    e.currentTarget.style.color = '#FFFFFF';
+                    e.currentTarget.style.borderColor = '#800020';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#FFFFFF';
+                    e.currentTarget.style.color = '#1A0A10';
+                    e.currentTarget.style.borderColor = '#EAE1DD';
+                  }}
+                  aria-label="Next specification"
+                >
+                  <ChevronRight size={16} />
+                </button>
               </div>
             )}
           </div>
         </div>
 
-        {/* Filter Pill Tabs */}
-        <div style={{
-          display: 'flex',
-          gap: '0.5rem',
-          flexWrap: 'wrap',
-          marginBottom: '2rem'
-        }}>
+        {/* Category Filters Pills */}
+        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
           {categories.map((cat) => {
             const isActive = activeCategory === cat.id;
             return (
@@ -385,12 +377,12 @@ export default function CustomizationShowcase({ openQuoteModal }) {
                   borderRadius: '9999px',
                   fontSize: '0.82rem',
                   fontWeight: '700',
-                  border: isActive ? '1px solid #1546D9' : '1px solid #DCDAD1',
-                  backgroundColor: isActive ? '#1546D9' : '#FFFFFF',
-                  color: isActive ? '#FFFFFF' : '#4B5565',
+                  border: isActive ? '1px solid #800020' : '1px solid #EAE1DD',
+                  backgroundColor: isActive ? '#800020' : '#FFFFFF',
+                  color: isActive ? '#FFFFFF' : '#5E5055',
                   cursor: 'pointer',
                   transition: 'all 0.15s ease',
-                  boxShadow: isActive ? '0 4px 12px rgba(21, 70, 217, 0.2)' : 'none'
+                  boxShadow: isActive ? '0 4px 12px rgba(128, 0, 32, 0.2)' : 'none'
                 }}
               >
                 {cat.label}
@@ -430,7 +422,7 @@ export default function CustomizationShowcase({ openQuoteModal }) {
                     maxWidth: '350px',
                     scrollSnapAlign: 'start',
                     backgroundColor: '#FFFFFF',
-                    border: '1px solid #DCDAD1',
+                    border: '1px solid #EAE1DD',
                     borderRadius: '18px',
                     padding: '2rem 1.75rem',
                     display: 'flex',
@@ -443,12 +435,12 @@ export default function CustomizationShowcase({ openQuoteModal }) {
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-6px)';
-                    e.currentTarget.style.borderColor = '#1546D9';
-                    e.currentTarget.style.boxShadow = '0 16px 36px rgba(21, 70, 217, 0.12)';
+                    e.currentTarget.style.borderColor = '#800020';
+                    e.currentTarget.style.boxShadow = '0 16px 36px rgba(128, 0, 32, 0.12)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.borderColor = '#DCDAD1';
+                    e.currentTarget.style.borderColor = '#EAE1DD';
                     e.currentTarget.style.boxShadow = '0 6px 20px rgba(0,0,0,0.04)';
                   }}
                 >
@@ -459,7 +451,7 @@ export default function CustomizationShowcase({ openQuoteModal }) {
                     left: 0,
                     right: 0,
                     height: '3px',
-                    backgroundColor: '#1546D9'
+                    backgroundColor: '#800020'
                   }} />
 
                   <div>
@@ -474,19 +466,19 @@ export default function CustomizationShowcase({ openQuoteModal }) {
                         width: '48px',
                         height: '48px',
                         borderRadius: '14px',
-                        backgroundColor: '#EBF0FE',
-                        border: '1px solid #A4BCFD',
+                        backgroundColor: '#FDF2F4',
+                        border: '1px solid #F0CBD3',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        boxShadow: '0 3px 8px rgba(21, 70, 217, 0.12)'
+                        boxShadow: '0 3px 8px rgba(128, 0, 32, 0.12)'
                       }}>
-                        <IconComp size={24} color="#1546D9" />
+                        <IconComp size={24} color="#800020" />
                       </div>
                       <span style={{
                         fontSize: '0.85rem',
                         fontWeight: '800',
-                        color: '#A4BCFD',
+                        color: '#F0CBD3',
                         letterSpacing: '0.05em'
                       }}>
                         SPEC {item.num}
@@ -496,7 +488,7 @@ export default function CustomizationShowcase({ openQuoteModal }) {
                     <h3 style={{
                       fontSize: '1.2rem',
                       fontWeight: '800',
-                      color: '#0A1128',
+                      color: '#1A0A10',
                       marginBottom: '0.65rem',
                       letterSpacing: '-0.02em'
                     }}>
@@ -505,7 +497,7 @@ export default function CustomizationShowcase({ openQuoteModal }) {
 
                     <p style={{
                       fontSize: '0.88rem',
-                      color: '#4B5565',
+                      color: '#5E5055',
                       lineHeight: '1.6',
                       marginBottom: '1.25rem'
                     }}>
@@ -515,8 +507,8 @@ export default function CustomizationShowcase({ openQuoteModal }) {
 
                   {/* Highlight Tag */}
                   <div style={{
-                    backgroundColor: '#EDECE6',
-                    border: '1px solid #DCDAD1',
+                    backgroundColor: '#FAF7F5',
+                    border: '1px solid #EAE1DD',
                     borderRadius: '8px',
                     padding: '0.55rem 0.85rem',
                     display: 'flex',
@@ -524,9 +516,9 @@ export default function CustomizationShowcase({ openQuoteModal }) {
                     gap: '0.45rem',
                     fontSize: '0.78rem',
                     fontWeight: '700',
-                    color: '#0A1128'
+                    color: '#1A0A10'
                   }}>
-                    <CheckCircle2 size={14} color="#1546D9" />
+                    <CheckCircle2 size={14} color="#800020" />
                     <span>{item.highlight}</span>
                   </div>
                 </div>
@@ -554,17 +546,17 @@ export default function CustomizationShowcase({ openQuoteModal }) {
                     flexDirection: 'column',
                     justifyContent: 'space-between',
                     backgroundColor: '#FFFFFF',
-                    border: '1px solid #DCDAD1',
+                    border: '1px solid #EAE1DD',
                     boxShadow: '0 4px 14px rgba(0,0,0,0.03)',
                     transition: 'all 0.25s ease'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = '#1546D9';
+                    e.currentTarget.style.borderColor = '#800020';
                     e.currentTarget.style.transform = 'translateY(-4px)';
-                    e.currentTarget.style.boxShadow = '0 12px 28px rgba(21, 70, 217, 0.1)';
+                    e.currentTarget.style.boxShadow = '0 12px 28px rgba(128, 0, 32, 0.1)';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = '#DCDAD1';
+                    e.currentTarget.style.borderColor = '#EAE1DD';
                     e.currentTarget.style.transform = 'translateY(0)';
                     e.currentTarget.style.boxShadow = '0 4px 14px rgba(0,0,0,0.03)';
                   }}
@@ -575,30 +567,30 @@ export default function CustomizationShowcase({ openQuoteModal }) {
                         width: '44px', 
                         height: '44px', 
                         borderRadius: '12px', 
-                        backgroundColor: '#EBF0FE', 
-                        border: '1px solid #A4BCFD',
+                        backgroundColor: '#FDF2F4', 
+                        border: '1px solid #F0CBD3',
                         display: 'flex', 
                         alignItems: 'center', 
                         justifyContent: 'center'
                       }}>
-                        <IconComp size={22} color="#1546D9" />
+                        <IconComp size={22} color="#800020" />
                       </div>
-                      <span style={{ fontSize: '0.8rem', fontWeight: '800', color: '#1546D9' }}>
+                      <span style={{ fontSize: '0.8rem', fontWeight: '800', color: '#800020' }}>
                         DIMENSION {item.num}
                       </span>
                     </div>
 
-                    <h3 style={{ fontSize: '1.1rem', fontWeight: '800', color: '#0A1128', marginBottom: '0.45rem', letterSpacing: '-0.01em' }}>
+                    <h3 style={{ fontSize: '1.1rem', fontWeight: '800', color: '#1A0A10', marginBottom: '0.45rem', letterSpacing: '-0.01em' }}>
                       {item.title}
                     </h3>
-                    <p style={{ fontSize: '0.86rem', color: '#4B5565', lineHeight: '1.6', marginBottom: '1.25rem' }}>
+                    <p style={{ fontSize: '0.86rem', color: '#5E5055', lineHeight: '1.6', marginBottom: '1.25rem' }}>
                       {item.desc}
                     </p>
                   </div>
 
                   <div style={{
-                    backgroundColor: '#EDECE6',
-                    border: '1px solid #DCDAD1',
+                    backgroundColor: '#FAF7F5',
+                    border: '1px solid #EAE1DD',
                     borderRadius: '8px',
                     padding: '0.45rem 0.75rem',
                     display: 'flex',
@@ -606,9 +598,9 @@ export default function CustomizationShowcase({ openQuoteModal }) {
                     gap: '0.4rem',
                     fontSize: '0.76rem',
                     fontWeight: '700',
-                    color: '#0A1128'
+                    color: '#1A0A10'
                   }}>
-                    <CheckCircle2 size={13} color="#1546D9" />
+                    <CheckCircle2 size={13} color="#800020" />
                     <span>{item.highlight}</span>
                   </div>
                 </div>
@@ -619,25 +611,25 @@ export default function CustomizationShowcase({ openQuoteModal }) {
 
         {/* Specification callout banner */}
         <div style={{
-          backgroundColor: '#0A1128',
-          color: '#EDECE6',
+          backgroundColor: '#1A0A10',
+          color: '#FAF7F5',
           borderRadius: '20px',
           padding: '3rem 2rem',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           textAlign: 'center',
-          boxShadow: '0 20px 45px rgba(10,17,40,0.25)',
-          border: '1px solid #1E294B',
+          boxShadow: '0 20px 45px rgba(26,10,16,0.3)',
+          border: '1px solid #441F2F',
           marginTop: '1.5rem'
         }} className={`reveal-init ${isVisible ? 'reveal-active delay-3' : ''}`}>
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.4rem',
-            backgroundColor: 'rgba(21, 70, 217, 0.25)',
-            border: '1px solid #1546D9',
-            color: '#A4BCFD',
+            backgroundColor: 'rgba(128, 0, 32, 0.35)',
+            border: '1px solid #800020',
+            color: '#F0CBD3',
             padding: '0.3rem 0.85rem',
             borderRadius: '9999px',
             fontSize: '0.78rem',
@@ -650,7 +642,7 @@ export default function CustomizationShowcase({ openQuoteModal }) {
           <h3 style={{ fontSize: '1.65rem', fontWeight: '800', marginBottom: '0.65rem', letterSpacing: '-0.02em', color: '#FFFFFF' }}>
             Have a Specific Tech Pack or Garment Sample?
           </h3>
-          <p style={{ fontSize: '1rem', color: '#CBD5E1', maxWidth: '680px', marginBottom: '1.85rem', lineHeight: '1.7' }}>
+          <p style={{ fontSize: '1rem', color: '#D1C4C8', maxWidth: '680px', marginBottom: '1.85rem', lineHeight: '1.7' }}>
             Send us your measurement charts, vector artwork files (.ai, .pdf, .psd), and target order quantities. We will assess manufacturing feasibility and provide formal quotations.
           </p>
           <button 
@@ -660,8 +652,9 @@ export default function CustomizationShowcase({ openQuoteModal }) {
               padding: '0.95rem 2.4rem', 
               fontSize: '1rem', 
               borderRadius: '12px',
-              backgroundColor: '#1546D9',
-              boxShadow: '0 8px 24px rgba(21, 70, 217, 0.35)'
+              backgroundColor: '#800020',
+              border: '1px solid #A0183A',
+              boxShadow: '0 8px 24px rgba(128, 0, 32, 0.35)'
             }}
           >
             <FileText size={18} /> Submit Your Technical Specifications

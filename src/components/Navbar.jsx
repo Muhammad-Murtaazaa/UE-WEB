@@ -59,11 +59,11 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
 
       {/* Top Professional Notice Bar */}
       <div style={{ 
-        backgroundColor: '#0A1128', 
-        color: '#D1D5DB', 
+        backgroundColor: '#1A0A10', 
+        color: '#D1C4C8', 
         fontSize: '0.78rem', 
         padding: '0.45rem 1.5rem',
-        borderBottom: '1px solid #1E294B'
+        borderBottom: '1px solid #441F2F'
       }}>
         <div className="container-custom" style={{ 
           display: 'flex', 
@@ -78,25 +78,25 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
               width: '7px', 
               height: '7px', 
               borderRadius: '50%', 
-              backgroundColor: '#1546D9',
-              boxShadow: '0 0 8px rgba(21, 70, 217, 0.9)' 
+              backgroundColor: '#800020',
+              boxShadow: '0 0 8px rgba(128, 0, 32, 0.9)' 
             }}></span>
-            <span style={{ color: '#EDECE6', fontWeight: '600' }}>
+            <span style={{ color: '#FAF7F5', fontWeight: '600' }}>
               B2B Custom Apparel Supply Partner
             </span>
-            <span style={{ color: '#4B5565' }}>|</span>
-            <span style={{ color: '#CBD5E1' }}>100% Made to Buyer Specifications • No Ready Stock</span>
+            <span style={{ color: '#5E5055' }}>|</span>
+            <span style={{ color: '#D1C4C8' }}>100% Made to Buyer Specifications • No Ready Stock</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
             <a 
               href="mailto:sales@uzairsharifenterprises.com" 
-              style={{ color: '#EDECE6', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.35rem' }}
+              style={{ color: '#FAF7F5', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.35rem' }}
             >
-              <Mail size={12} color="#1546D9" /> sales@uzairsharifenterprises.com
+              <Mail size={12} color="#800020" /> sales@uzairsharifenterprises.com
             </a>
-            <span style={{ color: '#4B5565' }}>•</span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', color: '#CBD5E1' }}>
-              <Globe2 size={12} color="#1546D9" /> Pakistan Export Operations
+            <span style={{ color: '#5E5055' }}>•</span>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', color: '#D1C4C8' }}>
+              <Globe2 size={12} color="#800020" /> Pakistan Export Operations
             </span>
           </div>
         </div>
@@ -125,27 +125,27 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
             width: '42px', 
             height: '42px', 
             borderRadius: '10px', 
-            backgroundColor: '#0A1128',
-            border: '1px solid #1E294B',
+            backgroundColor: '#1A0A10',
+            border: '1px solid #441F2F',
             display: 'flex', 
             alignItems: 'center', 
             justifyContent: 'center',
-            boxShadow: '0 2px 8px rgba(10, 17, 40, 0.15)'
+            boxShadow: '0 2px 8px rgba(26, 10, 16, 0.2)'
           }}>
             <span style={{ 
               fontWeight: '800', 
               fontSize: '1.05rem', 
-              color: '#EDECE6',
+              color: '#FAF7F5',
               letterSpacing: '-0.02em'
             }}>
-              US<span style={{ color: '#1546D9' }}>E</span>
+              US<span style={{ color: '#A0183A' }}>E</span>
             </span>
           </div>
           <div>
             <div style={{ 
               fontWeight: '800', 
               fontSize: '1.05rem', 
-              color: '#0A1128', 
+              color: '#1A0A10', 
               lineHeight: '1.2',
               letterSpacing: '-0.015em'
             }}>
@@ -153,15 +153,15 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
             </div>
             <div style={{ 
               fontSize: '0.72rem', 
-              color: '#4B5565', 
+              color: '#5E5055', 
               fontWeight: '600',
               display: 'flex',
               alignItems: 'center',
               gap: '0.35rem'
             }}>
               <span>(SMC-Private) Limited</span>
-              <span style={{ color: '#B8B5AA' }}>•</span>
-              <span style={{ color: '#1546D9', fontWeight: '700' }}>Garments Export</span>
+              <span style={{ color: '#D4C5C0' }}>•</span>
+              <span style={{ color: '#800020', fontWeight: '700' }}>Garments Export</span>
             </div>
           </div>
         </div>
@@ -188,7 +188,7 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
                       cursor: 'pointer',
                       fontSize: '0.9rem',
                       fontWeight: isActive ? '800' : '600',
-                      color: isActive ? '#1546D9' : '#0A1128',
+                      color: isActive ? '#800020' : '#1A0A10',
                       padding: '0.4rem 0.2rem',
                       position: 'relative',
                       transition: 'color 0.15s ease'
@@ -202,7 +202,7 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
                         left: '0',
                         width: '100%',
                         height: '2.5px',
-                        backgroundColor: '#1546D9',
+                        backgroundColor: '#800020',
                         borderRadius: '2px'
                       }}></span>
                     )}
@@ -224,7 +224,9 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.5rem',
-              borderRadius: '8px'
+              borderRadius: '8px',
+              backgroundColor: '#800020',
+              border: '1px solid #A0183A'
             }}
           >
             <FileText size={16} />
@@ -237,11 +239,11 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
             className="mobile-menu-btn"
             style={{
               background: '#FFFFFF',
-              border: '1px solid #DCDAD1',
+              border: '1px solid #EAE1DD',
               borderRadius: '8px',
               padding: '0.5rem',
               cursor: 'pointer',
-              color: '#0A1128'
+              color: '#1A0A10'
             }}
             aria-label="Toggle menu"
           >
@@ -253,10 +255,10 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div style={{
-          backgroundColor: '#EDECE6',
-          borderBottom: '1px solid #DCDAD1',
+          backgroundColor: '#FAF7F5',
+          borderBottom: '1px solid #EAE1DD',
           padding: '1.25rem 1.5rem',
-          boxShadow: '0 12px 30px rgba(10, 17, 40, 0.12)'
+          boxShadow: '0 12px 30px rgba(26, 10, 16, 0.12)'
         }} className="fade-in">
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.85rem', margin: 0, padding: 0 }}>
             {navItems.map((item) => (
@@ -266,11 +268,11 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
                   style={{
                     width: '100%',
                     textAlign: 'left',
-                    background: activePage === item.id ? '#EBF0FE' : '#FFFFFF',
-                    color: activePage === item.id ? '#1546D9' : '#0A1128',
+                    background: activePage === item.id ? '#FDF2F4' : '#FFFFFF',
+                    color: activePage === item.id ? '#800020' : '#1A0A10',
                     fontWeight: activePage === item.id ? '700' : '600',
                     border: '1px solid',
-                    borderColor: activePage === item.id ? '#A4BCFD' : '#DCDAD1',
+                    borderColor: activePage === item.id ? '#F0CBD3' : '#EAE1DD',
                     borderRadius: '8px',
                     padding: '0.75rem 0.95rem',
                     fontSize: '0.95rem',
@@ -281,7 +283,7 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
                   }}
                 >
                   <span>{item.label}</span>
-                  {activePage === item.id && <ArrowRight size={16} color="#1546D9" />}
+                  {activePage === item.id && <ArrowRight size={16} color="#800020" />}
                 </button>
               </li>
             ))}
@@ -292,7 +294,7 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
                   openQuoteModal();
                 }}
                 className="btn-cobalt"
-                style={{ width: '100%', padding: '0.85rem', justifyContent: 'center' }}
+                style={{ width: '100%', padding: '0.85rem', justifyContent: 'center', backgroundColor: '#800020', border: '1px solid #A0183A' }}
               >
                 <FileText size={18} /> Request a Quote
               </button>

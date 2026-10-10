@@ -9,7 +9,7 @@ import {
   Sliders, 
   X, 
   Eye, 
-  Sparkles,
+  Sparkles, 
   ArrowRight,
   ChevronLeft,
   ChevronRight,
@@ -74,18 +74,18 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
   };
 
   return (
-    <div style={{ backgroundColor: '#EDECE6', minHeight: '85vh', paddingBottom: '6rem' }}>
+    <div style={{ backgroundColor: '#FAF7F5', minHeight: '85vh', paddingBottom: '6rem' }}>
       
       {/* Vercel Styled Header Banner */}
       <div className="bg-dot-grid-dark" style={{ 
-        backgroundColor: '#0A1128', 
+        backgroundColor: '#1A0A10', 
         color: '#ffffff', 
         paddingTop: '5rem', 
         paddingBottom: '4.5rem',
-        borderBottom: '1px solid #1E294B'
+        borderBottom: '1px solid #441F2F'
       }}>
         <div className="container-custom" style={{ maxWidth: '880px', margin: '0 auto', textAlign: 'center' }}>
-          <span className="badge-pill badge-cobalt" style={{ marginBottom: '1rem', backgroundColor: '#1546D9', color: '#ffffff' }}>
+          <span className="badge-pill badge-cobalt" style={{ marginBottom: '1rem', backgroundColor: '#800020', color: '#ffffff', border: '1px solid #A0183A' }}>
             Digital Sourcing Catalogue
           </span>
           <h1 style={{ 
@@ -97,8 +97,8 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
           }}>
             Garment Manufacturing Capabilities
           </h1>
-          <p style={{ fontSize: '1.1rem', color: '#94a3b8', lineHeight: '1.75' }}>
-            Browse our 9 core custom apparel categories. All garments are custom manufactured to your requested fabric composition, weight (GSM), sizing chart, and branding details.
+          <p style={{ fontSize: '1.1rem', color: '#D1C4C8', lineHeight: '1.75' }}>
+            Browse our core custom apparel categories. All garments are custom manufactured to your requested fabric composition, weight (GSM), sizing chart, and branding details.
           </p>
         </div>
       </div>
@@ -107,9 +107,9 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
         
         {/* Important Product Page Disclaimer Banner */}
         <div style={{
-          backgroundColor: '#FAF9F5',
-          border: '1px solid #DCDAD1',
-          borderLeft: '5px solid #1546D9',
+          backgroundColor: '#FFFFFF',
+          border: '1px solid #EAE1DD',
+          borderLeft: '5px solid #800020',
           borderRadius: '14px',
           padding: '1.35rem 1.75rem',
           marginBottom: '2.5rem',
@@ -118,12 +118,12 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
           gap: '1.15rem',
           boxShadow: 'var(--shadow-sm)'
         }}>
-          <Info size={24} color="#1546D9" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <Info size={24} color="#800020" style={{ flexShrink: 0, marginTop: '2px' }} />
           <div>
-            <div style={{ fontSize: '0.94rem', fontWeight: '800', color: '#0A1128', marginBottom: '0.3rem' }}>
+            <div style={{ fontSize: '0.94rem', fontWeight: '800', color: '#1A0A10', marginBottom: '0.3rem' }}>
               Important Capability Disclaimer
             </div>
-            <div style={{ fontSize: '0.88rem', color: '#4B5565', lineHeight: '1.65' }}>
+            <div style={{ fontSize: '0.88rem', color: '#5E5055', lineHeight: '1.65' }}>
               Product images shown are representative of our product capabilities. Final products are developed according to buyer specifications, approved samples and order requirements. Uzair Sharif Enterprises does not stock pre-made garments.
             </div>
           </div>
@@ -131,53 +131,44 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
 
         {/* Filters and Search Console */}
         <div style={{ 
-          backgroundColor: '#FAF9F5',
-          border: '1px solid #DCDAD1',
+          backgroundColor: '#FFFFFF',
+          border: '1px solid #EAE1DD',
           borderRadius: '16px',
-          padding: '1.5rem',
-          marginBottom: '2.75rem',
+          padding: '1.75rem',
+          marginBottom: '3rem',
           boxShadow: 'var(--shadow-sm)'
         }}>
           
-          {/* Row 1: Search & Total Result Counter */}
-          <div style={{ 
-            display: 'flex', 
-            justifyContent: 'space-between', 
-            alignItems: 'center', 
-            flexWrap: 'wrap', 
-            gap: '1rem',
-            marginBottom: '1.25rem',
-            paddingBottom: '1.25rem',
-            borderBottom: '1px solid #E6E4DC'
-          }}>
-            <div style={{ position: 'relative', flex: 1, maxWidth: '420px', minWidth: '260px' }}>
-              <Search size={16} color="#6E798A" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
+          {/* Row 1: Search & Total Stats */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.5rem', borderBottom: '1px solid #F0E8E5', paddingBottom: '1.25rem' }}>
+            <div style={{ position: 'relative', flex: '1 1 300px', maxWidth: '450px' }}>
+              <Search size={18} color="#8C7D82" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
               <input 
-                type="text"
-                placeholder="Search category, fabric (e.g. combed cotton, fleece)..."
+                type="text" 
+                placeholder="Search products by silhouette, fabric, or finish..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={e => setSearchQuery(e.target.value)}
                 style={{
                   width: '100%',
                   padding: '0.65rem 1rem 0.65rem 2.4rem',
                   borderRadius: '10px',
-                  border: '1px solid #DCDAD1',
-                  fontSize: '0.88rem',
+                  border: '1px solid #EAE1DD',
+                  fontSize: '0.9rem',
                   outline: 'none',
-                  backgroundColor: '#FFFFFF',
-                  color: '#0A1128'
+                  backgroundColor: '#FAF7F5',
+                  color: '#1A0A10'
                 }}
               />
             </div>
 
-            <div style={{ fontSize: '0.85rem', color: '#4B5565', fontWeight: '600' }}>
-              Displaying <strong style={{ color: '#1546D9' }}>{filteredCategories.length}</strong> of {PRODUCTS_CATEGORIES.length} Categories (27 Representative Photos)
+            <div style={{ fontSize: '0.85rem', color: '#5E5055', fontWeight: '600' }}>
+              Displaying <strong style={{ color: '#800020' }}>{filteredCategories.length}</strong> of {PRODUCTS_CATEGORIES.length} Categories (27 Representative Photos)
             </div>
           </div>
 
           {/* Row 2: Category Filters */}
           <div style={{ marginBottom: '1rem' }}>
-            <div style={{ fontSize: '0.74rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A', letterSpacing: '0.04em', marginBottom: '0.5rem' }}>
+            <div style={{ fontSize: '0.74rem', fontWeight: '700', textTransform: 'uppercase', color: '#8C7D82', letterSpacing: '0.04em', marginBottom: '0.5rem' }}>
               Filter by Apparel Category
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem' }}>
@@ -189,9 +180,9 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                   fontSize: '0.82rem',
                   fontWeight: '600',
                   border: '1px solid',
-                  borderColor: selectedCategoryFilter === 'all' ? '#1546D9' : '#DCDAD1',
-                  backgroundColor: selectedCategoryFilter === 'all' ? '#1546D9' : '#FFFFFF',
-                  color: selectedCategoryFilter === 'all' ? '#FFFFFF' : '#0A1128',
+                  borderColor: selectedCategoryFilter === 'all' ? '#800020' : '#EAE1DD',
+                  backgroundColor: selectedCategoryFilter === 'all' ? '#800020' : '#FFFFFF',
+                  color: selectedCategoryFilter === 'all' ? '#FFFFFF' : '#1A0A10',
                   cursor: 'pointer',
                   transition: 'all 0.15s ease'
                 }}
@@ -208,9 +199,9 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                     fontSize: '0.82rem',
                     fontWeight: '600',
                     border: '1px solid',
-                    borderColor: selectedCategoryFilter === cat.id ? '#1546D9' : '#DCDAD1',
-                    backgroundColor: selectedCategoryFilter === cat.id ? '#1546D9' : '#FFFFFF',
-                    color: selectedCategoryFilter === cat.id ? '#FFFFFF' : '#0A1128',
+                    borderColor: selectedCategoryFilter === cat.id ? '#800020' : '#EAE1DD',
+                    backgroundColor: selectedCategoryFilter === cat.id ? '#800020' : '#FFFFFF',
+                    color: selectedCategoryFilter === cat.id ? '#FFFFFF' : '#1A0A10',
                     cursor: 'pointer',
                     transition: 'all 0.15s ease'
                   }}
@@ -223,7 +214,7 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
 
           {/* Row 3: Fabric Type Filters */}
           <div>
-            <div style={{ fontSize: '0.74rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A', letterSpacing: '0.04em', marginBottom: '0.5rem' }}>
+            <div style={{ fontSize: '0.74rem', fontWeight: '700', textTransform: 'uppercase', color: '#8C7D82', letterSpacing: '0.04em', marginBottom: '0.5rem' }}>
               Filter by Base Material Group
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem' }}>
@@ -237,9 +228,9 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                     fontSize: '0.78rem',
                     fontWeight: '600',
                     border: '1px solid',
-                    borderColor: selectedFabricFilter === f.id ? '#0A1128' : '#DCDAD1',
-                    backgroundColor: selectedFabricFilter === f.id ? '#0A1128' : '#FFFFFF',
-                    color: selectedFabricFilter === f.id ? '#FFFFFF' : '#4B5565',
+                    borderColor: selectedFabricFilter === f.id ? '#1A0A10' : '#EAE1DD',
+                    backgroundColor: selectedFabricFilter === f.id ? '#1A0A10' : '#FFFFFF',
+                    color: selectedFabricFilter === f.id ? '#FFFFFF' : '#5E5055',
                     cursor: 'pointer',
                     transition: 'all 0.15s ease'
                   }}
@@ -252,45 +243,43 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
 
         </div>
 
-        {/* 9 Categories Digital Cards Grid */}
+        {/* Categories Digital Cards Grid */}
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fill, minmax(370px, 1fr))', 
+          gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', 
           gap: '2.5rem' 
         }}>
           {filteredCategories.map((category) => (
             <div 
-              key={category.id}
+              key={category.id} 
               className="card-vercel"
               style={{
-                borderRadius: '18px',
-                overflow: 'hidden',
                 display: 'flex',
                 flexDirection: 'column',
-                backgroundColor: '#FAF9F5',
-                border: '1px solid #DCDAD1',
-                boxShadow: 'var(--shadow-sm)'
+                overflow: 'hidden',
+                borderRadius: '18px',
+                backgroundColor: '#FFFFFF',
+                borderColor: '#EAE1DD'
               }}
             >
-              {/* Image Banner Showcase */}
-              <div style={{ position: 'relative', height: '280px', backgroundColor: '#0A1128' }}>
+              {/* Primary Image Cover with Overlays */}
+              <div style={{ position: 'relative', height: '280px', backgroundColor: '#1A0A10' }}>
                 <img 
                   src={category.images[0].url} 
                   alt={category.name}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
                 
-                {/* 3 Photos Indicator Pill */}
                 <div style={{
                   position: 'absolute',
                   top: '0.85rem',
                   right: '0.85rem',
-                  backgroundColor: 'rgba(10, 17, 40, 0.88)',
-                  backdropFilter: 'blur(8px)',
-                  color: '#ffffff',
+                  backgroundColor: 'rgba(26, 10, 16, 0.85)',
+                  backdropFilter: 'blur(6px)',
+                  color: '#FAF7F5',
                   fontSize: '0.72rem',
                   fontWeight: '700',
-                  padding: '0.3rem 0.7rem',
+                  padding: '0.25rem 0.6rem',
                   borderRadius: '6px',
                   border: '1px solid rgba(255, 255, 255, 0.15)'
                 }}>
@@ -301,7 +290,7 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                   position: 'absolute',
                   top: '0.85rem',
                   left: '0.85rem',
-                  backgroundColor: '#1546D9',
+                  backgroundColor: '#800020',
                   color: '#ffffff',
                   fontSize: '0.72rem',
                   fontWeight: '700',
@@ -319,7 +308,7 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                     bottom: '0.85rem',
                     right: '0.85rem',
                     backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                    color: '#0A1128',
+                    color: '#1A0A10',
                     border: 'none',
                     borderRadius: '8px',
                     padding: '0.45rem 0.85rem',
@@ -329,10 +318,10 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.4rem',
-                    boxShadow: '0 4px 12px rgba(10, 17, 40, 0.18)'
+                    boxShadow: '0 4px 12px rgba(26, 10, 16, 0.18)'
                   }}
                 >
-                  <Eye size={14} color="#1546D9" /> View All 3 Angles
+                  <Eye size={14} color="#800020" /> View All 3 Angles
                 </button>
               </div>
 
@@ -341,8 +330,8 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                 display: 'grid', 
                 gridTemplateColumns: 'repeat(3, 1fr)', 
                 gap: '2px', 
-                backgroundColor: '#DCDAD1',
-                borderBottom: '1px solid #DCDAD1'
+                backgroundColor: '#EAE1DD',
+                borderBottom: '1px solid #EAE1DD'
               }}>
                 {category.images.map((img, i) => (
                   <div 
@@ -362,7 +351,7 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                       left: '4px',
                       fontSize: '0.65rem',
                       color: '#ffffff',
-                      backgroundColor: 'rgba(10, 17, 40, 0.75)',
+                      backgroundColor: 'rgba(26, 10, 16, 0.75)',
                       padding: '1px 4px',
                       borderRadius: '3px'
                     }}>
@@ -375,66 +364,63 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
               {/* Card Body */}
               <div style={{ padding: '1.75rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.35rem' }}>
-                  <h2 style={{ fontSize: '1.35rem', fontWeight: '800', color: '#0A1128', letterSpacing: '-0.01em' }}>
+                  <h2 style={{ fontSize: '1.35rem', fontWeight: '800', color: '#1A0A10', letterSpacing: '-0.01em' }}>
                     {category.name}
                   </h2>
-                  <span style={{ fontSize: '0.82rem', fontWeight: '700', color: '#1546D9' }}>
+                  <span style={{ fontSize: '0.82rem', fontWeight: '700', color: '#800020' }}>
                     {category.gsmRange}
                   </span>
                 </div>
 
-                <div style={{ fontSize: '0.84rem', fontWeight: '600', color: '#6E798A', marginBottom: '0.75rem' }}>
+                <div style={{ fontSize: '0.84rem', fontWeight: '600', color: '#8C7D82', marginBottom: '0.75rem' }}>
                   {category.subtitle}
                 </div>
 
-                <p style={{ fontSize: '0.88rem', color: '#4B5565', lineHeight: '1.6', marginBottom: '1.25rem' }}>
+                <p style={{ fontSize: '0.88rem', color: '#5E5055', lineHeight: '1.6', marginBottom: '1.25rem' }}>
                   {category.description}
                 </p>
 
-                {/* Technical Specifications Breakdown */}
+                {/* Key Technical Parameter Pills */}
                 <div style={{ 
-                  backgroundColor: '#FFFFFF', 
-                  borderRadius: '12px', 
-                  padding: '1.1rem', 
-                  border: '1px solid #E6E4DC',
+                  backgroundColor: '#FAF7F5', 
+                  borderRadius: '10px', 
+                  padding: '0.9rem', 
                   marginBottom: '1.5rem',
-                  fontSize: '0.82rem'
+                  border: '1px solid #F0E8E5',
+                  fontSize: '0.78rem'
                 }}>
-                  <div style={{ marginBottom: '0.5rem' }}>
-                    <strong style={{ color: '#0A1128' }}>Fabrics: </strong>
-                    <span style={{ color: '#4B5565' }}>{category.fabricOptions.slice(0, 3).join(', ')}...</span>
+                  <div style={{ marginBottom: '0.35rem' }}>
+                    <strong style={{ color: '#1A0A10' }}>Fabrics: </strong>
+                    <span style={{ color: '#5E5055' }}>{category.fabricOptions.join(' • ')}</span>
                   </div>
-                  <div style={{ marginBottom: '0.5rem' }}>
-                    <strong style={{ color: '#0A1128' }}>Fits: </strong>
-                    <span style={{ color: '#4B5565' }}>{category.fitOptions.join(', ')}</span>
+                  <div style={{ marginBottom: '0.35rem' }}>
+                    <strong style={{ color: '#1A0A10' }}>Fits: </strong>
+                    <span style={{ color: '#5E5055' }}>{category.fitOptions.join(' • ')}</span>
                   </div>
                   <div>
-                    <strong style={{ color: '#0A1128' }}>Branding: </strong>
-                    <span style={{ color: '#1546D9', fontWeight: '600' }}>Custom Embroidery, Prints, Labels, Packaging</span>
+                    <strong style={{ color: '#1A0A10' }}>Branding: </strong>
+                    <span style={{ color: '#800020', fontWeight: '600' }}>Custom Embroidery, Prints, Labels, Packaging</span>
                   </div>
                 </div>
 
-                {/* Representative Label Note */}
-                <div style={{ fontSize: '0.72rem', color: '#6E798A', marginBottom: '1.25rem', fontStyle: 'italic' }}>
-                  * Representative photo. Final garments are cut & sewn to your approved tech pack.
-                </div>
-
-                {/* Actions */}
+                {/* Bottom Card Actions */}
                 <div style={{ marginTop: 'auto', display: 'flex', gap: '0.75rem' }}>
                   <button
                     onClick={() => handleOpenDetailModal(category, 0)}
                     className="btn-secondary"
-                    style={{ flex: 1, padding: '0.7rem', fontSize: '0.85rem' }}
+                    style={{ flex: 1, padding: '0.7rem', fontSize: '0.85rem', borderColor: '#EAE1DD' }}
                   >
-                    <span>Full Specs</span>
+                    <span>View Specifications</span>
+                    <ArrowRight size={14} />
                   </button>
+
                   <button
                     onClick={() => openQuoteModal(category.name)}
                     className="btn-cobalt"
-                    style={{ flex: 1, padding: '0.7rem', fontSize: '0.85rem' }}
+                    style={{ flex: 1, padding: '0.7rem', fontSize: '0.85rem', backgroundColor: '#800020', border: '1px solid #A0183A' }}
                   >
-                    <FileText size={15} />
-                    <span>Request Quote</span>
+                    <FileText size={14} />
+                    <span>Inquire / Quote</span>
                   </button>
                 </div>
 
@@ -445,28 +431,28 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
 
       </div>
 
-      {/* Product Deep-Dive Lightbox Modal */}
+      {/* Full Digital Spec & Lightbox Modal */}
       {modalProduct && (
         <div style={{
           position: 'fixed',
           inset: 0,
-          backgroundColor: 'rgba(10, 17, 40, 0.85)',
-          backdropFilter: 'blur(12px)',
+          backgroundColor: 'rgba(26, 10, 16, 0.85)',
+          backdropFilter: 'blur(8px)',
+          zIndex: 1000,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          zIndex: 100,
           padding: '1.5rem'
         }} className="fade-in">
           <div style={{
-            backgroundColor: '#FAF9F5',
+            backgroundColor: '#FFFFFF',
             borderRadius: '24px',
-            maxWidth: '960px',
+            maxWidth: '920px',
             width: '100%',
-            maxHeight: '92vh',
+            maxHeight: '90vh',
             overflowY: 'auto',
-            border: '1px solid #DCDAD1',
-            boxShadow: '0 25px 60px rgba(10, 17, 40, 0.35)',
+            boxShadow: '0 25px 60px rgba(0,0,0,0.5)',
+            border: '1px solid #EAE1DD',
             position: 'relative'
           }}>
             {/* Modal Header */}
@@ -475,14 +461,14 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
               justifyContent: 'space-between',
               alignItems: 'center',
               padding: '1.35rem 2rem',
-              borderBottom: '1px solid #1E294B',
-              backgroundColor: '#0A1128',
+              borderBottom: '1px solid #441F2F',
+              backgroundColor: '#1A0A10',
               color: '#ffffff',
               borderTopLeftRadius: '24px',
               borderTopRightRadius: '24px'
             }}>
               <div>
-                <span className="badge-pill badge-cobalt" style={{ marginBottom: '0.35rem', backgroundColor: '#1546D9', color: '#ffffff' }}>
+                <span className="badge-pill badge-cobalt" style={{ marginBottom: '0.35rem', backgroundColor: '#800020', color: '#ffffff', border: '1px solid #A0183A' }}>
                   Representative Capability Profile
                 </span>
                 <h3 style={{ fontSize: '1.45rem', fontWeight: '800', letterSpacing: '-0.02em', margin: 0 }}>
@@ -518,9 +504,9 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                     borderRadius: '16px', 
                     overflow: 'hidden', 
                     height: '350px', 
-                    backgroundColor: '#0A1128',
+                    backgroundColor: '#1A0A10',
                     marginBottom: '1rem',
-                    border: '1px solid #DCDAD1',
+                    border: '1px solid #EAE1DD',
                     position: 'relative'
                   }}>
                     <img 
@@ -534,20 +520,21 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                       onClick={handlePrevModalImage}
                       style={{
                         position: 'absolute',
-                        left: '10px',
+                        left: '12px',
                         top: '50%',
                         transform: 'translateY(-50%)',
-                        backgroundColor: 'rgba(10, 17, 40, 0.75)',
+                        backgroundColor: 'rgba(26, 10, 16, 0.75)',
                         border: 'none',
-                        color: '#ffffff',
+                        borderRadius: '50%',
                         width: '36px',
                         height: '36px',
-                        borderRadius: '50%',
-                        cursor: 'pointer',
+                        color: '#ffffff',
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'center'
+                        justifyContent: 'center',
+                        cursor: 'pointer'
                       }}
+                      title="Previous angle"
                     >
                       <ChevronLeft size={20} />
                     </button>
@@ -556,27 +543,38 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                       onClick={handleNextModalImage}
                       style={{
                         position: 'absolute',
-                        right: '10px',
+                        right: '12px',
                         top: '50%',
                         transform: 'translateY(-50%)',
-                        backgroundColor: 'rgba(10, 17, 40, 0.75)',
+                        backgroundColor: 'rgba(26, 10, 16, 0.75)',
                         border: 'none',
-                        color: '#ffffff',
+                        borderRadius: '50%',
                         width: '36px',
                         height: '36px',
-                        borderRadius: '50%',
-                        cursor: 'pointer',
+                        color: '#ffffff',
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'center'
+                        justifyContent: 'center',
+                        cursor: 'pointer'
                       }}
+                      title="Next angle"
                     >
                       <ChevronRight size={20} />
                     </button>
-                  </div>
 
-                  <div style={{ fontSize: '0.82rem', color: '#4B5565', marginBottom: '1.25rem', fontStyle: 'italic', lineHeight: '1.5' }}>
-                    <strong>Photo {modalImageIdx + 1} of 3:</strong> {modalProduct.images[modalImageIdx].caption}
+                    <div style={{
+                      position: 'absolute',
+                      bottom: '10px',
+                      left: '12px',
+                      backgroundColor: 'rgba(26, 10, 16, 0.85)',
+                      color: '#FAF7F5',
+                      padding: '4px 10px',
+                      borderRadius: '6px',
+                      fontSize: '0.75rem',
+                      fontWeight: '600'
+                    }}>
+                      {modalProduct.images[modalImageIdx].caption} (Photo {modalImageIdx + 1} of 3)
+                    </div>
                   </div>
 
                   {/* 3 Thumbnails Selector */}
@@ -590,14 +588,14 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                           height: '75px',
                           borderRadius: '8px',
                           overflow: 'hidden',
-                          border: modalImageIdx === idx ? '2px solid #1546D9' : '1px solid #DCDAD1',
+                          border: modalImageIdx === idx ? '2px solid #800020' : '1px solid #EAE1DD',
                           cursor: 'pointer',
                           padding: 0
                         }}
                       >
                         <img 
                           src={img.url} 
-                          alt="thumbnail"
+                          alt="thumbnail" 
                           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
                       </button>
@@ -608,34 +606,34 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                 {/* Specs Detail Column */}
                 <div>
                   <div style={{ marginBottom: '1.25rem' }}>
-                    <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A', letterSpacing: '0.04em' }}>
+                    <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#8C7D82', letterSpacing: '0.04em' }}>
                       Weight / GSM Range
                     </div>
-                    <div style={{ fontSize: '1.2rem', fontWeight: '800', color: '#1546D9' }}>
+                    <div style={{ fontSize: '1.2rem', fontWeight: '800', color: '#800020' }}>
                       {modalProduct.gsmRange}
                     </div>
                   </div>
 
                   <div style={{ marginBottom: '1.25rem' }}>
-                    <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A', letterSpacing: '0.04em', marginBottom: '0.4rem' }}>
+                    <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#8C7D82', letterSpacing: '0.04em', marginBottom: '0.4rem' }}>
                       Available Fabrics & Blends
                     </div>
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
                       {modalProduct.fabricOptions.map((f, i) => (
-                        <li key={i} style={{ fontSize: '0.85rem', color: '#0A1128', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                          <CheckCircle2 size={15} color="#1546D9" /> {f}
+                        <li key={i} style={{ fontSize: '0.85rem', color: '#1A0A10', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                          <CheckCircle2 size={15} color="#800020" /> {f}
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div style={{ marginBottom: '1.25rem' }}>
-                    <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A', letterSpacing: '0.04em', marginBottom: '0.4rem' }}>
+                    <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#8C7D82', letterSpacing: '0.04em', marginBottom: '0.4rem' }}>
                       Fit & Grading Profiles
                     </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem' }}>
                       {modalProduct.fitOptions.map((fit, i) => (
-                        <span key={i} className="badge-pill badge-slate" style={{ backgroundColor: '#EDECE6', border: '1px solid #DCDAD1', color: '#0A1128' }}>
+                        <span key={i} className="badge-pill badge-slate" style={{ backgroundColor: '#FAF7F5', border: '1px solid #EAE1DD', color: '#1A0A10' }}>
                           {fit}
                         </span>
                       ))}
@@ -643,13 +641,13 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                   </div>
 
                   <div style={{ marginBottom: '1.5rem' }}>
-                    <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A', letterSpacing: '0.04em', marginBottom: '0.4rem' }}>
+                    <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#8C7D82', letterSpacing: '0.04em', marginBottom: '0.4rem' }}>
                       Custom Branding & Finishing
                     </div>
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
                       {modalProduct.customizations.map((c, i) => (
-                        <li key={i} style={{ fontSize: '0.82rem', color: '#4B5565', display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-                          <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#1546D9' }}></span> {c}
+                        <li key={i} style={{ fontSize: '0.82rem', color: '#5E5055', display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
+                          <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#800020' }}></span> {c}
                         </li>
                       ))}
                     </ul>
@@ -662,7 +660,7 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                       openQuoteModal(categoryName);
                     }}
                     className="btn-cobalt"
-                    style={{ width: '100%', padding: '0.9rem', fontSize: '0.96rem' }}
+                    style={{ width: '100%', padding: '0.9rem', fontSize: '0.96rem', backgroundColor: '#800020', border: '1px solid #A0183A' }}
                   >
                     <FileText size={16} /> Request Quotation for {modalProduct.name}
                   </button>

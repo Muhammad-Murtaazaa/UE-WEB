@@ -25,7 +25,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
       id: 'milling',
       title: 'Fabric Knitting & Circular Milling',
       hub: 'Faisalabad Textile Hub, Pakistan',
-      tag: '01 Yarn & Knit Engineering',
+      tag: '01 Fabric & Knit Engineering',
       desc: 'Combed cotton, custom GSM single jersey, pique, and heavy fleece engineered to buyer composition.',
       imageUrl: 'https://images.unsplash.com/photo-1574634534894-89d7576c8259?q=80&w=2000&auto=format&fit=crop'
     },
@@ -109,9 +109,9 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
     <section style={{ 
       position: 'relative', 
       minHeight: '90vh',
-      backgroundColor: '#0A1128',
+      backgroundColor: '#1A0A10',
       color: '#FFFFFF',
-      borderBottom: '1px solid #1E294B',
+      borderBottom: '1px solid #441F2F',
       overflow: 'hidden',
       display: 'flex',
       flexDirection: 'column',
@@ -153,7 +153,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
         <div style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(180deg, rgba(10, 17, 40, 0.40) 0%, rgba(10, 17, 40, 0.20) 45%, rgba(10, 17, 40, 0.60) 100%)',
+          background: 'linear-gradient(180deg, rgba(26, 10, 16, 0.45) 0%, rgba(26, 10, 16, 0.25) 45%, rgba(26, 10, 16, 0.65) 100%)',
           pointerEvents: 'none'
         }} />
 
@@ -161,7 +161,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
         <div style={{
           position: 'absolute',
           inset: 0,
-          background: 'radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.05) 0%, rgba(10, 17, 40, 0.45) 100%)',
+          background: 'radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.05) 0%, rgba(26, 10, 16, 0.50) 100%)',
           pointerEvents: 'none'
         }} />
       </div>
@@ -179,13 +179,13 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
         
         {/* Frosted Glass Focal Container for maximum text legibility & image exposure around it */}
         <div style={{
-          backgroundColor: 'rgba(10, 17, 40, 0.72)',
+          backgroundColor: 'rgba(26, 10, 16, 0.76)',
           backdropFilter: 'blur(16px)',
           WebkitBackdropFilter: 'blur(16px)',
           border: '1px solid rgba(255, 255, 255, 0.20)',
           borderRadius: '26px',
           padding: 'clamp(2rem, 4vw, 3.25rem) clamp(1.25rem, 3.5vw, 2.75rem)',
-          boxShadow: '0 24px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(21, 70, 217, 0.22)',
+          boxShadow: '0 24px 60px rgba(0, 0, 0, 0.55), 0 0 40px rgba(128, 0, 32, 0.3)',
           margin: '0 auto'
         }}>
           {/* Live Top Announcement Pill */}
@@ -195,8 +195,8 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
             gap: '0.65rem', 
             marginBottom: '1.5rem', 
             flexWrap: 'wrap',
-            backgroundColor: 'rgba(21, 70, 217, 0.22)',
-            border: '1px solid rgba(164, 188, 253, 0.35)',
+            backgroundColor: 'rgba(128, 0, 32, 0.35)',
+            border: '1px solid rgba(240, 203, 211, 0.4)',
             padding: '0.4rem 1.15rem',
             borderRadius: '9999px',
             boxShadow: '0 4px 16px rgba(0,0,0,0.2)'
@@ -205,7 +205,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.4rem',
-              color: '#A4BCFD',
+              color: '#F0CBD3',
               fontWeight: '700',
               fontSize: '0.78rem'
             }}>
@@ -213,18 +213,18 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
                 width: '8px', 
                 height: '8px', 
                 borderRadius: '50%', 
-                backgroundColor: '#1546D9', 
+                backgroundColor: '#A0183A', 
                 display: 'inline-block',
-                boxShadow: '0 0 10px #1546D9'
+                boxShadow: '0 0 10px #A0183A'
               }} />
               Uzair Sharif Enterprises (SMC-Pvt) Ltd
             </span>
             <span style={{ color: 'rgba(255, 255, 255, 0.3)' }}>•</span>
-            <span style={{ fontSize: '0.78rem', color: '#EDECE6' }}>
+            <span style={{ fontSize: '0.78rem', color: '#FAF7F5' }}>
               Pakistan Garment Export Coordination
             </span>
             <span style={{ color: 'rgba(255, 255, 255, 0.3)' }}>•</span>
-            <span style={{ fontSize: '0.78rem', color: '#1546D9', fontWeight: '700', backgroundColor: '#FFFFFF', padding: '0.15rem 0.55rem', borderRadius: '4px' }}>
+            <span style={{ fontSize: '0.78rem', color: '#800020', fontWeight: '700', backgroundColor: '#FFFFFF', padding: '0.15rem 0.55rem', borderRadius: '4px' }}>
               100% Custom Specs
             </span>
           </div>
@@ -242,7 +242,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
             Pakistan-Based Custom Garment <br className="hidden-mobile" />
             <span style={{ 
               color: '#FFFFFF',
-              background: 'linear-gradient(90deg, #FFFFFF 0%, #A4BCFD 50%, #60A5FA 100%)',
+              background: 'linear-gradient(90deg, #FFFFFF 0%, #F5D3DB 50%, #E8A8B8 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               display: 'inline-block'
@@ -254,7 +254,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
           {/* Subtitle */}
           <p style={{ 
             fontSize: 'clamp(1rem, 1.6vw, 1.18rem)', 
-            color: '#EDECE6', 
+            color: '#FAF7F5', 
             lineHeight: '1.65', 
             maxWidth: '780px',
             margin: '0 auto 2rem auto',
@@ -273,7 +273,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
             gap: '1rem',
             marginBottom: '2rem'
           }}>
-            {/* Primary Button: Cobalt Blue with Glow */}
+            {/* Primary Button: Maroon with Glow */}
             <button 
               onClick={() => openQuoteModal()}
               className="btn-cobalt"
@@ -282,10 +282,10 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
                 fontSize: '1.02rem',
                 fontWeight: '700',
                 borderRadius: '12px',
-                backgroundColor: '#1546D9',
-                border: '1px solid #3867F7',
+                backgroundColor: '#800020',
+                border: '1px solid #A0183A',
                 color: '#FFFFFF',
-                boxShadow: '0 6px 26px rgba(21, 70, 217, 0.65)',
+                boxShadow: '0 6px 26px rgba(128, 0, 32, 0.65)',
                 cursor: 'pointer',
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -297,7 +297,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
               <span>Request a Quote</span>
             </button>
             
-            {/* Secondary Button: Warm Beige Glass */}
+            {/* Secondary Button: Light Ivory with Maroon Accent */}
             <button 
               onClick={navigateToProducts}
               className="btn-secondary"
@@ -306,9 +306,9 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
                 fontSize: '1.02rem',
                 fontWeight: '700',
                 borderRadius: '12px',
-                backgroundColor: '#EDECE6', 
-                borderColor: '#EDECE6',
-                color: '#0A1128',
+                backgroundColor: '#FAF7F5', 
+                borderColor: '#FAF7F5',
+                color: '#1A0A10',
                 cursor: 'pointer',
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -317,8 +317,8 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
                 transition: 'all 0.2s ease'
               }}
             >
-              <span>Explore 9 Categories</span>
-              <ArrowRight size={18} color="#1546D9" />
+              <span>Explore All Categories</span>
+              <ArrowRight size={18} color="#800020" />
             </button>
 
             {/* Tertiary Button: Direct WhatsApp Desk */}
@@ -343,8 +343,8 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
                 transition: 'all 0.2s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#1546D9';
-                e.currentTarget.style.borderColor = '#1546D9';
+                e.currentTarget.style.backgroundColor = '#800020';
+                e.currentTarget.style.borderColor = '#800020';
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
@@ -353,7 +353,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
-              <PhoneCall size={18} color="#A4BCFD" />
+              <PhoneCall size={18} color="#F0CBD3" />
               <span>WhatsApp Direct Desk</span>
             </a>
           </div>
@@ -366,25 +366,25 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
             flexWrap: 'wrap',
             gap: '1.25rem',
             padding: '0.75rem 1.5rem',
-            backgroundColor: 'rgba(10, 17, 40, 0.65)',
+            backgroundColor: 'rgba(26, 10, 16, 0.75)',
             backdropFilter: 'blur(12px)',
             borderRadius: '12px',
-            border: '1px solid rgba(255, 255, 255, 0.12)'
+            border: '1px solid rgba(255, 255, 255, 0.14)'
           }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.82rem', color: '#EDECE6', fontWeight: '600' }}>
-              <CheckCircle2 size={15} color="#A4BCFD" />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.82rem', color: '#FAF7F5', fontWeight: '600' }}>
+              <CheckCircle2 size={15} color="#F0CBD3" />
               <span>Zero Ready-Stock Claim</span>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.82rem', color: '#EDECE6', fontWeight: '600' }}>
-              <Clock size={15} color="#A4BCFD" />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.82rem', color: '#FAF7F5', fontWeight: '600' }}>
+              <Clock size={15} color="#F0CBD3" />
               <span>7–10 Days Sampling Turnaround</span>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.82rem', color: '#EDECE6', fontWeight: '600' }}>
-              <ShieldCheck size={15} color="#A4BCFD" />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.82rem', color: '#FAF7F5', fontWeight: '600' }}>
+              <ShieldCheck size={15} color="#F0CBD3" />
               <span>AQL 2.5 Standard Inspection</span>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.82rem', color: '#EDECE6', fontWeight: '600' }}>
-              <Anchor size={15} color="#A4BCFD" />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.82rem', color: '#FAF7F5', fontWeight: '600' }}>
+              <Anchor size={15} color="#F0CBD3" />
               <span>FOB Karachi / Qasim Logistics</span>
             </div>
           </div>
@@ -396,7 +396,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
       <div style={{ 
         position: 'relative', 
         zIndex: 2, 
-        backgroundColor: 'rgba(10, 17, 40, 0.92)',
+        backgroundColor: 'rgba(26, 10, 16, 0.94)',
         borderTop: '1px solid rgba(255, 255, 255, 0.14)',
         backdropFilter: 'blur(20px)',
         padding: '0.9rem 1.5rem'
@@ -413,8 +413,8 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
           <div style={{
             height: '100%',
             width: `${progress}%`,
-            backgroundColor: '#1546D9',
-            boxShadow: '0 0 10px #1546D9',
+            backgroundColor: '#800020',
+            boxShadow: '0 0 10px #800020',
             transition: 'width 0.05s linear'
           }} />
         </div>
@@ -433,11 +433,11 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
               width: '38px',
               height: '38px',
               borderRadius: '8px',
-              backgroundColor: '#1546D9',
+              backgroundColor: '#800020',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: '0 0 10px rgba(21, 70, 217, 0.4)'
+              boxShadow: '0 0 10px rgba(128, 0, 32, 0.5)'
             }}>
               <Building size={18} color="#FFFFFF" />
             </div>
@@ -445,7 +445,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
               <div style={{ 
                 fontSize: '0.74rem', 
                 fontWeight: '700', 
-                color: '#A4BCFD', 
+                color: '#F0CBD3', 
                 letterSpacing: '0.05em',
                 textTransform: 'uppercase'
               }}>
@@ -475,12 +475,12 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
                       width: isCur ? '28px' : '8px',
                       height: '8px',
                       borderRadius: '4px',
-                      backgroundColor: isCur ? '#1546D9' : 'rgba(255, 255, 255, 0.3)',
+                      backgroundColor: isCur ? '#800020' : 'rgba(255, 255, 255, 0.3)',
                       border: 'none',
                       padding: 0,
                       cursor: 'pointer',
                       transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-                      boxShadow: isCur ? '0 0 8px #1546D9' : 'none'
+                      boxShadow: isCur ? '0 0 8px #800020' : 'none'
                     }}
                     title={slide.title}
                     aria-label={`Go to slide ${idx + 1}`}
@@ -496,7 +496,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
                 background: 'transparent',
                 border: '1px solid rgba(255, 255, 255, 0.2)',
                 borderRadius: '8px',
-                color: '#EDECE6',
+                color: '#FAF7F5',
                 padding: '0.4rem',
                 display: 'flex',
                 alignItems: 'center',
@@ -527,7 +527,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
                   cursor: 'pointer',
                   transition: 'all 0.15s ease'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#1546D9'}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#800020'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'}
                 aria-label="Previous scene"
               >
@@ -548,7 +548,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
                   cursor: 'pointer',
                   transition: 'all 0.15s ease'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#1546D9'}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#800020'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'}
                 aria-label="Next scene"
               >

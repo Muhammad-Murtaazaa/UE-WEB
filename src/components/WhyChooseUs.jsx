@@ -1,49 +1,67 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { 
-  Network, 
+  Building2, 
   Settings2, 
   Tag, 
-  FlaskConical, 
+  Workflow, 
   CheckCircle2, 
-  Ship,
-  ShieldCheck,
-  Building2,
-  FileCheck2,
-  ArrowRight
+  Ship, 
+  ArrowRight,
+  ShieldAlert,
+  Network
 } from 'lucide-react';
-import { useScrollReveal } from '../utils/useScrollReveal';
 
 export default function WhyChooseUs({ openQuoteModal }) {
-  const [sectionRef, isVisible] = useScrollReveal({ threshold: 0.1 });
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
 
   const points = [
     {
       num: '01',
-      title: 'Pakistan-Based Supply Network',
+      title: 'Partner-Based Model',
       desc: 'Selected manufacturing partners across Pakistan.',
-      detail: 'We collaborate with vetted, specialized knit and woven production units located across key Pakistani textile hubs, matching your specific order quantity, machinery requirement, and fabric type.',
+      detail: 'Direct access to audited specialized industrial units across Faisalabad, Lahore, and Karachi. No single factory bottleneck; your order is placed in the optimal facility.',
       icon: Network
     },
     {
       num: '02',
       title: 'Custom Production',
       desc: 'Products developed according to buyer specifications.',
-      detail: 'Zero ready-made stock. From raw yarn selection and custom knitting/weaving to precise GSM tolerances, dyeing, silhouette cuts, and custom pantone shades.',
+      detail: 'Zero ready-made stock. From raw fabric selection and custom knitting/weaving to precise GSM tolerances, dyeing, silhouette cuts, and custom pantone shades.',
       icon: Settings2
     },
     {
       num: '03',
       title: 'Private Label Execution',
-      desc: 'Custom labels, tags and packaging according to requirements.',
-      detail: 'Complete brand execution: woven main labels, satin care labels, custom embossed hang tags, barcode stickers, printed polybags, and custom master export carton markings.',
+      desc: 'Labels, tags, printing and custom packaging.',
+      detail: 'Complete retail-ready branding including custom damask woven neck tags, care labels, hangtags with barcodes, branded polybags, and custom master shipping cartons.',
       icon: Tag
     },
     {
       num: '04',
-      title: 'Pre-Production Sampling',
-      desc: 'Buyer-specific samples developed before bulk production.',
-      detail: 'Physical prototypes and fit samples are developed and dispatched for your touch, measurement verification, and formal sign-off before commencing bulk line production.',
-      icon: FlaskConical
+      title: 'Sampling Support',
+      desc: 'Pre-production samples for buyer approval.',
+      detail: 'Fast turnaround physical prototypes dispatched to your door for fit, hand-feel, shrinkage, and seam strength testing before bulk fabric cutting begins.',
+      icon: Workflow
     },
     {
       num: '05',
@@ -65,28 +83,28 @@ export default function WhyChooseUs({ openQuoteModal }) {
     <section 
       ref={sectionRef}
       style={{ 
-        backgroundColor: '#FAF9F5', 
+        backgroundColor: '#FAF7F5', 
         paddingTop: '5.5rem', 
         paddingBottom: '5.5rem',
-        borderBottom: '1px solid #DCDAD1'
+        borderBottom: '1px solid #EAE1DD'
       }}
     >
       <div className="container-custom">
         <div style={{ maxWidth: '820px', margin: '0 auto', textAlign: 'center', marginBottom: '3.5rem' }} className={`reveal-init ${isVisible ? 'reveal-active' : ''}`}>
-          <span className="badge-pill badge-cobalt" style={{ marginBottom: '1rem' }}>
+          <span className="badge-pill badge-cobalt" style={{ marginBottom: '1rem', backgroundColor: '#FDF2F4', color: '#800020', border: '1px solid #F0CBD3' }}>
             Built for International B2B Buyers
           </span>
           <h2 style={{ 
             fontSize: 'clamp(2rem, 3.4vw, 2.7rem)', 
             fontWeight: '800', 
-            color: '#0A1128',
+            color: '#1A0A10',
             letterSpacing: '-0.025em',
             lineHeight: '1.2',
             marginBottom: '1rem'
           }}>
             Why Choose Uzair Sharif Enterprises?
           </h2>
-          <p style={{ fontSize: '1.05rem', color: '#4B5565', lineHeight: '1.7' }}>
+          <p style={{ fontSize: '1.05rem', color: '#5E5055', lineHeight: '1.7' }}>
             International brands, apparel importers, and wholesale buyers choose our supply coordination model for transparency, specification accuracy, and dedicated export support.
           </p>
         </div>
@@ -113,18 +131,18 @@ export default function WhyChooseUs({ openQuoteModal }) {
                   overflow: 'hidden', 
                   borderRadius: '20px', 
                   backgroundColor: '#FFFFFF', 
-                  border: '1px solid #DCDAD1',
+                  border: '1px solid #EAE1DD',
                   boxShadow: '0 6px 20px rgba(0,0,0,0.03)',
                   transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-6px)';
-                  e.currentTarget.style.borderColor = '#1546D9';
-                  e.currentTarget.style.boxShadow = '0 18px 40px rgba(21, 70, 217, 0.12)';
+                  e.currentTarget.style.borderColor = '#800020';
+                  e.currentTarget.style.boxShadow = '0 18px 40px rgba(128, 0, 32, 0.12)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.borderColor = '#DCDAD1';
+                  e.currentTarget.style.borderColor = '#EAE1DD';
                   e.currentTarget.style.boxShadow = '0 6px 20px rgba(0,0,0,0.03)';
                 }}
               >
@@ -135,7 +153,7 @@ export default function WhyChooseUs({ openQuoteModal }) {
                   left: 0,
                   right: 0,
                   height: '3px',
-                  backgroundColor: '#1546D9'
+                  backgroundColor: '#800020'
                 }} />
 
                 {/* Number Watermark */}
@@ -145,7 +163,7 @@ export default function WhyChooseUs({ openQuoteModal }) {
                   right: '1.75rem',
                   fontSize: '2.4rem',
                   fontWeight: '800',
-                  color: '#EDECE6',
+                  color: '#FAF7F5',
                   fontFamily: 'monospace',
                   userSelect: 'none'
                 }}>
@@ -157,31 +175,31 @@ export default function WhyChooseUs({ openQuoteModal }) {
                   width: '52px', 
                   height: '52px', 
                   borderRadius: '14px', 
-                  backgroundColor: '#EBF0FE', 
-                  border: '1px solid #A4BCFD', 
+                  backgroundColor: '#FDF2F4', 
+                  border: '1px solid #F0CBD3', 
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center', 
                   marginBottom: '1.5rem', 
-                  boxShadow: '0 3px 8px rgba(21, 70, 217, 0.12)' 
+                  boxShadow: '0 3px 8px rgba(128, 0, 32, 0.12)' 
                 }}>
-                  <IconComponent size={26} color="#1546D9" />
+                  <IconComponent size={26} color="#800020" />
                 </div>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#0A1128', marginBottom: '0.45rem', letterSpacing: '-0.01em' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#1A0A10', marginBottom: '0.45rem', letterSpacing: '-0.01em' }}>
                   {item.title}
                 </h3>
 
                 <div style={{ 
                   fontSize: '0.94rem', 
                   fontWeight: '700', 
-                  color: '#1546D9', 
+                  color: '#800020', 
                   marginBottom: '0.85rem' 
                 }}>
                   {item.desc}
                 </div>
 
-                <p style={{ fontSize: '0.9rem', color: '#4B5565', lineHeight: '1.7' }}>
+                <p style={{ fontSize: '0.9rem', color: '#5E5055', lineHeight: '1.7' }}>
                   {item.detail}
                 </p>
               </div>
@@ -191,8 +209,8 @@ export default function WhyChooseUs({ openQuoteModal }) {
 
         {/* Verification Strip Callout */}
         <div style={{
-          backgroundColor: '#EDECE6',
-          border: '1px solid #DCDAD1',
+          backgroundColor: '#FFFFFF',
+          border: '1px solid #EAE1DD',
           borderRadius: '16px',
           padding: '1.5rem 2rem',
           display: 'flex',
@@ -206,7 +224,7 @@ export default function WhyChooseUs({ openQuoteModal }) {
               width: '38px',
               height: '38px',
               borderRadius: '10px',
-              backgroundColor: '#1546D9',
+              backgroundColor: '#800020',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -215,10 +233,10 @@ export default function WhyChooseUs({ openQuoteModal }) {
               <CheckCircle2 size={20} />
             </div>
             <div>
-              <div style={{ fontSize: '0.92rem', fontWeight: '800', color: '#0A1128' }}>
+              <div style={{ fontSize: '0.92rem', fontWeight: '800', color: '#1A0A10' }}>
                 SECP Incorporated & Federal Board of Revenue (FBR) Registered
               </div>
-              <div style={{ fontSize: '0.82rem', color: '#4B5565' }}>
+              <div style={{ fontSize: '0.82rem', color: '#5E5055' }}>
                 Single legal manufacturing contract with dedicated export documentation support.
               </div>
             </div>
@@ -231,7 +249,8 @@ export default function WhyChooseUs({ openQuoteModal }) {
               padding: '0.75rem 1.75rem',
               fontSize: '0.88rem',
               borderRadius: '10px',
-              backgroundColor: '#1546D9'
+              backgroundColor: '#800020',
+              border: '1px solid #A0183A'
             }}
           >
             <span>Request Commercial Quote</span>

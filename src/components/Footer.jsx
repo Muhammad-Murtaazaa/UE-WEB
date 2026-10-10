@@ -29,9 +29,9 @@ export default function Footer({ setActivePage, openQuoteModal }) {
 
   return (
     <footer style={{
-      backgroundColor: '#0A1128',
+      backgroundColor: '#1A0A10',
       color: '#ffffff',
-      borderTop: '1px solid #1E294B',
+      borderTop: '1px solid #441F2F',
       paddingTop: '5rem',
       paddingBottom: '2.5rem'
     }}>
@@ -52,14 +52,14 @@ export default function Footer({ setActivePage, openQuoteModal }) {
                 width: '38px',
                 height: '38px',
                 borderRadius: '8px',
-                backgroundColor: '#1546D9',
+                backgroundColor: '#800020',
                 color: '#ffffff',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 fontWeight: '800',
                 fontSize: '1rem',
-                boxShadow: '0 0 15px rgba(21, 70, 217, 0.4)'
+                boxShadow: '0 0 15px rgba(128, 0, 32, 0.5)'
               }}>
                 USE
               </div>
@@ -67,20 +67,20 @@ export default function Footer({ setActivePage, openQuoteModal }) {
                 <div style={{ fontWeight: '800', fontSize: '1.05rem', lineHeight: '1.2' }}>
                   Uzair Sharif Enterprises
                 </div>
-                <div style={{ fontSize: '0.72rem', color: '#94a3b8' }}>
+                <div style={{ fontSize: '0.72rem', color: '#D1C4C8' }}>
                   (SMC-Private) Limited
                 </div>
               </div>
             </div>
 
-            <div style={{ fontSize: '0.88rem', fontWeight: '700', color: '#2D5DF5', marginBottom: '0.5rem' }}>
+            <div style={{ fontSize: '0.88rem', fontWeight: '700', color: '#E8A8B8', marginBottom: '0.5rem' }}>
               Pakistan-Based Garment Exporter
             </div>
-            <div style={{ fontSize: '0.82rem', color: '#94a3b8', marginBottom: '1.25rem' }}>
+            <div style={{ fontSize: '0.82rem', color: '#B8A8AD', marginBottom: '1.25rem' }}>
               Custom Apparel • Private Label • Global Supply Network
             </div>
             
-            <p style={{ fontSize: '0.82rem', color: '#64748b', lineHeight: '1.6' }}>
+            <p style={{ fontSize: '0.82rem', color: '#8C7D82', lineHeight: '1.6' }}>
               We develop and supply custom garments according to buyer specifications through selected manufacturing partners in Pakistan.
             </p>
           </div>
@@ -98,15 +98,15 @@ export default function Footer({ setActivePage, openQuoteModal }) {
                     style={{
                       background: 'none',
                       border: 'none',
-                      color: '#94a3b8',
+                      color: '#D1C4C8',
                       fontSize: '0.85rem',
                       cursor: 'pointer',
                       padding: 0,
                       textAlign: 'left',
                       transition: 'color 0.15s ease'
                     }}
-                    onMouseEnter={(e) => e.target.style.color = '#1546D9'}
-                    onMouseLeave={(e) => e.target.style.color = '#94a3b8'}
+                    onMouseEnter={(e) => e.target.style.color = '#F0CBD3'}
+                    onMouseLeave={(e) => e.target.style.color = '#D1C4C8'}
                   >
                     {link.label}
                   </button>
@@ -128,15 +128,15 @@ export default function Footer({ setActivePage, openQuoteModal }) {
                     style={{
                       background: 'none',
                       border: 'none',
-                      color: '#94a3b8',
+                      color: '#D1C4C8',
                       fontSize: '0.85rem',
                       cursor: 'pointer',
                       padding: 0,
                       textAlign: 'left',
                       transition: 'color 0.15s ease'
                     }}
-                    onMouseEnter={(e) => e.target.style.color = '#1546D9'}
-                    onMouseLeave={(e) => e.target.style.color = '#94a3b8'}
+                    onMouseEnter={(e) => e.target.style.color = '#F0CBD3'}
+                    onMouseLeave={(e) => e.target.style.color = '#D1C4C8'}
                   >
                     {c.name}
                   </button>
@@ -151,27 +151,27 @@ export default function Footer({ setActivePage, openQuoteModal }) {
               Commercial Desk
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', fontSize: '0.84rem' }}>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', color: '#94a3b8' }}>
-                <Mail size={16} color="#1546D9" style={{ flexShrink: 0, marginTop: '2px' }} />
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', color: '#D1C4C8' }}>
+                <Mail size={16} color="#A0183A" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div>
                   <a href={`mailto:${COMPANY_DETAILS.emailSales}`} style={{ color: '#ffffff', textDecoration: 'none', display: 'block' }}>
                     {COMPANY_DETAILS.emailSales}
                   </a>
-                  <a href={`mailto:${COMPANY_DETAILS.emailInfo}`} style={{ color: '#94a3b8', textDecoration: 'none', display: 'block' }}>
+                  <a href={`mailto:${COMPANY_DETAILS.emailInfo}`} style={{ color: '#B8A8AD', textDecoration: 'none', display: 'block' }}>
                     {COMPANY_DETAILS.emailInfo}
                   </a>
                 </div>
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#94a3b8' }}>
-                <Phone size={16} color="#1546D9" style={{ flexShrink: 0 }} />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#D1C4C8' }}>
+                <Phone size={16} color="#A0183A" style={{ flexShrink: 0 }} />
                 <a href={COMPANY_DETAILS.whatsappUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none' }}>
                   {COMPANY_DETAILS.whatsappRaw} ({COMPANY_DETAILS.whatsappIntl})
                 </a>
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#94a3b8' }}>
-                <MapPin size={16} color="#1546D9" style={{ flexShrink: 0 }} />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#D1C4C8' }}>
+                <MapPin size={16} color="#A0183A" style={{ flexShrink: 0 }} />
                 <span>Pakistan</span>
               </div>
 
@@ -179,7 +179,7 @@ export default function Footer({ setActivePage, openQuoteModal }) {
                 <button
                   onClick={openQuoteModal}
                   className="btn-cobalt"
-                  style={{ width: '100%', padding: '0.65rem', fontSize: '0.82rem', borderRadius: '6px' }}
+                  style={{ width: '100%', padding: '0.65rem', fontSize: '0.82rem', borderRadius: '6px', backgroundColor: '#800020', border: '1px solid #A0183A' }}
                 >
                   <FileText size={14} /> Request a Quote
                 </button>
@@ -191,16 +191,16 @@ export default function Footer({ setActivePage, openQuoteModal }) {
 
         {/* Transparent Compliance Statement Box */}
         <div style={{
-          backgroundColor: '#101935',
-          border: '1px solid #1E294B',
+          backgroundColor: '#251019',
+          border: '1px solid #441F2F',
           borderRadius: '12px',
           padding: '1.25rem 1.5rem',
           fontSize: '0.78rem',
-          color: '#8A99AD',
+          color: '#B8A8AD',
           lineHeight: '1.65',
           marginBottom: '2.5rem'
         }}>
-          <strong style={{ color: '#FAF9F5' }}>International Buyer Notice:</strong> Uzair Sharif Enterprises (SMC-Private) Limited coordinates custom bulk garment production exclusively according to verified buyer technical specifications and pre-production approved samples. We do not sell retail items, stock lots, or pre-made inventory. All representative product photographs illustrate technical capability.
+          <strong style={{ color: '#FAF7F5' }}>International Buyer Notice:</strong> Uzair Sharif Enterprises (SMC-Private) Limited coordinates custom bulk garment production exclusively according to verified buyer technical specifications and pre-production approved samples. We do not sell retail items, stock lots, or pre-made inventory. All representative product photographs illustrate technical capability.
         </div>
 
         {/* Bottom Legal Copyright Strip */}
@@ -211,17 +211,17 @@ export default function Footer({ setActivePage, openQuoteModal }) {
           flexWrap: 'wrap',
           gap: '1rem',
           paddingTop: '1.5rem',
-          borderTop: '1px solid #1E294B',
+          borderTop: '1px solid #441F2F',
           fontSize: '0.76rem',
-          color: '#64748b'
+          color: '#8C7D82'
         }}>
           <div>
             © {new Date().getFullYear()} <strong>Uzair Sharif Enterprises (SMC-Private) Limited</strong>. All rights reserved.
           </div>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <span style={{ color: '#94a3b8' }}>Privacy Policy</span>
-            <span style={{ color: '#94a3b8' }}>Terms & Conditions</span>
-            <span style={{ color: '#94a3b8' }}>Pakistan Export Compliance</span>
+            <span style={{ color: '#B8A8AD' }}>Privacy Policy</span>
+            <span style={{ color: '#B8A8AD' }}>Terms & Conditions</span>
+            <span style={{ color: '#B8A8AD' }}>Pakistan Export Compliance</span>
           </div>
         </div>
 

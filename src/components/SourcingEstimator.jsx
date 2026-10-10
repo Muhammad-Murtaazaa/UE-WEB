@@ -1,32 +1,31 @@
 import React, { useState } from 'react';
 import { 
-  Calculator, 
-  Layers, 
+  Sliders, 
   Clock, 
+  Calendar, 
+  Package, 
   Ship, 
   ShieldCheck, 
-  FileText, 
-  Sliders, 
-  Tag, 
-  CheckCircle2,
+  ArrowRight,
   Sparkles,
-  ArrowRight
+  Layers
 } from 'lucide-react';
 import { PRODUCTS_CATEGORIES } from '../data/productsData';
 
 export default function SourcingEstimator({ openQuoteModal }) {
-  const [selectedCat, setSelectedCat] = useState('Hoodies & Sweatshirts');
+  const [selectedCat, setSelectedCat] = useState('Heavyweight Hoodies & Fleece');
   const [quantity, setQuantity] = useState(1500);
-  const [gsm, setGsm] = useState(360);
+  const [gsm, setGsm] = useState(380);
   const [incoterm, setIncoterm] = useState('FOB');
   const [hasEmbroidery, setHasEmbroidery] = useState(true);
   const [hasPrivateLabel, setHasPrivateLabel] = useState(true);
 
-  // Dynamic calculations based on specs
-  const samplingDays = '7 – 10 Calendar Days';
-  let bulkDays = '25 – 30 Days';
-  if (quantity > 3000) bulkDays = '35 – 42 Days';
-  if (quantity > 7000) bulkDays = '45 – 55 Days';
+  // Dynamic calculated estimations
+  const samplingDays = hasEmbroidery ? '8–11 Days' : '7–9 Days';
+  
+  let bulkDays = '25–30 Days';
+  if (quantity <= 1000) bulkDays = '20–25 Days';
+  else if (quantity > 5000) bulkDays = '35–45 Days';
 
   const handleLaunchRfq = () => {
     openQuoteModal(selectedCat);
@@ -34,16 +33,16 @@ export default function SourcingEstimator({ openQuoteModal }) {
 
   return (
     <section style={{ 
-      backgroundColor: '#0A1128', 
-      color: '#EDECE6',
+      backgroundColor: '#1A0A10', 
+      color: '#FAF7F5',
       paddingTop: '5.5rem', 
       paddingBottom: '5.5rem',
-      borderBottom: '1px solid #1E294B',
+      borderBottom: '1px solid #441F2F',
       position: 'relative',
       overflow: 'hidden'
     }} className="bg-dot-grid-dark">
       
-      {/* Cobalt Ambient Radial Spotlight */}
+      {/* Maroon Ambient Radial Spotlight */}
       <div style={{
         position: 'absolute',
         top: '20%',
@@ -52,13 +51,13 @@ export default function SourcingEstimator({ openQuoteModal }) {
         width: '600px',
         height: '600px',
         borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(21, 70, 217, 0.18) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(128, 0, 32, 0.22) 0%, transparent 70%)',
         pointerEvents: 'none'
       }} />
 
       <div className="container-custom" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{ maxWidth: '820px', margin: '0 auto', textAlign: 'center', marginBottom: '3.5rem' }}>
-          <span className="badge-pill" style={{ backgroundColor: 'rgba(21, 70, 217, 0.25)', color: '#A4BCFD', border: '1px solid #1546D9', marginBottom: '1rem' }}>
+          <span className="badge-pill" style={{ backgroundColor: 'rgba(128, 0, 32, 0.35)', color: '#F0CBD3', border: '1px solid #800020', marginBottom: '1rem' }}>
             Interactive Sourcing Tool
           </span>
           <h2 style={{ 
@@ -71,12 +70,12 @@ export default function SourcingEstimator({ openQuoteModal }) {
           }}>
             Garment Production & Lead-Time Estimator
           </h2>
-          <p style={{ fontSize: '1.05rem', color: '#CBD5E1', lineHeight: '1.7' }}>
+          <p style={{ fontSize: '1.05rem', color: '#D1C4C8', lineHeight: '1.7' }}>
             Configure your technical variables below to estimate pre-production sampling turnaround, bulk manufacturing duration, and Pakistan export coordination parameters.
           </p>
         </div>
 
-        {/* 2-Column Bento Layout */}
+        {/* 2-Column Calculator Layout */}
         <div style={{ 
           display: 'grid', 
           gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', 
@@ -86,8 +85,8 @@ export default function SourcingEstimator({ openQuoteModal }) {
           
           {/* Left Column: Interactive Controls */}
           <div style={{
-            backgroundColor: '#101935',
-            border: '1px solid #1E294B',
+            backgroundColor: '#251019',
+            border: '1px solid #441F2F',
             borderRadius: '20px',
             padding: '2.25rem',
             boxShadow: '0 15px 35px rgba(0,0,0,0.5)',
@@ -97,7 +96,7 @@ export default function SourcingEstimator({ openQuoteModal }) {
           }}>
             {/* Category Select */}
             <div>
-              <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.04em', color: '#EDECE6', marginBottom: '0.5rem' }}>
+              <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.04em', color: '#FAF7F5', marginBottom: '0.5rem' }}>
                 Select Apparel Category
               </label>
               <select
@@ -107,9 +106,9 @@ export default function SourcingEstimator({ openQuoteModal }) {
                   width: '100%',
                   padding: '0.75rem 1rem',
                   borderRadius: '10px',
-                  backgroundColor: '#162244',
+                  backgroundColor: '#331623',
                   color: '#FFFFFF',
-                  border: '1px solid #2D3E6B',
+                  border: '1px solid #5A2338',
                   fontSize: '0.95rem',
                   outline: 'none',
                   cursor: 'pointer'
@@ -124,10 +123,10 @@ export default function SourcingEstimator({ openQuoteModal }) {
             {/* Quantity Slider */}
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                <label style={{ fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.04em', color: '#EDECE6' }}>
+                <label style={{ fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.04em', color: '#FAF7F5' }}>
                   Target Bulk Quantity
                 </label>
-                <span style={{ fontFamily: 'var(--font-mono)', fontWeight: '800', color: '#60A5FA', fontSize: '1.05rem' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontWeight: '800', color: '#F0CBD3', fontSize: '1.05rem' }}>
                   {quantity.toLocaleString()} pcs
                 </span>
               </div>
@@ -140,11 +139,11 @@ export default function SourcingEstimator({ openQuoteModal }) {
                 onChange={e => setQuantity(Number(e.target.value))}
                 style={{
                   width: '100%',
-                  accentColor: '#1546D9',
+                  accentColor: '#800020',
                   cursor: 'pointer'
                 }}
               />
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.72rem', color: '#94A3B8', marginTop: '4px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.72rem', color: '#B8A8AD', marginTop: '4px' }}>
                 <span>500 pcs (Small batch)</span>
                 <span>5,000 pcs</span>
                 <span>10,000+ pcs (Container)</span>
@@ -154,10 +153,10 @@ export default function SourcingEstimator({ openQuoteModal }) {
             {/* Target GSM */}
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                <label style={{ fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.04em', color: '#EDECE6' }}>
+                <label style={{ fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.04em', color: '#FAF7F5' }}>
                   Fabric Weight (GSM)
                 </label>
-                <span style={{ fontFamily: 'var(--font-mono)', fontWeight: '800', color: '#60A5FA', fontSize: '1.05rem' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontWeight: '800', color: '#F0CBD3', fontSize: '1.05rem' }}>
                   {gsm} GSM
                 </span>
               </div>
@@ -170,11 +169,11 @@ export default function SourcingEstimator({ openQuoteModal }) {
                 onChange={e => setGsm(Number(e.target.value))}
                 style={{
                   width: '100%',
-                  accentColor: '#1546D9',
+                  accentColor: '#800020',
                   cursor: 'pointer'
                 }}
               />
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.72rem', color: '#94A3B8', marginTop: '4px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.72rem', color: '#B8A8AD', marginTop: '4px' }}>
                 <span>140 GSM (Lightweight)</span>
                 <span>280 GSM (Mid)</span>
                 <span>450 GSM (Ultra Heavy)</span>
@@ -183,7 +182,7 @@ export default function SourcingEstimator({ openQuoteModal }) {
 
             {/* Preferred Incoterm */}
             <div>
-              <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.04em', color: '#EDECE6', marginBottom: '0.5rem' }}>
+              <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.04em', color: '#FAF7F5', marginBottom: '0.5rem' }}>
                 Commercial Trade Term (Incoterm)
               </label>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.5rem' }}>
@@ -195,8 +194,8 @@ export default function SourcingEstimator({ openQuoteModal }) {
                     style={{
                       padding: '0.65rem',
                       borderRadius: '8px',
-                      border: incoterm === term ? '2px solid #1546D9' : '1px solid #2D3E6B',
-                      backgroundColor: incoterm === term ? '#1546D9' : '#162244',
+                      border: incoterm === term ? '2px solid #800020' : '1px solid #5A2338',
+                      backgroundColor: incoterm === term ? '#800020' : '#331623',
                       color: '#FFFFFF',
                       fontWeight: '700',
                       fontSize: '0.88rem',
@@ -212,22 +211,22 @@ export default function SourcingEstimator({ openQuoteModal }) {
 
             {/* Embellishment Toggles */}
             <div style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap' }}>
-              <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.86rem', color: '#EDECE6', cursor: 'pointer' }}>
+              <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.86rem', color: '#FAF7F5', cursor: 'pointer' }}>
                 <input 
                   type="checkbox" 
                   checked={hasEmbroidery} 
                   onChange={e => setHasEmbroidery(e.target.checked)}
-                  style={{ accentColor: '#1546D9', width: '16px', height: '16px' }}
+                  style={{ accentColor: '#800020', width: '16px', height: '16px' }}
                 />
                 Custom Embroidery / Print
               </label>
 
-              <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.86rem', color: '#EDECE6', cursor: 'pointer' }}>
+              <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.86rem', color: '#FAF7F5', cursor: 'pointer' }}>
                 <input 
                   type="checkbox" 
                   checked={hasPrivateLabel} 
                   onChange={e => setHasPrivateLabel(e.target.checked)}
-                  style={{ accentColor: '#1546D9', width: '16px', height: '16px' }}
+                  style={{ accentColor: '#800020', width: '16px', height: '16px' }}
                 />
                 Private Label (Tags & Bags)
               </label>
@@ -237,8 +236,8 @@ export default function SourcingEstimator({ openQuoteModal }) {
 
           {/* Right Column: Live Output Specs Card */}
           <div style={{
-            backgroundColor: '#101935',
-            border: '1px solid #1E294B',
+            backgroundColor: '#251019',
+            border: '1px solid #441F2F',
             borderRadius: '20px',
             padding: '2.25rem 2rem',
             display: 'flex',
@@ -248,9 +247,9 @@ export default function SourcingEstimator({ openQuoteModal }) {
             position: 'relative'
           }}>
             <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', borderBottom: '1px solid #1E294B', paddingBottom: '1rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', borderBottom: '1px solid #441F2F', paddingBottom: '1rem' }}>
                 <div>
-                  <span className="badge-pill" style={{ backgroundColor: 'rgba(21, 70, 217, 0.25)', color: '#A4BCFD', border: '1px solid #1546D9', marginBottom: '0.25rem' }}>
+                  <span className="badge-pill" style={{ backgroundColor: 'rgba(128, 0, 32, 0.35)', color: '#F0CBD3', border: '1px solid #800020', marginBottom: '0.25rem' }}>
                     Calculated Projection
                   </span>
                   <div style={{ fontSize: '1.3rem', fontWeight: '800', color: '#FFFFFF' }}>
@@ -258,8 +257,8 @@ export default function SourcingEstimator({ openQuoteModal }) {
                   </div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
-                  <div style={{ fontSize: '0.72rem', color: '#94A3B8' }}>Est. Volume</div>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '1.15rem', fontWeight: '800', color: '#60A5FA' }}>
+                  <div style={{ fontSize: '0.72rem', color: '#B8A8AD' }}>Est. Volume</div>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '1.15rem', fontWeight: '800', color: '#F0CBD3' }}>
                     {quantity.toLocaleString()} pcs
                   </div>
                 </div>
@@ -268,51 +267,51 @@ export default function SourcingEstimator({ openQuoteModal }) {
               {/* Metric Breakdown Grid */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.25rem', marginBottom: '2rem' }}>
                 
-                <div style={{ backgroundColor: '#162244', padding: '1rem 1.15rem', borderRadius: '12px', border: '1px solid #1E294B' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: '#94A3B8', fontSize: '0.78rem', marginBottom: '0.35rem' }}>
-                    <Clock size={15} color="#60A5FA" /> Pre-Production Sample
+                <div style={{ backgroundColor: '#331623', padding: '1rem 1.15rem', borderRadius: '12px', border: '1px solid #441F2F' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: '#D1C4C8', fontSize: '0.78rem', marginBottom: '0.35rem' }}>
+                    <Clock size={15} color="#F0CBD3" /> Pre-Production Sample
                   </div>
                   <div style={{ fontSize: '1.1rem', fontWeight: '800', color: '#FFFFFF' }}>
                     {samplingDays}
                   </div>
-                  <div style={{ fontSize: '0.7rem', color: '#94A3B8' }}>Dispatched via DHL/FedEx</div>
+                  <div style={{ fontSize: '0.7rem', color: '#B8A8AD' }}>Dispatched via DHL/FedEx</div>
                 </div>
 
-                <div style={{ backgroundColor: '#162244', padding: '1rem 1.15rem', borderRadius: '12px', border: '1px solid #1E294B' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: '#94A3B8', fontSize: '0.78rem', marginBottom: '0.35rem' }}>
-                    <Layers size={15} color="#60A5FA" /> Bulk Line Manufacturing
+                <div style={{ backgroundColor: '#331623', padding: '1rem 1.15rem', borderRadius: '12px', border: '1px solid #441F2F' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: '#D1C4C8', fontSize: '0.78rem', marginBottom: '0.35rem' }}>
+                    <Layers size={15} color="#F0CBD3" /> Bulk Line Manufacturing
                   </div>
                   <div style={{ fontSize: '1.1rem', fontWeight: '800', color: '#FFFFFF' }}>
                     {bulkDays}
                   </div>
-                  <div style={{ fontSize: '0.7rem', color: '#94A3B8' }}>From golden sample sign-off</div>
+                  <div style={{ fontSize: '0.7rem', color: '#B8A8AD' }}>From golden sample sign-off</div>
                 </div>
 
-                <div style={{ backgroundColor: '#162244', padding: '1rem 1.15rem', borderRadius: '12px', border: '1px solid #1E294B' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: '#94A3B8', fontSize: '0.78rem', marginBottom: '0.35rem' }}>
-                    <Ship size={15} color="#60A5FA" /> Loading Port & Trade
+                <div style={{ backgroundColor: '#331623', padding: '1rem 1.15rem', borderRadius: '12px', border: '1px solid #441F2F' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: '#D1C4C8', fontSize: '0.78rem', marginBottom: '0.35rem' }}>
+                    <Ship size={15} color="#F0CBD3" /> Loading Port & Trade
                   </div>
                   <div style={{ fontSize: '1.1rem', fontWeight: '800', color: '#FFFFFF' }}>
                     {incoterm} Karachi (KPT/PQA)
                   </div>
-                  <div style={{ fontSize: '0.7rem', color: '#94A3B8' }}>Ocean or Air freight</div>
+                  <div style={{ fontSize: '0.7rem', color: '#B8A8AD' }}>Ocean or Air freight</div>
                 </div>
 
-                <div style={{ backgroundColor: '#162244', padding: '1rem 1.15rem', borderRadius: '12px', border: '1px solid #1E294B' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: '#94A3B8', fontSize: '0.78rem', marginBottom: '0.35rem' }}>
-                    <ShieldCheck size={15} color="#60A5FA" /> Quality Protocol
+                <div style={{ backgroundColor: '#331623', padding: '1rem 1.15rem', borderRadius: '12px', border: '1px solid #441F2F' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: '#D1C4C8', fontSize: '0.78rem', marginBottom: '0.35rem' }}>
+                    <ShieldCheck size={15} color="#F0CBD3" /> Quality Protocol
                   </div>
                   <div style={{ fontSize: '1.1rem', fontWeight: '800', color: '#FFFFFF' }}>
                     AQL 2.5 Multi-Point
                   </div>
-                  <div style={{ fontSize: '0.7rem', color: '#94A3B8' }}>Fabric, stitch & carton audit</div>
+                  <div style={{ fontSize: '0.7rem', color: '#B8A8AD' }}>Fabric, stitch & carton audit</div>
                 </div>
 
               </div>
 
               {/* Note */}
-              <div style={{ fontSize: '0.76rem', color: '#CBD5E1', lineHeight: '1.6', marginBottom: '1.75rem', borderLeft: '3px solid #1546D9', paddingLeft: '0.75rem' }}>
-                Exact commercial quotations are issued per order based on raw yarn fluctuations, Pantone lab dips, and packaging configurations.
+              <div style={{ fontSize: '0.76rem', color: '#D1C4C8', lineHeight: '1.6', marginBottom: '1.75rem', borderLeft: '3px solid #800020', paddingLeft: '0.75rem' }}>
+                Exact commercial quotations are issued per order based on raw fabric material fluctuations, Pantone lab dips, and packaging configurations.
               </div>
             </div>
 
@@ -320,7 +319,7 @@ export default function SourcingEstimator({ openQuoteModal }) {
             <button
               onClick={handleLaunchRfq}
               className="btn-cobalt"
-              style={{ width: '100%', padding: '0.95rem', fontSize: '1rem', borderRadius: '12px' }}
+              style={{ width: '100%', padding: '0.95rem', fontSize: '1rem', borderRadius: '12px', backgroundColor: '#800020', border: '1px solid #A0183A' }}
             >
               <span>Transfer These Specs to RFQ Engine</span>
               <ArrowRight size={18} />

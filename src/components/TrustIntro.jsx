@@ -18,21 +18,21 @@ export default function TrustIntro() {
     <section 
       ref={sectionRef}
       style={{ 
-        backgroundColor: '#F7F6F2', 
+        backgroundColor: '#FFFFFF', 
         paddingTop: '5rem', 
         paddingBottom: '5rem',
-        borderBottom: '1px solid #DCDAD1'
+        borderBottom: '1px solid #EAE1DD'
       }}
     >
       <div className="container-custom">
         <div style={{ maxWidth: '840px', margin: '0 auto', textAlign: 'center', marginBottom: '3.5rem' }} className={`reveal-init ${isVisible ? 'reveal-active' : ''}`}>
-          <span className="badge-pill badge-cobalt" style={{ marginBottom: '1rem' }}>
+          <span className="badge-pill badge-cobalt" style={{ marginBottom: '1rem', backgroundColor: '#FDF2F4', color: '#800020', border: '1px solid #F0CBD3' }}>
             Corporate Credibility & Supply Coordination
           </span>
           <h2 style={{ 
             fontSize: 'clamp(1.9rem, 3.4vw, 2.6rem)', 
             fontWeight: '800', 
-            color: '#0A1128',
+            color: '#1A0A10',
             letterSpacing: '-0.025em',
             lineHeight: '1.2',
             marginBottom: '1.25rem'
@@ -41,7 +41,7 @@ export default function TrustIntro() {
           </h2>
           <p style={{ 
             fontSize: '1.15rem', 
-            color: '#0A1128', 
+            color: '#1A0A10', 
             lineHeight: '1.8',
             marginBottom: '1rem',
             fontWeight: '600'
@@ -50,7 +50,7 @@ export default function TrustIntro() {
           </p>
           <p style={{ 
             fontSize: '1.05rem', 
-            color: '#4B5565', 
+            color: '#5E5055', 
             lineHeight: '1.75' 
           }}>
             We coordinate product development, sampling, production, quality requirements, packaging and export according to buyer specifications.
@@ -64,94 +64,94 @@ export default function TrustIntro() {
           gap: '1.75rem' 
         }}>
           
-          <div className={`card-vercel reveal-init ${isVisible ? 'reveal-active delay-1' : ''}`} style={{ padding: '2.25rem 2rem', borderRadius: '18px', backgroundColor: '#FFFFFF', borderColor: '#DCDAD1' }}>
+          <div className={`card-vercel reveal-init ${isVisible ? 'reveal-active delay-1' : ''}`} style={{ padding: '2.25rem 2rem', borderRadius: '18px', backgroundColor: '#FAF7F5', borderColor: '#EAE1DD' }}>
             <div style={{ 
               width: '50px', 
               height: '50px', 
               borderRadius: '12px', 
-              backgroundColor: '#EBF0FE', 
-              border: '1px solid #A4BCFD',
+              backgroundColor: '#FDF2F4', 
+              border: '1px solid #F0CBD3',
               display: 'flex', 
               alignItems: 'center', 
               justifyContent: 'center',
               marginBottom: '1.35rem',
-              boxShadow: '0 2px 6px rgba(21, 70, 217, 0.12)'
+              boxShadow: '0 2px 6px rgba(128, 0, 32, 0.12)'
             }}>
-              <Building2 size={24} color="#1546D9" />
+              <Building2 size={24} color="#800020" />
             </div>
-            <h3 style={{ fontSize: '1.15rem', fontWeight: '800', color: '#0A1128', marginBottom: '0.65rem', letterSpacing: '-0.01em' }}>
+            <h3 style={{ fontSize: '1.15rem', fontWeight: '800', color: '#1A0A10', marginBottom: '0.65rem', letterSpacing: '-0.01em' }}>
               Single Commercial Point of Contact
             </h3>
-            <p style={{ fontSize: '0.92rem', color: '#4B5565', lineHeight: '1.65' }}>
+            <p style={{ fontSize: '0.92rem', color: '#5E5055', lineHeight: '1.65' }}>
               No messy direct supplier negotiations. You communicate seamlessly in professional English with one accountable Pakistani corporate partner.
             </p>
           </div>
 
-          <div className={`card-vercel reveal-init ${isVisible ? 'reveal-active delay-2' : ''}`} style={{ padding: '2.25rem 2rem', borderRadius: '18px', backgroundColor: '#FFFFFF', borderColor: '#DCDAD1' }}>
+          <div className={`card-vercel reveal-init ${isVisible ? 'reveal-active delay-2' : ''}`} style={{ padding: '2.25rem 2rem', borderRadius: '18px', backgroundColor: '#FAF7F5', borderColor: '#EAE1DD' }}>
             <div style={{ 
               width: '50px', 
               height: '50px', 
               borderRadius: '12px', 
-              backgroundColor: '#EBF0FE', 
-              border: '1px solid #A4BCFD',
+              backgroundColor: '#FDF2F4', 
+              border: '1px solid #F0CBD3',
               display: 'flex', 
               alignItems: 'center', 
               justifyContent: 'center',
               marginBottom: '1.35rem',
-              boxShadow: '0 2px 6px rgba(21, 70, 217, 0.12)'
+              boxShadow: '0 2px 6px rgba(128, 0, 32, 0.12)'
             }}>
-              <SlidersHorizontal size={24} color="#1546D9" />
+              <SlidersHorizontal size={24} color="#800020" />
             </div>
-            <h3 style={{ fontSize: '1.15rem', fontWeight: '800', color: '#0A1128', marginBottom: '0.65rem', letterSpacing: '-0.01em' }}>
+            <h3 style={{ fontSize: '1.15rem', fontWeight: '800', color: '#1A0A10', marginBottom: '0.65rem', letterSpacing: '-0.01em' }}>
               Strict Buyer Specification Fidelity
             </h3>
-            <p style={{ fontSize: '0.92rem', color: '#4B5565', lineHeight: '1.65' }}>
-              Yarn, GSM, lab dip pantone matching, knit density, and sizing specs are tracked with zero compromise across bulk manufacturing.
+            <p style={{ fontSize: '0.92rem', color: '#5E5055', lineHeight: '1.65' }}>
+              Fabric, GSM, lab dip pantone matching, knit density, and sizing specs are tracked with zero compromise across bulk manufacturing.
             </p>
           </div>
 
-          <div className={`card-vercel reveal-init ${isVisible ? 'reveal-active delay-3' : ''}`} style={{ padding: '2.25rem 2rem', borderRadius: '18px', backgroundColor: '#FFFFFF', borderColor: '#DCDAD1' }}>
+          <div className={`card-vercel reveal-init ${isVisible ? 'reveal-active delay-3' : ''}`} style={{ padding: '2.25rem 2rem', borderRadius: '18px', backgroundColor: '#FAF7F5', borderColor: '#EAE1DD' }}>
             <div style={{ 
               width: '50px', 
               height: '50px', 
               borderRadius: '12px', 
-              backgroundColor: '#EBF0FE', 
-              border: '1px solid #A4BCFD',
+              backgroundColor: '#FDF2F4', 
+              border: '1px solid #F0CBD3',
               display: 'flex', 
               alignItems: 'center', 
               justifyContent: 'center',
               marginBottom: '1.35rem',
-              boxShadow: '0 2px 6px rgba(21, 70, 217, 0.12)'
+              boxShadow: '0 2px 6px rgba(128, 0, 32, 0.12)'
             }}>
-              <Scale size={24} color="#1546D9" />
+              <Scale size={24} color="#800020" />
             </div>
-            <h3 style={{ fontSize: '1.15rem', fontWeight: '800', color: '#0A1128', marginBottom: '0.65rem', letterSpacing: '-0.01em' }}>
+            <h3 style={{ fontSize: '1.15rem', fontWeight: '800', color: '#1A0A10', marginBottom: '0.65rem', letterSpacing: '-0.01em' }}>
               Transparent & Realistic Business Practice
             </h3>
-            <p style={{ fontSize: '0.92rem', color: '#4B5565', lineHeight: '1.65' }}>
+            <p style={{ fontSize: '0.92rem', color: '#5E5055', lineHeight: '1.65' }}>
               We never make fake factory claims, fake certificate badges, or fictitious ready-stock promises. Honest capabilities you can verify.
             </p>
           </div>
 
-          <div className={`card-vercel reveal-init ${isVisible ? 'reveal-active delay-4' : ''}`} style={{ padding: '2.25rem 2rem', borderRadius: '18px', backgroundColor: '#FFFFFF', borderColor: '#DCDAD1' }}>
+          <div className={`card-vercel reveal-init ${isVisible ? 'reveal-active delay-4' : ''}`} style={{ padding: '2.25rem 2rem', borderRadius: '18px', backgroundColor: '#FAF7F5', borderColor: '#EAE1DD' }}>
             <div style={{ 
               width: '50px', 
               height: '50px', 
               borderRadius: '12px', 
-              backgroundColor: '#EBF0FE', 
-              border: '1px solid #A4BCFD',
+              backgroundColor: '#FDF2F4', 
+              border: '1px solid #F0CBD3',
               display: 'flex', 
               alignItems: 'center', 
               justifyContent: 'center',
               marginBottom: '1.35rem',
-              boxShadow: '0 2px 6px rgba(21, 70, 217, 0.12)'
+              boxShadow: '0 2px 6px rgba(128, 0, 32, 0.12)'
             }}>
-              <Boxes size={24} color="#1546D9" />
+              <Boxes size={24} color="#800020" />
             </div>
-            <h3 style={{ fontSize: '1.15rem', fontWeight: '800', color: '#0A1128', marginBottom: '0.65rem', letterSpacing: '-0.01em' }}>
+            <h3 style={{ fontSize: '1.15rem', fontWeight: '800', color: '#1A0A10', marginBottom: '0.65rem', letterSpacing: '-0.01em' }}>
               Full Logistics & Export Coordination
             </h3>
-            <p style={{ fontSize: '0.92rem', color: '#4B5565', lineHeight: '1.65' }}>
+            <p style={{ fontSize: '0.92rem', color: '#5E5055', lineHeight: '1.65' }}>
               From export documentation and Pakistani customs clearance to FOB or CIF sea/air freight booking to your destination port.
             </p>
           </div>

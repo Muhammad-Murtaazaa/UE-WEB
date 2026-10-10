@@ -111,22 +111,22 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory = '' }
 
         {/* Modal Top Header */}
         <div style={{
-          backgroundColor: '#0A1128',
+          backgroundColor: '#1A0A10',
           color: '#ffffff',
           padding: '1.5rem 2rem',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          borderBottom: '1px solid #1E294B',
+          borderBottom: '1px solid #441F2F',
           borderTopLeftRadius: '24px',
           borderTopRightRadius: '24px'
         }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.25rem' }}>
-              <span className="badge-pill badge-cobalt" style={{ padding: '0.2rem 0.65rem', fontSize: '0.72rem', backgroundColor: '#1546D9', color: '#ffffff' }}>
+              <span className="badge-pill badge-cobalt" style={{ padding: '0.2rem 0.65rem', fontSize: '0.72rem', backgroundColor: '#800020', color: '#ffffff', border: '1px solid #A0183A' }}>
                 B2B Custom Quotation System
               </span>
-              <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>• 100% Made to Specs</span>
+              <span style={{ fontSize: '0.75rem', color: '#D1C4C8' }}>• 100% Made to Specs</span>
             </div>
             <h2 style={{ fontSize: '1.5rem', fontWeight: '800', letterSpacing: '-0.025em', margin: 0 }}>
               Request a Manufacturing Quote
@@ -255,7 +255,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory = '' }
             }}>
               <ShieldCheck size={22} color="#059669" style={{ flexShrink: 0 }} />
               <div style={{ fontSize: '0.85rem', color: '#065f46', lineHeight: '1.55' }}>
-                <strong>No Fixed Catalog Prices:</strong> Unit prices are calculated based on your exact yarn weight, order quantity, embroidery/print complexity, and destination shipping terms.
+                <strong>No Fixed Catalog Prices:</strong> Unit prices are calculated based on your exact fabric weight, order quantity, embroidery/print complexity, and destination shipping terms.
               </div>
             </div>
 

@@ -17,10 +17,10 @@ export default function ProcessPage({ openQuoteModal }) {
   const steps = [
     {
       num: '01',
-      title: 'Buyer Inquiry',
-      subtitle: 'Buyer sends preliminary product requirement',
-      details: 'The buyer provides product category, estimated order volume, destination market, target delivery date, and tech pack or reference photos.',
-      inputs: ['Product category & style reference', 'Target order quantity per size/color', 'Target country & preferred Incoterm', 'Artwork / logo vector files (if any)'],
+      title: 'Inquiry',
+      subtitle: 'Buyer sends requirements or reference samples',
+      details: 'Start by submitting your garment concept, digital CAD sketch, physical sample references, or detailed technical specifications pack.',
+      inputs: ['Garment categories & intended styling', 'Reference images or competitor benchmarks', 'Target quantity & target budget expectations', 'Destination country & delivery deadlines'],
       icon: FileSearch
     },
     {
@@ -28,7 +28,7 @@ export default function ProcessPage({ openQuoteModal }) {
       title: 'Requirement Analysis',
       subtitle: 'Technical clarification & parameter breakdown',
       details: 'We carefully review and verify every technical variable before proposing prices or scheduling machinery.',
-      inputs: ['Product type & garment silhouette', 'Fabric composition & yarn blend', 'Target GSM & fabric knit/weave style', 'Pantone TCX / TPX color matching', 'Size breakdown chart (grading)', 'Printing / embroidery technique', 'Woven / care label requirements', 'Custom polybag & carton markings', 'Destination shipping constraints'],
+      inputs: ['Product type & garment silhouette', 'Fabric composition & material blend', 'Target GSM & fabric knit/weave style', 'Pantone TCX / TPX color matching', 'Size breakdown chart (grading)', 'Printing / embroidery technique', 'Woven / care label requirements', 'Custom polybag & carton markings', 'Destination shipping constraints'],
       icon: ListChecks
     },
     {
@@ -60,7 +60,7 @@ export default function ProcessPage({ openQuoteModal }) {
       title: 'Production',
       subtitle: 'Structured bulk execution',
       details: 'Production is arranged with specialized partner units according to the approved pre-production golden sample.',
-      inputs: ['Yarn procurement & knitting/weaving', 'Dyeing & bio-polishing treatment', 'Precision fabric cutting & bundling', 'Inline stitching assembly & embellishment'],
+      inputs: ['Fabric procurement & knitting/weaving', 'Dyeing & bio-polishing treatment', 'Precision fabric cutting & bundling', 'Inline stitching assembly & embellishment'],
       icon: Factory
     },
     {
@@ -90,18 +90,18 @@ export default function ProcessPage({ openQuoteModal }) {
   ];
 
   return (
-    <div style={{ backgroundColor: '#EDECE6', minHeight: '85vh', paddingBottom: '6rem' }}>
+    <div style={{ backgroundColor: '#FAF7F5', minHeight: '85vh', paddingBottom: '6rem' }}>
       
       {/* Header Banner */}
       <div style={{ 
-        backgroundColor: '#0A1128', 
+        backgroundColor: '#1A0A10', 
         color: '#ffffff', 
         paddingTop: '5rem', 
         paddingBottom: '4.5rem',
-        borderBottom: '1px solid #1E294B'
+        borderBottom: '1px solid #441F2F'
       }}>
         <div className="container-custom" style={{ maxWidth: '860px', margin: '0 auto', textAlign: 'center' }}>
-          <span className="badge-pill badge-cobalt" style={{ marginBottom: '1rem', backgroundColor: '#1546D9', color: '#ffffff' }}>
+          <span className="badge-pill badge-cobalt" style={{ marginBottom: '1rem', backgroundColor: '#800020', color: '#ffffff', border: '1px solid #A0183A' }}>
             Transparent Step-by-Step Execution
           </span>
           <h1 style={{ 
@@ -113,7 +113,7 @@ export default function ProcessPage({ openQuoteModal }) {
           }}>
             Our Manufacturing & Supply Process
           </h1>
-          <p style={{ fontSize: '1.1rem', color: '#94a3b8', lineHeight: '1.7' }}>
+          <p style={{ fontSize: '1.1rem', color: '#D1C4C8', lineHeight: '1.7' }}>
             From initial product inquiry through final container dispatch, we coordinate every stage with transparent milestones.
           </p>
         </div>
@@ -136,8 +136,8 @@ export default function ProcessPage({ openQuoteModal }) {
                   gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
                   gap: '2rem',
                   alignItems: 'flex-start',
-                  backgroundColor: '#FAF9F5',
-                  borderColor: '#DCDAD1'
+                  backgroundColor: '#FFFFFF',
+                  borderColor: '#EAE1DD'
                 }}
               >
                 {/* Left: Step Overview */}
@@ -147,8 +147,8 @@ export default function ProcessPage({ openQuoteModal }) {
                       fontFamily: 'var(--font-mono)', 
                       fontWeight: '800', 
                       fontSize: '1.15rem', 
-                      backgroundColor: '#0A1128', 
-                      color: '#1546D9', 
+                      backgroundColor: '#1A0A10', 
+                      color: '#F0CBD3', 
                       padding: '0.35rem 0.75rem', 
                       borderRadius: '8px' 
                     }}>
@@ -158,41 +158,41 @@ export default function ProcessPage({ openQuoteModal }) {
                       width: '40px', 
                       height: '40px', 
                       borderRadius: '10px', 
-                      backgroundColor: '#EBF0FE', 
-                      border: '1px solid #A4BCFD',
+                      backgroundColor: '#FDF2F4', 
+                      border: '1px solid #F0CBD3',
                       display: 'flex', 
                       alignItems: 'center', 
                       justifyContent: 'center' 
                     }}>
-                      <IconComp size={20} color="#1546D9" />
+                      <IconComp size={20} color="#800020" />
                     </div>
                   </div>
 
-                  <h3 style={{ fontSize: '1.45rem', fontWeight: '800', color: '#0A1128', marginBottom: '0.4rem' }}>
+                  <h3 style={{ fontSize: '1.45rem', fontWeight: '800', color: '#1A0A10', marginBottom: '0.4rem' }}>
                     {step.title}
                   </h3>
-                  <div style={{ fontSize: '0.9rem', fontWeight: '600', color: '#1546D9', marginBottom: '0.75rem' }}>
+                  <div style={{ fontSize: '0.9rem', fontWeight: '600', color: '#800020', marginBottom: '0.75rem' }}>
                     {step.subtitle}
                   </div>
-                  <p style={{ fontSize: '0.92rem', color: '#4B5565', lineHeight: '1.65' }}>
+                  <p style={{ fontSize: '0.92rem', color: '#5E5055', lineHeight: '1.65' }}>
                     {step.details}
                   </p>
                 </div>
 
                 {/* Right: Key Deliverables Checklist */}
                 <div style={{ 
-                  backgroundColor: '#FFFFFF', 
+                  backgroundColor: '#FAF7F5', 
                   borderRadius: '12px', 
                   padding: '1.5rem', 
-                  border: '1px solid #E6E4DC' 
+                  border: '1px solid #EAE1DD' 
                 }}>
-                  <div style={{ fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', color: '#6E798A', letterSpacing: '0.04em', marginBottom: '0.85rem' }}>
+                  <div style={{ fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', color: '#8C7D82', letterSpacing: '0.04em', marginBottom: '0.85rem' }}>
                     Key Checkpoints & Parameters
                   </div>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.5rem' }}>
                     {step.inputs.map((item, i) => (
-                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.85rem', color: '#0A1128' }}>
-                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#1546D9' }}></span>
+                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.85rem', color: '#1A0A10' }}>
+                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#800020' }}></span>
                         <span>{item}</span>
                       </div>
                     ))}
@@ -209,7 +209,7 @@ export default function ProcessPage({ openQuoteModal }) {
           <button 
             onClick={openQuoteModal}
             className="btn-cobalt"
-            style={{ padding: '0.95rem 2.5rem', fontSize: '1.05rem' }}
+            style={{ padding: '0.95rem 2.5rem', fontSize: '1.05rem', backgroundColor: '#800020', border: '1px solid #A0183A' }}
           >
             <FileText size={18} /> Initiate Step 01: Submit Your Inquiry
           </button>

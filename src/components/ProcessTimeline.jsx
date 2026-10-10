@@ -7,7 +7,7 @@ import {
   CheckCircle, 
   Factory, 
   ShieldCheck, 
-  PackageCheck,
+  PackageCheck, 
   ArrowRight,
   ChevronLeft,
   ChevronRight,
@@ -143,10 +143,10 @@ export default function ProcessTimeline({ openQuoteModal }) {
     <section 
       ref={sectionRef}
       style={{ 
-        backgroundColor: '#EDECE6', 
+        backgroundColor: '#FAF7F5', 
         paddingTop: '5.5rem', 
         paddingBottom: '5.5rem',
-        borderBottom: '1px solid #DCDAD1',
+        borderBottom: '1px solid #EAE1DD',
         overflow: 'hidden'
       }}
     >
@@ -161,20 +161,20 @@ export default function ProcessTimeline({ openQuoteModal }) {
           marginBottom: '2.5rem' 
         }} className={`reveal-init ${isVisible ? 'reveal-active' : ''}`}>
           <div>
-            <span className="badge-pill badge-cobalt" style={{ marginBottom: '0.85rem' }}>
+            <span className="badge-pill badge-cobalt" style={{ marginBottom: '0.85rem', backgroundColor: '#FDF2F4', color: '#800020', border: '1px solid #F0CBD3' }}>
               Structured Sourcing Methodology
             </span>
             <h2 style={{ 
               fontSize: 'clamp(2rem, 3.4vw, 2.7rem)', 
               fontWeight: '800', 
-              color: '#0A1128',
+              color: '#1A0A10',
               letterSpacing: '-0.025em',
               lineHeight: '1.2',
               marginBottom: '0.65rem'
             }}>
               Our Manufacturing & Export Process
             </h2>
-            <p style={{ fontSize: '1.05rem', color: '#4B5565', maxWidth: '680px', lineHeight: '1.65' }}>
+            <p style={{ fontSize: '1.05rem', color: '#5E5055', maxWidth: '680px', lineHeight: '1.65' }}>
               A disciplined 8-stage export pipeline ensuring full transparency from your initial technical inquiry through final container dispatch.
             </p>
           </div>
@@ -183,7 +183,7 @@ export default function ProcessTimeline({ openQuoteModal }) {
           <div style={{
             display: 'inline-flex',
             backgroundColor: '#FFFFFF',
-            border: '1px solid #DCDAD1',
+            border: '1px solid #EAE1DD',
             borderRadius: '10px',
             padding: '3px'
           }}>
@@ -199,8 +199,8 @@ export default function ProcessTimeline({ openQuoteModal }) {
                 fontSize: '0.8rem',
                 fontWeight: '700',
                 cursor: 'pointer',
-                backgroundColor: viewMode === 'carousel' ? '#1546D9' : 'transparent',
-                color: viewMode === 'carousel' ? '#FFFFFF' : '#4B5565',
+                backgroundColor: viewMode === 'carousel' ? '#800020' : 'transparent',
+                color: viewMode === 'carousel' ? '#FFFFFF' : '#5E5055',
                 transition: 'all 0.15s ease'
               }}
             >
@@ -219,8 +219,8 @@ export default function ProcessTimeline({ openQuoteModal }) {
                 fontSize: '0.8rem',
                 fontWeight: '700',
                 cursor: 'pointer',
-                backgroundColor: viewMode === 'grid' ? '#1546D9' : 'transparent',
-                color: viewMode === 'grid' ? '#FFFFFF' : '#4B5565',
+                backgroundColor: viewMode === 'grid' ? '#800020' : 'transparent',
+                color: viewMode === 'grid' ? '#FFFFFF' : '#5E5055',
                 transition: 'all 0.15s ease'
               }}
             >
@@ -259,13 +259,13 @@ export default function ProcessTimeline({ openQuoteModal }) {
                       minWidth: '110px',
                       padding: '0.75rem 0.5rem',
                       borderRadius: '12px',
-                      border: isActive ? '2px solid #1546D9' : '1px solid #DCDAD1',
-                      backgroundColor: isActive ? '#1546D9' : isPassed ? '#FFFFFF' : '#FAF9F5',
-                      color: isActive ? '#FFFFFF' : '#0A1128',
+                      border: isActive ? '2px solid #800020' : '1px solid #EAE1DD',
+                      backgroundColor: isActive ? '#800020' : isPassed ? '#FFFFFF' : '#FAF7F5',
+                      color: isActive ? '#FFFFFF' : '#1A0A10',
                       cursor: 'pointer',
                       textAlign: 'center',
                       transition: 'all 0.2s ease',
-                      boxShadow: isActive ? '0 6px 18px rgba(21, 70, 217, 0.25)' : 'none'
+                      boxShadow: isActive ? '0 6px 18px rgba(128, 0, 32, 0.25)' : 'none'
                     }}
                   >
                     <div style={{
@@ -298,7 +298,7 @@ export default function ProcessTimeline({ openQuoteModal }) {
               style={{
                 backgroundColor: '#FFFFFF',
                 borderRadius: '24px',
-                border: '1px solid #DCDAD1',
+                border: '1px solid #EAE1DD',
                 boxShadow: '0 20px 45px rgba(0,0,0,0.06)',
                 overflow: 'hidden',
                 marginBottom: '3rem'
@@ -306,7 +306,7 @@ export default function ProcessTimeline({ openQuoteModal }) {
             >
               {/* Card Top Banner with Progress & Controls */}
               <div style={{
-                backgroundColor: '#0A1128',
+                backgroundColor: '#1A0A10',
                 color: '#FFFFFF',
                 padding: '1.25rem 2rem',
                 display: 'flex',
@@ -314,23 +314,23 @@ export default function ProcessTimeline({ openQuoteModal }) {
                 alignItems: 'center',
                 flexWrap: 'wrap',
                 gap: '1rem',
-                borderBottom: '1px solid #1E294B'
+                borderBottom: '1px solid #441F2F'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
                   <div style={{
                     width: '42px',
                     height: '42px',
                     borderRadius: '10px',
-                    backgroundColor: '#1546D9',
+                    backgroundColor: '#800020',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    boxShadow: '0 0 12px rgba(21, 70, 217, 0.5)'
+                    boxShadow: '0 0 12px rgba(128, 0, 32, 0.5)'
                   }}>
                     <StepIcon size={22} color="#FFFFFF" />
                   </div>
                   <div>
-                    <div style={{ fontSize: '0.75rem', fontWeight: '800', color: '#A4BCFD', letterSpacing: '0.05em' }}>
+                    <div style={{ fontSize: '0.75rem', fontWeight: '800', color: '#F0CBD3', letterSpacing: '0.05em' }}>
                       STAGE {currentStep.num} OF 08
                     </div>
                     <div style={{ fontSize: '1.25rem', fontWeight: '800', color: '#FFFFFF' }}>
@@ -350,10 +350,10 @@ export default function ProcessTimeline({ openQuoteModal }) {
                     padding: '0.35rem 0.85rem',
                     borderRadius: '8px',
                     fontSize: '0.8rem',
-                    color: '#EDECE6',
+                    color: '#FAF7F5',
                     fontWeight: '600'
                   }}>
-                    <Clock size={14} color="#A4BCFD" />
+                    <Clock size={14} color="#F0CBD3" />
                     <span>Estimated: {currentStep.timeline}</span>
                   </div>
 
@@ -363,7 +363,7 @@ export default function ProcessTimeline({ openQuoteModal }) {
                       width: '36px',
                       height: '36px',
                       borderRadius: '8px',
-                      backgroundColor: isAutoPlaying ? '#1546D9' : 'rgba(255, 255, 255, 0.12)',
+                      backgroundColor: isAutoPlaying ? '#800020' : 'rgba(255, 255, 255, 0.12)',
                       border: '1px solid rgba(255, 255, 255, 0.2)',
                       color: '#FFFFFF',
                       display: 'flex',
@@ -422,7 +422,7 @@ export default function ProcessTimeline({ openQuoteModal }) {
               <div style={{ padding: '2.5rem 2rem' }}>
                 <p style={{
                   fontSize: '1.15rem',
-                  color: '#0A1128',
+                  color: '#1A0A10',
                   lineHeight: '1.7',
                   marginBottom: '2rem',
                   fontWeight: '500'
@@ -438,105 +438,98 @@ export default function ProcessTimeline({ openQuoteModal }) {
                 }}>
                   {/* Buyer Responsibility */}
                   <div style={{
-                    backgroundColor: '#FAF9F5',
-                    border: '1px solid #DCDAD1',
+                    backgroundColor: '#FAF7F5',
+                    border: '1px solid #EAE1DD',
                     borderRadius: '16px',
                     padding: '1.5rem'
                   }}>
                     <div style={{
                       fontSize: '0.78rem',
                       fontWeight: '800',
-                      color: '#4B5565',
-                      letterSpacing: '0.04em',
-                      textTransform: 'uppercase',
-                      marginBottom: '0.5rem'
-                    }}>
-                      Buyer Action
-                    </div>
-                    <div style={{
-                      fontSize: '0.95rem',
-                      fontWeight: '700',
-                      color: '#0A1128',
-                      lineHeight: '1.5'
-                    }}>
-                      {currentStep.buyerRole}
-                    </div>
-                  </div>
-
-                  {/* Uzair Sharif Enterprises Role */}
-                  <div style={{
-                    backgroundColor: '#EBF0FE',
-                    border: '1px solid #A4BCFD',
-                    borderRadius: '16px',
-                    padding: '1.5rem'
-                  }}>
-                    <div style={{
-                      fontSize: '0.78rem',
-                      fontWeight: '800',
-                      color: '#1546D9',
-                      letterSpacing: '0.04em',
-                      textTransform: 'uppercase',
-                      marginBottom: '0.5rem'
-                    }}>
-                      Our Coordination Desk
-                    </div>
-                    <div style={{
-                      fontSize: '0.95rem',
-                      fontWeight: '700',
-                      color: '#0A1128',
-                      lineHeight: '1.5'
-                    }}>
-                      {currentStep.ourRole}
-                    </div>
-                  </div>
-
-                  {/* Stage Deliverable */}
-                  <div style={{
-                    backgroundColor: '#FAF9F5',
-                    border: '1px solid #DCDAD1',
-                    borderRadius: '16px',
-                    padding: '1.5rem'
-                  }}>
-                    <div style={{
-                      fontSize: '0.78rem',
-                      fontWeight: '800',
-                      color: '#059669',
+                      color: '#5E5055',
                       letterSpacing: '0.04em',
                       textTransform: 'uppercase',
                       marginBottom: '0.5rem',
                       display: 'flex',
                       alignItems: 'center',
-                      gap: '0.35rem'
+                      gap: '0.4rem'
                     }}>
-                      <CheckCircle2 size={14} color="#059669" />
+                      <span>Buyer Responsibility</span>
+                    </div>
+                    <div style={{ fontSize: '0.94rem', color: '#1A0A10', lineHeight: '1.6', fontWeight: '600' }}>
+                      {currentStep.buyerRole}
+                    </div>
+                  </div>
+
+                  {/* USE Coordination Role */}
+                  <div style={{
+                    backgroundColor: '#FDF2F4',
+                    border: '1px solid #F0CBD3',
+                    borderRadius: '16px',
+                    padding: '1.5rem'
+                  }}>
+                    <div style={{
+                      fontSize: '0.78rem',
+                      fontWeight: '800',
+                      color: '#800020',
+                      letterSpacing: '0.04em',
+                      textTransform: 'uppercase',
+                      marginBottom: '0.5rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.4rem'
+                    }}>
+                      <span>Uzair Sharif Enterprises Role</span>
+                    </div>
+                    <div style={{ fontSize: '0.94rem', color: '#800020', lineHeight: '1.6', fontWeight: '600' }}>
+                      {currentStep.ourRole}
+                    </div>
+                  </div>
+
+                  {/* Deliverable Document */}
+                  <div style={{
+                    backgroundColor: '#FAF7F5',
+                    border: '1px solid #EAE1DD',
+                    borderRadius: '16px',
+                    padding: '1.5rem'
+                  }}>
+                    <div style={{
+                      fontSize: '0.78rem',
+                      fontWeight: '800',
+                      color: '#5E5055',
+                      letterSpacing: '0.04em',
+                      textTransform: 'uppercase',
+                      marginBottom: '0.5rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.4rem'
+                    }}>
+                      <CheckCircle2 size={14} color="#800020" />
                       <span>Stage Deliverable</span>
                     </div>
-                    <div style={{
-                      fontSize: '0.95rem',
-                      fontWeight: '700',
-                      color: '#0A1128',
-                      lineHeight: '1.5'
-                    }}>
+                    <div style={{ fontSize: '0.94rem', color: '#1A0A10', lineHeight: '1.6', fontWeight: '600' }}>
                       {currentStep.deliverable}
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
           </div>
         ) : (
           /* ================= FULL 8-STEP GRID MODE ================= */
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))',
             gap: '1.75rem',
             marginBottom: '3.5rem'
           }}>
             {steps.map((step, idx) => {
               const IconComponent = step.icon;
               return (
-                <div 
-                  key={idx}
+                <div
+                  key={step.num}
+                  className="subtle-card"
                   style={{ 
                     padding: '2rem 1.75rem', 
                     borderRadius: '18px',
@@ -544,18 +537,18 @@ export default function ProcessTimeline({ openQuoteModal }) {
                     flexDirection: 'column',
                     justifyContent: 'space-between',
                     backgroundColor: '#FFFFFF',
-                    border: '1px solid #DCDAD1',
+                    border: '1px solid #EAE1DD',
                     boxShadow: '0 4px 16px rgba(0,0,0,0.03)',
                     transition: 'all 0.25s ease'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-5px)';
-                    e.currentTarget.style.borderColor = '#1546D9';
-                    e.currentTarget.style.boxShadow = '0 14px 30px rgba(21, 70, 217, 0.1)';
+                    e.currentTarget.style.borderColor = '#800020';
+                    e.currentTarget.style.boxShadow = '0 14px 30px rgba(128, 0, 32, 0.1)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.borderColor = '#DCDAD1';
+                    e.currentTarget.style.borderColor = '#EAE1DD';
                     e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.03)';
                   }}
                 >
@@ -566,52 +559,52 @@ export default function ProcessTimeline({ openQuoteModal }) {
                         width: '44px', 
                         height: '44px', 
                         borderRadius: '12px', 
-                        backgroundColor: '#0A1128', 
+                        backgroundColor: '#1A0A10', 
                         display: 'flex', 
                         alignItems: 'center', 
                         justifyContent: 'center',
-                        boxShadow: '0 3px 8px rgba(10,17,40,0.2)'
+                        boxShadow: '0 3px 8px rgba(26,10,16,0.2)'
                       }}>
-                        <IconComponent size={22} color="#60A5FA" />
+                        <IconComponent size={22} color="#F0CBD3" />
                       </div>
                       <span style={{ 
                         fontFamily: 'monospace', 
                         fontWeight: '800', 
                         fontSize: '0.95rem',
-                        color: '#1546D9',
-                        backgroundColor: '#EBF0FE',
+                        color: '#800020',
+                        backgroundColor: '#FDF2F4',
                         padding: '0.25rem 0.65rem',
                         borderRadius: '8px',
-                        border: '1px solid #A4BCFD'
+                        border: '1px solid #F0CBD3'
                       }}>
                         {step.num}
                       </span>
                     </div>
 
-                    <h3 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#0A1128', marginBottom: '0.35rem', letterSpacing: '-0.01em' }}>
+                    <h3 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#1A0A10', marginBottom: '0.35rem', letterSpacing: '-0.01em' }}>
                       {step.title}
                     </h3>
-                    <div style={{ fontSize: '0.82rem', fontWeight: '700', color: '#1546D9', marginBottom: '0.75rem' }}>
+                    <div style={{ fontSize: '0.82rem', fontWeight: '700', color: '#800020', marginBottom: '0.75rem' }}>
                       {step.subtitle}
                     </div>
-                    <p style={{ fontSize: '0.86rem', color: '#4B5565', lineHeight: '1.65', marginBottom: '1.25rem' }}>
+                    <p style={{ fontSize: '0.86rem', color: '#5E5055', lineHeight: '1.65', marginBottom: '1.25rem' }}>
                       {step.desc}
                     </p>
                   </div>
 
                   <div style={{
-                    backgroundColor: '#FAF9F5',
-                    border: '1px solid #DCDAD1',
+                    backgroundColor: '#FAF7F5',
+                    border: '1px solid #EAE1DD',
                     borderRadius: '8px',
                     padding: '0.45rem 0.75rem',
                     fontSize: '0.78rem',
                     fontWeight: '700',
-                    color: '#0A1128',
+                    color: '#1A0A10',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.4rem'
                   }}>
-                    <Clock size={13} color="#1546D9" />
+                    <Clock size={13} color="#800020" />
                     <span>{step.timeline}</span>
                   </div>
                 </div>
@@ -629,8 +622,9 @@ export default function ProcessTimeline({ openQuoteModal }) {
               padding: '0.95rem 2.4rem', 
               fontSize: '1rem', 
               borderRadius: '12px',
-              backgroundColor: '#1546D9',
-              boxShadow: '0 8px 24px rgba(21, 70, 217, 0.35)'
+              backgroundColor: '#800020',
+              border: '1px solid #A0183A',
+              boxShadow: '0 8px 24px rgba(128, 0, 32, 0.35)'
             }}
           >
             <span>Start Your Specification Inquiry</span>
