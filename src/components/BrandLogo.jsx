@@ -17,9 +17,9 @@ export default function BrandLogo({
   const currentIcon = iconSizes[size] || iconSizes.md;
 
   return (
-    <div style={{ display: 'inline-flex', alignItems: 'center', gap: size === 'sm' ? '0.6rem' : '0.75rem', textDecoration: 'none' }}>
+    <div className={`brand-logo-root brand-logo-${size}`} style={{ display: 'inline-flex', alignItems: 'center', gap: size === 'sm' ? '0.5rem' : '0.65rem', textDecoration: 'none' }}>
       {/* Precision Emblem */}
-      <div style={{
+      <div className="brand-logo-emblem" style={{
         width: `${currentIcon.width}px`,
         height: `${currentIcon.height}px`,
         borderRadius: `${currentIcon.radius}px`,
@@ -72,8 +72,8 @@ export default function BrandLogo({
 
       {/* Brand Typography */}
       {!iconOnly && (
-        <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
-          <div style={{ 
+        <div className="brand-logo-text" style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
+          <div className="brand-logo-title" style={{ 
             fontSize: size === 'sm' ? '0.96rem' : size === 'lg' ? '1.35rem' : '1.18rem', 
             fontWeight: '800', 
             color: isLightText ? '#FFFFFF' : '#1A0A10',
@@ -84,7 +84,7 @@ export default function BrandLogo({
           </div>
           
           {showSubtitle && (
-            <div style={{ 
+            <div className="brand-logo-subtitle" style={{ 
               fontSize: size === 'sm' ? '0.66rem' : '0.72rem', 
               color: isLightText ? '#CFC4C8' : '#7A686F', 
               fontWeight: '700',

@@ -6,6 +6,7 @@ export default function WhatsAppButton() {
 
   return (
     <div 
+      className="floating-whatsapp-btn"
       style={{
         position: 'fixed',
         bottom: '24px',

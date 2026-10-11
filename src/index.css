@@ -402,6 +402,14 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
    Prevents overlapping, squishing, and horizontal overflows
    ========================================================================== */
 
+/* Universal Floating WhatsApp Button Base */
+.floating-whatsapp-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 90;
+}
+
 @media (max-width: 900px) {
   .hidden-mobile {
     display: none !important;
@@ -409,57 +417,202 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 }
 
 @media (max-width: 768px) {
+  /* 1. Header & Top Bar Optimization */
+  .top-notice-bar {
+    display: none !important;
+  }
+
+  .glass-header {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .brand-logo-root .brand-logo-emblem {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px !important;
+  }
+
+  .brand-logo-root .brand-logo-emblem svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .brand-logo-root .brand-logo-title {
+    font-size: 1.05rem !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  .brand-logo-root .brand-logo-subtitle {
+    font-size: 0.63rem !important;
+  }
+
+  .desktop-quote-btn {
+    display: none !important;
+  }
+
+  /* 2. Layout Containers */
   .container-custom {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
 
-  /* Hero Mobile Enhancements */
+  /* 3. Hero Section Mobile Elegance */
+  .hero-section {
+    min-height: auto !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .hero-content-container {
+    padding-top: 1rem !important;
+    padding-bottom: 1.25rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .hero-focal-card {
+    padding: 1.35rem 1rem !important;
+    border-radius: 18px !important;
+    background-color: rgba(26, 10, 16, 0.76) !important;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55) !important;
+    margin: 0 !important;
+  }
+
   .hero-announcement-pill {
-    padding: 0.35rem 0.75rem !important;
+    padding: 0.3rem 0.75rem !important;
     font-size: 0.72rem !important;
     gap: 0.35rem !important;
+    margin-bottom: 0.95rem !important;
     max-width: 100% !important;
   }
-  
+
+  .hero-main-heading {
+    font-size: clamp(1.6rem, 5.8vw, 2.15rem) !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.86rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1.25rem !important;
+    max-width: 100% !important;
+  }
+
   .hero-btn-group {
     flex-direction: column !important;
     width: 100% !important;
-    gap: 0.75rem !important;
+    gap: 0.7rem !important;
+    margin-bottom: 1.35rem !important;
   }
-  
+
   .hero-btn-group > * {
     width: 100% !important;
     justify-content: center !important;
     padding: 0.85rem 1.25rem !important;
+    font-size: 0.94rem !important;
+    border-radius: 10px !important;
   }
 
   .hero-trust-bar {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
-    gap: 0.65rem !important;
+    gap: 0.5rem !important;
     width: 100% !important;
-    padding: 0.85rem 1rem !important;
+    padding: 0.75rem 0.85rem !important;
     box-sizing: border-box !important;
+    border-radius: 10px !important;
   }
-  
+
   .hero-trust-bar > div {
-    font-size: 0.76rem !important;
+    font-size: 0.72rem !important;
+    gap: 0.35rem !important;
     justify-content: flex-start !important;
+  }
+
+  .hero-trust-bar > div svg {
+    width: 14px !important;
+    height: 14px !important;
+    flex-shrink: 0 !important;
   }
 
   .hero-bottom-bar {
     flex-direction: column !important;
     align-items: flex-start !important;
+    gap: 0.75rem !important;
+    padding: 0.75rem 0.5rem !important;
+  }
+
+  /* 4. Floating WhatsApp Button on Mobile */
+  .floating-whatsapp-btn {
+    bottom: 16px !important;
+    right: 14px !important;
+  }
+
+  .floating-whatsapp-btn a {
+    width: 48px !important;
+    height: 48px !important;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45) !important;
+  }
+
+  .floating-whatsapp-btn a svg {
+    width: 25px !important;
+    height: 25px !important;
+  }
+
+  /* 5. Product Category Carousel */
+  .carousel-viewport-bleed {
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .carousel-viewport-bleed .no-scrollbar {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    gap: 1rem !important;
+    scroll-snap-type: x mandatory !important;
+  }
+
+  .category-preview-card {
+    flex: 0 0 84vw !important;
+    max-width: 320px !important;
+    scroll-snap-align: center !important;
+  }
+
+  /* 6. Global Export Network Card */
+  .gen-card-banner {
+    padding: 1.25rem 1rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
     gap: 0.85rem !important;
   }
 
-  /* Header safe-guard */
-  .desktop-quote-btn {
-    display: none !important;
+  .gen-card-body {
+    padding: 1.25rem 1rem !important;
+    gap: 1.75rem !important;
   }
 
-  /* Prevent text and button overlap */
+  /* 7. Quote Modal Responsive Dialog */
+  .quote-modal-dialog {
+    max-height: 94vh !important;
+    margin: 0.5rem !important;
+    border-radius: 16px !important;
+  }
+
+  .quote-modal-header {
+    padding: 1.15rem 1rem !important;
+  }
+
+  .quote-modal-body {
+    padding: 1.25rem 1rem !important;
+  }
+
+  /* 8. Text wrapping & general element guards */
   .subtle-card, .card-vercel {
     word-break: break-word;
   }

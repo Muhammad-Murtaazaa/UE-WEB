@@ -128,7 +128,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory = '' }
       overflowY: 'auto'
     }} className="fade-in">
       
-      <div style={{
+      <div className="quote-modal-dialog" style={{
         backgroundColor: '#ffffff',
         borderRadius: '24px',
         maxWidth: '920px',
@@ -142,7 +142,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory = '' }
       }}>
 
         {/* Modal Top Header */}
-        <div style={{
+        <div className="quote-modal-header" style={{
           background: 'linear-gradient(180deg, #360C1E 0%, #240713 100%)',
           color: '#ffffff',
           padding: '1.5rem 2rem',
@@ -278,7 +278,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory = '' }
           </div>
         ) : (
           /* The Full RFQ Form with Dynamic Sourcing Summary */
-          <form onSubmit={handleSubmit} style={{ padding: '2rem' }}>
+          <form onSubmit={handleSubmit} className="quote-modal-body" style={{ padding: '2rem' }}>
             
             {/* Top Sourcing Helper Box */}
             <div style={{

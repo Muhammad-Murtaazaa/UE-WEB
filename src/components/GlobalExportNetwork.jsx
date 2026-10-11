@@ -224,7 +224,7 @@ export default function GlobalExportNetwork({ openQuoteModal }) {
         }} className={`reveal-init ${isVisible ? 'reveal-active delay-2' : ''}`}>
           
           {/* Card Top Title Banner */}
-          <div style={{
+          <div className="gen-card-banner" style={{
             background: 'linear-gradient(135deg, #240713 0%, #360C1E 100%)',
             color: '#FFFFFF',
             padding: '2rem 2.5rem',
@@ -254,7 +254,7 @@ export default function GlobalExportNetwork({ openQuoteModal }) {
                   fontSize: '0.78rem', 
                   fontWeight: '700', 
                   color: '#D4AF37', 
-                  textTransform: 'uppercase',
+                  textTransform: 'uppercase', 
                   letterSpacing: '0.08em'
                 }}>
                   {currentPillar.badge}
@@ -271,7 +271,7 @@ export default function GlobalExportNetwork({ openQuoteModal }) {
           </div>
 
           {/* Card Content Grid */}
-          <div style={{
+          <div className="gen-card-body" style={{
             padding: '2.5rem',
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',

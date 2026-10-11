@@ -111,7 +111,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
   const active = bgSlides[currentSlide];
 
   return (
-    <section style={{ 
+    <section className="hero-section" style={{ 
       position: 'relative', 
       minHeight: '90vh',
       backgroundColor: '#240713',
@@ -177,10 +177,10 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
       </div>
 
       {/* ================= FOREGROUND HERO CONTENT ================= */}
-      <div className="container-custom" style={{ 
+      <div className="container-custom hero-content-container" style={{ 
         position: 'relative', 
         zIndex: 2, 
-        paddingTop: '3.75rem', 
+        paddingTop: '3rem', 
         paddingBottom: '2.5rem',
         maxWidth: '1080px',
         margin: '0 auto',
@@ -188,13 +188,13 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
       }}>
         
         {/* Frosted Glass Focal Container for maximum text legibility & image exposure around it */}
-        <div style={{
-          backgroundColor: 'rgba(26, 10, 16, 0.76)',
+        <div className="hero-focal-card" style={{
+          backgroundColor: 'rgba(26, 10, 16, 0.72)',
           backdropFilter: 'blur(16px)',
           WebkitBackdropFilter: 'blur(16px)',
           border: '1px solid rgba(255, 255, 255, 0.20)',
-          borderRadius: '26px',
-          padding: 'clamp(2rem, 4vw, 3.25rem) clamp(1.25rem, 3.5vw, 2.75rem)',
+          borderRadius: '24px',
+          padding: 'clamp(1.5rem, 4vw, 3.25rem) clamp(1rem, 3.5vw, 2.75rem)',
           boxShadow: '0 24px 60px rgba(0, 0, 0, 0.55), 0 0 40px rgba(128, 0, 32, 0.3)',
           margin: '0 auto'
         }}>
@@ -202,12 +202,12 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
           <div className="hero-announcement-pill" style={{ 
             display: 'inline-flex', 
             alignItems: 'center', 
-            gap: '0.65rem', 
-            marginBottom: '1.5rem', 
-            flexWrap: 'wrap',
+            gap: '0.55rem', 
+            marginBottom: '1.25rem', 
+            flexWrap: 'nowrap',
             backgroundColor: 'rgba(128, 0, 32, 0.35)',
             border: '1px solid rgba(240, 203, 211, 0.4)',
-            padding: '0.4rem 1.15rem',
+            padding: '0.35rem 1rem',
             borderRadius: '9999px',
             boxShadow: '0 4px 16px rgba(0,0,0,0.2)'
           }}>
@@ -220,33 +220,34 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
               fontSize: '0.78rem'
             }}>
               <span style={{ 
-                width: '8px', 
-                height: '8px', 
+                width: '7px', 
+                height: '7px', 
                 borderRadius: '50%', 
                 backgroundColor: '#A0183A', 
                 display: 'inline-block',
                 boxShadow: '0 0 10px #A0183A'
               }} />
-              Uzair Sharif Enterprises (SMC-Pvt) Ltd
+              <span>Uzair Sharif Enterprises</span>
+              <span className="hidden-mobile"> (SMC-Pvt) Ltd</span>
             </span>
-            <span style={{ color: 'rgba(255, 255, 255, 0.3)' }}>•</span>
-            <span style={{ fontSize: '0.78rem', color: '#FAF7F5' }}>
+            <span className="hidden-mobile" style={{ color: 'rgba(255, 255, 255, 0.3)' }}>•</span>
+            <span className="hidden-mobile" style={{ fontSize: '0.78rem', color: '#FAF7F5' }}>
               Pakistan Garment Export Coordination
             </span>
             <span style={{ color: 'rgba(255, 255, 255, 0.3)' }}>•</span>
-            <span style={{ fontSize: '0.78rem', color: '#800020', fontWeight: '700', backgroundColor: '#FFFFFF', padding: '0.15rem 0.55rem', borderRadius: '4px' }}>
+            <span style={{ fontSize: '0.74rem', color: '#800020', fontWeight: '700', backgroundColor: '#FFFFFF', padding: '0.15rem 0.5rem', borderRadius: '4px', whiteSpace: 'nowrap' }}>
               100% Custom Specs
             </span>
           </div>
 
           {/* Central Bold Headline */}
-          <h1 style={{ 
-            fontSize: 'clamp(2.3rem, 4.8vw, 4.1rem)', 
+          <h1 className="hero-main-heading" style={{ 
+            fontSize: 'clamp(1.75rem, 4.6vw, 4rem)', 
             fontWeight: '800', 
             color: '#FFFFFF', 
-            lineHeight: '1.12',
-            letterSpacing: '-0.035em',
-            marginBottom: '1.25rem',
+            lineHeight: '1.15',
+            letterSpacing: '-0.03em',
+            marginBottom: '1rem',
             textShadow: '0 4px 20px rgba(0, 0, 0, 0.8)'
           }}>
             Pakistan-Based Custom Garment <br className="hidden-mobile" />
@@ -262,12 +263,12 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
           </h1>
 
           {/* Subtitle */}
-          <p style={{ 
-            fontSize: 'clamp(1rem, 1.6vw, 1.18rem)', 
+          <p className="hero-subtitle" style={{ 
+            fontSize: 'clamp(0.92rem, 1.5vw, 1.15rem)', 
             color: '#FAF7F5', 
-            lineHeight: '1.65', 
+            lineHeight: '1.6', 
             maxWidth: '780px',
-            margin: '0 auto 2rem auto',
+            margin: '0 auto 1.75rem auto',
             textShadow: '0 2px 10px rgba(0, 0, 0, 0.7)',
             fontWeight: '400'
           }}>

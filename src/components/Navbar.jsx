@@ -59,7 +59,7 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
       />
 
       {/* Top Professional Notice Bar */}
-      <div style={{ 
+      <div className="top-notice-bar" style={{ 
         backgroundColor: '#240713', 
         color: '#D1C4C8', 
         fontSize: '0.78rem', 

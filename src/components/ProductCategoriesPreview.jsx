@@ -292,7 +292,7 @@ export default function ProductCategoriesPreview({ onSelectCategory, openQuoteMo
               return (
                 <div 
                   key={category.id}
-                  className="card-vercel"
+                  className="card-vercel category-preview-card"
                   style={{ 
                     flex: '0 0 clamp(320px, 34vw, 380px)',
                     scrollSnapAlign: 'start',
