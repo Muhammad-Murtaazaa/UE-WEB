@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Uzair Sharif Enterprises</title>
+  <link rel="icon" type="image/png" href="/LOGO.png" />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #240713;
+      color: #FAF7F5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .card {
+      background: rgba(36, 7, 19, 0.85);
+      border: 1px solid #541731;
+      padding: 2.5rem;
+      border-radius: 20px;
+      max-width: 480px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+    img {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 1.5rem;
+      border-radius: 14px;
+      background: #ffffff;
+      padding: 4px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0 0 0.5rem 0;
+      color: #F0CBD3;
+    }
+    p {
+      color: #D1C4C8;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    a {
+      display: inline-block;
+      background-color: #800020;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 0.85rem 1.75rem;
+      border-radius: 10px;
+      font-weight: 700;
+      border: 1px solid #A0183A;
+      transition: all 0.2s ease;
+    }
+    a:hover {
+      background-color: #A0183A;
+      transform: translateY(-2px);
+    }
+  </style>
+  <script>
+    // SPA fallback: If visitor arrives here, redirect smoothly to root
+    setTimeout(function() {
+      if (window.location.pathname !== '/404.html' && window.location.pathname !== '/404') {
+        window.location.replace('/#' + window.location.pathname);
+      }
+    }, 1500);
+  </script>
+</head>
+<body>
+  <div class="card">
+    <img src="/LOGO.png" alt="Uzair Sharif Enterprises Logo" />
+    <h1>404</h1>
+    <h2>Page Not Found</h2>
+    <p>The garment manufacturing page or resource you are looking for has been moved or does not exist.</p>
+    <a href="/">Return to Home & Catalogue</a>
+  </div>
+</body>
+</html>
