@@ -418,16 +418,16 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                   <button
                     onClick={() => handleOpenDetailModal(category, 0)}
                     className="btn-secondary"
-                    style={{ flex: 1, padding: '0.7rem', fontSize: '0.85rem', borderColor: '#EAE1DD' }}
+                    style={{ flex: 1, padding: '0.7rem 0.6rem', fontSize: '0.82rem', borderColor: '#EAE1DD', whiteSpace: 'nowrap', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.35rem' }}
                   >
-                    <span>View Specifications</span>
+                    <span>View Specs</span>
                     <ArrowRight size={14} />
                   </button>
 
                   <button
                     onClick={() => openQuoteModal(category.name)}
                     className="btn-cobalt"
-                    style={{ flex: 1, padding: '0.7rem', fontSize: '0.85rem', backgroundColor: '#800020', border: '1px solid #A0183A' }}
+                    style={{ flex: 1, padding: '0.7rem 0.6rem', fontSize: '0.82rem', backgroundColor: '#800020', border: '1px solid #A0183A', whiteSpace: 'nowrap', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.35rem' }}
                   >
                     <FileText size={14} />
                     <span>Inquire / Quote</span>

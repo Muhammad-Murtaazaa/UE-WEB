@@ -208,21 +208,22 @@ export default function FabricSpecGuide({ openQuoteModal }) {
             justifyContent: 'space-between'
           }}>
             <div>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.65rem', marginBottom: '1.25rem' }}>
                 <span style={{ 
                   fontFamily: 'var(--font-mono)', 
-                  fontSize: '0.78rem', 
+                  fontSize: '0.76rem', 
                   fontWeight: '700', 
                   color: '#F0CBD3',
                   backgroundColor: 'rgba(128,0,32,0.45)',
-                  padding: '0.3rem 0.75rem',
+                  padding: '0.35rem 0.85rem',
                   borderRadius: '20px',
-                  border: '1px solid #800020'
+                  border: '1px solid #800020',
+                  whiteSpace: 'nowrap'
                 }}>
-                  GSM: {currentFabric.gsmRange}
+                  Custom Knitted to Any GSM
                 </span>
-                <span style={{ fontSize: '0.8rem', color: '#B8A8AD', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-                  <ShieldCheck size={16} color="#4ADE80" /> OEKO-TEX Compliant
+                <span style={{ fontSize: '0.8rem', color: '#B8A8AD', display: 'flex', alignItems: 'center', gap: '0.35rem', whiteSpace: 'nowrap' }}>
+                  <ShieldCheck size={16} color="#4ADE80" style={{ flexShrink: 0 }} /> OEKO-TEX Compliant
                 </span>
               </div>
 

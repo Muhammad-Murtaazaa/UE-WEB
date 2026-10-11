@@ -239,6 +239,9 @@ export default function GlobalExportNetwork({ openQuoteModal }) {
               <div style={{
                 width: '52px',
                 height: '52px',
+                minWidth: '52px',
+                minHeight: '52px',
+                flexShrink: 0,
                 borderRadius: '14px',
                 backgroundColor: '#800020',
                 border: '1px solid #A0183A',

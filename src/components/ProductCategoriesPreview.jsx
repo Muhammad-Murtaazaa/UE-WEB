@@ -459,19 +459,19 @@ export default function ProductCategoriesPreview({ onSelectCategory, openQuoteMo
                     </div>
 
                     {/* Card Actions */}
-                    <div style={{ marginTop: 'auto', display: 'flex', gap: '0.6rem', paddingTop: '1rem', borderTop: '1px solid #F0E8E5' }}>
+                    <div style={{ marginTop: 'auto', display: 'flex', gap: '0.5rem', paddingTop: '1rem', borderTop: '1px solid #F0E8E5' }}>
                       <button
                         onClick={() => onSelectCategory(category.id)}
                         className="btn-secondary"
-                        style={{ flex: 1, padding: '0.65rem 0.75rem', fontSize: '0.82rem', borderColor: '#EAE1DD' }}
+                        style={{ flex: 1, padding: '0.65rem 0.5rem', fontSize: '0.8rem', borderColor: '#EAE1DD', whiteSpace: 'nowrap', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.35rem' }}
                       >
-                        <span>Specifications</span>
+                        <span>View Specs</span>
                         <ArrowRight size={13} />
                       </button>
                       <button
                         onClick={() => openQuoteModal(category.name)}
                         className="btn-cobalt"
-                        style={{ flex: 1, padding: '0.65rem 0.75rem', fontSize: '0.82rem', backgroundColor: '#800020', border: '1px solid #A0183A' }}
+                        style={{ flex: 1, padding: '0.65rem 0.5rem', fontSize: '0.8rem', backgroundColor: '#800020', border: '1px solid #A0183A', whiteSpace: 'nowrap', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.35rem' }}
                       >
                         <FileText size={13} />
                         <span>Quote</span>
@@ -666,19 +666,19 @@ export default function ProductCategoriesPreview({ onSelectCategory, openQuoteMo
                     </div>
 
                     {/* Card Actions */}
-                    <div style={{ marginTop: 'auto', display: 'flex', gap: '0.75rem', paddingTop: '1.15rem', borderTop: '1px solid #F0E8E5' }}>
+                    <div style={{ marginTop: 'auto', display: 'flex', gap: '0.6rem', paddingTop: '1.15rem', borderTop: '1px solid #F0E8E5' }}>
                       <button
                         onClick={() => onSelectCategory(category.id)}
                         className="btn-secondary"
-                        style={{ flex: 1, padding: '0.7rem 0.85rem', fontSize: '0.85rem', borderColor: '#EAE1DD' }}
+                        style={{ flex: 1, padding: '0.7rem 0.6rem', fontSize: '0.82rem', borderColor: '#EAE1DD', whiteSpace: 'nowrap', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.35rem' }}
                       >
-                        <span>Specifications</span>
+                        <span>View Specs</span>
                         <ArrowRight size={14} />
                       </button>
                       <button
                         onClick={() => openQuoteModal(category.name)}
                         className="btn-cobalt"
-                        style={{ flex: 1, padding: '0.7rem 0.85rem', fontSize: '0.85rem', backgroundColor: '#800020', border: '1px solid #A0183A' }}
+                        style={{ flex: 1, padding: '0.7rem 0.6rem', fontSize: '0.82rem', backgroundColor: '#800020', border: '1px solid #A0183A', whiteSpace: 'nowrap', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.35rem' }}
                       >
                         <FileText size={14} />
                         <span>Quote</span>

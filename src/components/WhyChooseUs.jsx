@@ -219,10 +219,13 @@ export default function WhyChooseUs({ openQuoteModal }) {
           flexWrap: 'wrap',
           gap: '1.25rem'
         }} className={`reveal-init ${isVisible ? 'reveal-active delay-3' : ''}`}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', flex: '1 1 300px' }}>
             <div style={{
-              width: '38px',
-              height: '38px',
+              width: '40px',
+              height: '40px',
+              minWidth: '40px',
+              minHeight: '40px',
+              flexShrink: 0,
               borderRadius: '10px',
               backgroundColor: '#800020',
               display: 'flex',
