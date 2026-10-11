@@ -18,56 +18,32 @@ export default function BrandLogo({
 
   return (
     <div className={`brand-logo-root brand-logo-${size}`} style={{ display: 'inline-flex', alignItems: 'center', gap: size === 'sm' ? '0.5rem' : '0.65rem', textDecoration: 'none' }}>
-      {/* Precision Emblem */}
+      {/* Official Brand Emblem from public/LOGO.png */}
       <div className="brand-logo-emblem" style={{
         width: `${currentIcon.width}px`,
         height: `${currentIcon.height}px`,
         borderRadius: `${currentIcon.radius}px`,
-        backgroundColor: '#240713',
-        border: '1.5px solid #800020',
+        backgroundColor: '#FFFFFF',
+        border: isLightText ? '1.5px solid rgba(255, 255, 255, 0.25)' : '1.5px solid #EAE1DD',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        boxShadow: '0 4px 14px rgba(36, 7, 19, 0.35)',
+        boxShadow: isLightText ? '0 4px 14px rgba(0, 0, 0, 0.4)' : '0 2px 8px rgba(0, 0, 0, 0.06)',
         flexShrink: 0,
         position: 'relative',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        padding: '2px'
       }}>
-        {/* Subtle Inner Glow */}
-        <div style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'linear-gradient(135deg, rgba(128,0,32,0.4) 0%, rgba(20,4,10,0.8) 100%)',
-          pointerEvents: 'none'
-        }} />
-        
-        {/* Vector SVG Emblem */}
-        <svg 
-          width={currentIcon.width * 0.72} 
-          height={currentIcon.height * 0.72} 
-          viewBox="0 0 40 40" 
-          fill="none" 
-          style={{ position: 'relative', zIndex: 1 }}
-        >
-          {/* U shape */}
-          <path 
-            d="M10 10v11c0 5.5 4.5 10 10 10s10-4.5 10-10V10" 
-            stroke="#FAF7F5" 
-            strokeWidth="3" 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-          />
-          {/* S curve in gold */}
-          <path 
-            d="M26 15.5c-1.4-1.8-3.4-2.5-6-2.5-4 0-6.2 2-6.2 4.5 0 3.8 8 3.2 8 6.8 0 2-1.8 3.5-4.8 3.5-2.8 0-5-1.4-6.5-3.5" 
-            stroke="#D4AF37" 
-            strokeWidth="2.5" 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-          />
-          {/* Center core knot */}
-          <circle cx="20" cy="21" r="2" fill="#D4AF37" />
-        </svg>
+        <img 
+          src="/LOGO.png" 
+          alt="Uzair Sharif Enterprises"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'contain',
+            display: 'block'
+          }}
+        />
       </div>
 
       {/* Brand Typography */}
