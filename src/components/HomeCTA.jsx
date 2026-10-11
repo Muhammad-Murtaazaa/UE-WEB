@@ -9,6 +9,7 @@ import {
   CheckCircle2, 
   Mail, 
   Phone, 
+  MapPin,
   Search 
 } from 'lucide-react';
 import { FAQ_DATA } from '../data/faqData';
@@ -257,7 +258,7 @@ export default function HomeCTA({ openQuoteModal }) {
                 <CheckCircle2 size={15} color="#F0CBD3" /> Official Domain Sales Communications
               </span>
               <span style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-                <CheckCircle2 size={15} color="#F0CBD3" /> Pakistan Textile Clusters
+                <MapPin size={15} color="#F0CBD3" /> Office: House No. 540, Street No. 8, Shah Faiz Park, Burewala
               </span>
             </div>
 

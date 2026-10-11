@@ -95,7 +95,7 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
             lineHeight: '1.18',
             marginBottom: '1rem'
           }}>
-            Garment Manufacturing Capabilities
+            Custom Apparel Product Catalog
           </h1>
           <p style={{ fontSize: '1.1rem', color: '#D1C4C8', lineHeight: '1.75' }}>
             Browse our core custom apparel categories. All garments are custom manufactured to your requested fabric composition, weight (GSM), sizing chart, and branding details.

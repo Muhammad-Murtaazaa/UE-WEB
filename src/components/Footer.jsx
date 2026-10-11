@@ -166,9 +166,14 @@ export default function Footer({ setActivePage, openQuoteModal }) {
                 </a>
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#D1C4C8' }}>
-                <MapPin size={16} color="#A0183A" style={{ flexShrink: 0 }} />
-                <span>Pakistan</span>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', color: '#D1C4C8' }}>
+                <MapPin size={16} color="#A0183A" style={{ flexShrink: 0, marginTop: '3px' }} />
+                <div style={{ lineHeight: '1.4' }}>
+                  <span style={{ color: '#ffffff', fontWeight: '600', display: 'block', marginBottom: '0.15rem' }}>Office Address:</span>
+                  <span style={{ color: '#D1C4C8', fontSize: '0.82rem', display: 'block' }}>
+                    House No. 540, Street No. 8, Shah Faiz Park, Burewala, Pakistan
+                  </span>
+                </div>
               </div>
 
               <div style={{ paddingTop: '0.5rem' }}>

@@ -207,8 +207,8 @@ export default function ContactSection({ openQuoteModal }) {
                 </div>
               </div>
 
-              {/* Country of Operations */}
-              <div className="subtle-card" style={{ padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', backgroundColor: '#FFFFFF', borderColor: '#EAE1DD' }}>
+              {/* Registered Office Address */}
+              <div className="subtle-card" style={{ padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'flex-start', gap: '1.25rem', backgroundColor: '#FFFFFF', borderColor: '#EAE1DD' }}>
                 <div style={{ 
                   width: '46px', 
                   height: '46px', 
@@ -218,19 +218,20 @@ export default function ContactSection({ openQuoteModal }) {
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center',
-                  flexShrink: 0
+                  flexShrink: 0,
+                  marginTop: '2px'
                 }}>
-                  <MapPin size={22} color="#1A0A10" />
+                  <MapPin size={22} color="#800020" />
                 </div>
                 <div>
                   <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#8C7A82' }}>
-                    Country of Incorporation & Operations
+                    Registered Office Address
                   </div>
-                  <div style={{ fontWeight: '700', color: '#1A0A10', fontSize: '0.98rem', marginTop: '0.2rem' }}>
-                    Pakistan
+                  <div style={{ fontWeight: '700', color: '#1A0A10', fontSize: '0.96rem', marginTop: '0.2rem', lineHeight: '1.4' }}>
+                    House No. 540, Street No. 8, Shah Faiz Park, Burewala, Pakistan
                   </div>
                   <span style={{ fontSize: '0.75rem', color: '#8C7A82' }}>
-                    Textile & Garment Export Operations
+                    Commercial Garment & Export Operations
                   </span>
                 </div>
               </div>

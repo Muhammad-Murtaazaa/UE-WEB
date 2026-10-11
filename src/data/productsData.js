@@ -258,6 +258,8 @@ export const COMPANY_DETAILS = {
   tagline: 'Pakistan-Based Garment Exporter & Supply Partner',
   specialization: 'Custom Apparel • Private Label • Global Supply Network',
   country: 'Pakistan',
+  address: 'House No. 540, Street No. 8, Shah Faiz Park, Burewala, Pakistan',
+  officeAddress: 'House No. 540, Street No. 8, Shah Faiz Park, Burewala',
   emailSales: 'info@uzairsharifenterprises.com',
   emailInfo: 'info@uzairsharifenterprises.com',
   email: 'info@uzairsharifenterprises.com',

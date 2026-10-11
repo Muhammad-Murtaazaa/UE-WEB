@@ -84,8 +84,8 @@ export default function CustomizationShowcase({ openQuoteModal }) {
       cat: 'fabric',
       num: '03',
       title: 'Color & Dyeing', 
-      desc: 'Accurate Pantone TCX / TPX lab-dip matching, reactive piece dyeing, pigment overdyes, acid wash, mineral wash, and vintage sun-faded treatments.', 
-      highlight: 'Pantone TCX / TPX Lab-Dip Matching',
+      desc: 'Custom color matching to your exact shades, premium fabric dyeing, rich solid colors, and vintage washed finishes.', 
+      highlight: 'Custom Color Matching & Washes',
       icon: Palette 
     },
     { 

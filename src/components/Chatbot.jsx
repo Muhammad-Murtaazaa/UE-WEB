@@ -433,6 +433,7 @@ export default function Chatbot({ openQuoteModal }) {
             >
               {copiedEmail ? <Check size={13} color="#059669" /> : <Copy size={13} />}
             </button>
+            </div>
           </div>
 
           {/* User Input Form */}
