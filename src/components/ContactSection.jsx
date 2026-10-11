@@ -232,7 +232,7 @@ export default function ContactSection({ openQuoteModal }) {
                 </div>
                 
                 <span className="badge-pill badge-cobalt" style={{ marginBottom: '0.85rem', backgroundColor: '#FDF2F4', color: '#800020', border: '1px solid #F0CBD3' }}>
-                  Email Dispatched to info@uzairsharifenterprises.com
+                  Email Dispatched to <a href="mailto:info@uzairsharifenterprises.com" style={{ color: '#800020', fontWeight: '700', textDecoration: 'underline' }}>info@uzairsharifenterprises.com</a>
                 </span>
 
                 <h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1A0A10', marginBottom: '0.6rem' }}>

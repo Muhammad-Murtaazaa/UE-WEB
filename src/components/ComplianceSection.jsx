@@ -24,17 +24,7 @@ export default function ComplianceSection({ openQuoteModal }) {
       ],
       icon: Flask
     },
-    {
-      title: 'Textile Chemical & Physical Testing',
-      desc: 'Physical and chemical testing where required by buyer protocol or destination regulations.',
-      points: [
-        'Color fastness to washing, perspiration, light & rubbing (crocking)',
-        'pH value of aqueous extract testing',
-        'Formaldehyde and azo dyes detection compliance (REACH / CPSIA)',
-        'Fiber composition quantitative verification'
-      ],
-      icon: ShieldCheck
-    },
+
     {
       title: 'Destination Labeling Compliance',
       desc: 'Buyer and destination-market labeling requirements strictly adhered to.',
@@ -119,7 +109,7 @@ export default function ComplianceSection({ openQuoteModal }) {
                 Honest Certification & Standards Policy
               </h3>
               <p style={{ fontSize: '0.92rem', color: '#4B5565', lineHeight: '1.7', marginBottom: '0.75rem' }}>
-                Many overseas suppliers display unverified or outdated certification logos (such as generic ISO, OEKO-TEX, WRAP, or BSCI badges) without context. 
+                We maintain complete transparency, verifiable quality standards, and clear accountability across all manufacturing processes. 
                 At <strong>Uzair Sharif Enterprises</strong>, we believe in honest commercial partnership:
               </p>
               <p style={{ fontSize: '0.88rem', color: '#8C7A82', lineHeight: '1.65' }}>

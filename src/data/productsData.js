@@ -8,18 +8,18 @@ export const PRODUCTS_CATEGORIES = [
     images: [
       {
         url: '/images/products/t-shirts-1.jpg',
-        fallbackUrl: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop',
-        caption: '100% Combed Cotton Crewneck (Representative Sample)'
+        fallbackUrl: '/images/products/t-shirts-1.jpg',
+        caption: '100% Combed Cotton Crewneck Flat-Lay (Representative Sample)'
       },
       {
         url: '/images/products/t-shirts-2.jpg',
-        fallbackUrl: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1000&auto=format&fit=crop',
-        caption: 'Heavyweight Drop Shoulder Oversized Fit (Representative Sample)'
+        fallbackUrl: '/images/products/t-shirts-2.jpg',
+        caption: 'Heavyweight Cotton Crewneck Flat-Lay (Representative Sample)'
       },
       {
         url: '/images/products/t-shirts-3.jpg',
-        fallbackUrl: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1000&auto=format&fit=crop',
-        caption: 'Garment Dye & Acid Wash Finish Capabilities (Representative Sample)'
+        fallbackUrl: '/images/products/t-shirts-1.jpg',
+        caption: 'Custom Production Streetwear Tee (Representative Sample)'
       }
     ],
     fabricOptions: ['100% Combed Cotton', 'Carded Cotton', '60/40 Cotton-Poly Blend', 'Organic BCI Cotton', 'Bamboo Cotton', 'Modal Blends'],
@@ -232,18 +232,18 @@ export const PRODUCTS_CATEGORIES = [
     images: [
       {
         url: '/images/products/kidswear-1.jpg',
-        fallbackUrl: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=1000&auto=format&fit=crop',
-        caption: 'Soft Organic Combed Cotton Kids Crewneck Tee (Representative Sample)'
+        fallbackUrl: '/images/products/kidswear-1.jpg',
+        caption: 'Soft Organic Combed Cotton Kids Playwear Set (Representative Sample)'
       },
       {
         url: '/images/products/kidswear-2.jpg',
-        fallbackUrl: 'https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=1000&auto=format&fit=crop',
-        caption: 'Cozy Brushed Cotton Kids Fleece Hoodie (Representative Sample)'
+        fallbackUrl: '/images/products/kidswear-2.jpg',
+        caption: 'Cozy Organic Cotton Kids Hoodie & Joggers Set (Representative Sample)'
       },
       {
         url: '/images/products/kidswear-3.jpg',
-        fallbackUrl: 'https://images.unsplash.com/photo-1503919545889-aef636e10ad4?q=80&w=1000&auto=format&fit=crop',
-        caption: 'Coordinated Children’s 2-Piece Knitwear Set (Representative Sample)'
+        fallbackUrl: '/images/products/kidswear-1.jpg',
+        caption: 'Coordinated Children’s Organic Knitwear (Representative Sample)'
       }
     ],
     fabricOptions: ['100% Organic Combed Cotton', 'OEKO-TEX Compliant Knits (Buyer coordinated)', 'Bamboo-Cotton Extra Soft', 'Cotton Interlock & Baby Rib', 'Breathable Summer Knits'],

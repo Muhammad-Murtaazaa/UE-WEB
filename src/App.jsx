@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TrustIntro from './components/TrustIntro';
 import ProductCategoriesPreview from './components/ProductCategoriesPreview';
-import FabricSpecGuide from './components/FabricSpecGuide';
 import WhyChooseUs from './components/WhyChooseUs';
 import GlobalExportNetwork from './components/GlobalExportNetwork';
 import CustomizationShowcase from './components/CustomizationShowcase';
@@ -66,8 +65,7 @@ export default function App() {
               onSelectCategory={handleSelectCategoryFromHome} 
               openQuoteModal={openQuoteModal} 
             />
-            {/* Fabric Sourcing & Technical Specification Hub */}
-            <FabricSpecGuide openQuoteModal={openQuoteModal} />
+
             <WhyChooseUs openQuoteModal={() => openQuoteModal('')} />
             <GlobalExportNetwork openQuoteModal={() => openQuoteModal('')} />
             <CustomizationShowcase openQuoteModal={() => openQuoteModal('')} />

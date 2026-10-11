@@ -222,7 +222,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory = '' }
 
             <div style={{ marginBottom: '1rem' }}>
               <span className="badge-pill badge-cobalt" style={{ backgroundColor: '#FDF2F4', color: '#800020', border: '1px solid #F0CBD3' }}>
-                Quotation Dispatched to info@uzairsharifenterprises.com
+                Quotation Dispatched to <a href="mailto:info@uzairsharifenterprises.com" style={{ color: '#800020', fontWeight: '700', textDecoration: 'underline' }}>info@uzairsharifenterprises.com</a>
               </span>
             </div>
 
