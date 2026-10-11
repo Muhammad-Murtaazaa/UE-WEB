@@ -130,13 +130,33 @@ export default function Footer({ setActivePage, openQuoteModal }) {
               Commercial Desk
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', fontSize: '0.84rem' }}>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', color: '#D1C4C8' }}>
-                <Mail size={16} color="#A0183A" style={{ flexShrink: 0, marginTop: '2px' }} />
-                <div>
-                  <a href={`mailto:${COMPANY_DETAILS.emailInfo}`} style={{ color: '#ffffff', textDecoration: 'none', display: 'block', fontWeight: '600' }}>
-                    {COMPANY_DETAILS.emailInfo}
-                  </a>
-                </div>
+              <div>
+                <a 
+                  href={`mailto:${COMPANY_DETAILS.emailInfo}`} 
+                  style={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    gap: '0.6rem', 
+                    color: '#ffffff', 
+                    textDecoration: 'none', 
+                    fontWeight: '600',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    padding: '0.2rem 0'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = '#F0CBD3';
+                    e.currentTarget.style.textDecoration = 'underline';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = '#ffffff';
+                    e.currentTarget.style.textDecoration = 'none';
+                  }}
+                  title="Click to open your email client"
+                >
+                  <Mail size={16} color="#E8A8B8" style={{ flexShrink: 0 }} />
+                  <span>{COMPANY_DETAILS.emailInfo}</span>
+                </a>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#D1C4C8' }}>

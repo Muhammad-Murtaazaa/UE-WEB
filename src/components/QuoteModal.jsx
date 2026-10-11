@@ -16,7 +16,9 @@ import {
   AlertCircle,
   Clock,
   ShieldCheck,
-  Check
+  Check,
+  Mail,
+  Phone
 } from 'lucide-react';
 import { PRODUCTS_CATEGORIES, COMPANY_DETAILS } from '../data/productsData';
 import BrandLogo from './BrandLogo';
@@ -163,6 +165,16 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory = '' }
             <h2 style={{ fontSize: '1.5rem', fontWeight: '800', letterSpacing: '-0.025em', margin: 0 }}>
               Request a Manufacturing Quote
             </h2>
+            <div style={{ fontSize: '0.8rem', color: '#D1C4C8', marginTop: '0.35rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+              <span>Or email specs directly:</span>
+              <a 
+                href={`mailto:${COMPANY_DETAILS.emailInfo}`} 
+                style={{ color: '#F0CBD3', fontWeight: '700', textDecoration: 'underline' }}
+                title="Click to open your email client"
+              >
+                {COMPANY_DETAILS.emailInfo}
+              </a>
+            </div>
           </div>
           <button
             onClick={onClose}
@@ -256,11 +268,11 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory = '' }
               </div>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '0.85rem', flexWrap: 'wrap' }}>
               <button
                 onClick={onClose}
                 className="btn-primary"
-                style={{ padding: '0.85rem 2.2rem' }}
+                style={{ padding: '0.85rem 1.8rem' }}
               >
                 Close Window
               </button>
@@ -269,9 +281,17 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory = '' }
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-cobalt"
-                style={{ padding: '0.85rem 2.2rem' }}
+                style={{ padding: '0.85rem 1.8rem' }}
               >
                 Notify on WhatsApp ({COMPANY_DETAILS.whatsappRaw})
+              </a>
+              <a
+                href={`mailto:${COMPANY_DETAILS.emailInfo}?subject=RFQ%20Specification%20[${submittedTicket.id}]%20from%20${encodeURIComponent(submittedTicket.fullName)}&body=Quotation%20Ticket:%20${submittedTicket.id}%0AClient:%20${encodeURIComponent(submittedTicket.fullName)}%0ACompany:%20${encodeURIComponent(submittedTicket.companyName)}%0AProduct:%20${encodeURIComponent(submittedTicket.productRequired)}%0AQuantity:%20${encodeURIComponent(submittedTicket.quantity)}%0AFabric:%20${encodeURIComponent(submittedTicket.fabricMaterial || 'N/A')}%0ADestination:%20${encodeURIComponent(submittedTicket.destinationCountry || '')}`}
+                className="btn-secondary"
+                style={{ padding: '0.85rem 1.8rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem', borderRadius: '10px' }}
+                title="Click to open your email client"
+              >
+                <Mail size={16} color="#800020" /> Open in Email App
               </a>
             </div>
 

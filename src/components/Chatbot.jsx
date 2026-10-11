@@ -11,7 +11,8 @@ import {
   HelpCircle,
   Copy,
   Check,
-  RotateCcw
+  RotateCcw,
+  Mail
 } from 'lucide-react';
 import { FAQ_DATA } from '../data/faqData';
 import { COMPANY_DETAILS } from '../data/productsData';
@@ -300,7 +301,21 @@ export default function Chatbot({ openQuoteModal }) {
                   borderBottomLeftRadius: msg.sender === 'bot' ? '2px' : '14px',
                   boxShadow: msg.sender === 'user' ? '0 2px 6px rgba(0,0,0,0.1)' : 'none'
                 }}>
-                  {msg.text}
+                  {typeof msg.text === 'string' && msg.text.includes(COMPANY_DETAILS.emailInfo) ? (
+                    <>
+                      {msg.text.split(COMPANY_DETAILS.emailInfo)[0]}
+                      <a 
+                        href={`mailto:${COMPANY_DETAILS.emailInfo}`}
+                        style={{ color: '#800020', fontWeight: '700', textDecoration: 'underline' }}
+                        title="Click to open email"
+                      >
+                        {COMPANY_DETAILS.emailInfo}
+                      </a>
+                      {msg.text.split(COMPANY_DETAILS.emailInfo)[1]}
+                    </>
+                  ) : (
+                    msg.text
+                  )}
                 </div>
               </div>
             ))}
@@ -330,6 +345,8 @@ export default function Chatbot({ openQuoteModal }) {
             display: 'flex',
             gap: '0.5rem'
           }}>
+            {/* Quick External Contact Buttons */}
+            <div style={{ display: 'flex', gap: '0.4rem', width: '100%' }}>
             <button
               onClick={() => {
                 setIsOpen(false);
@@ -337,21 +354,21 @@ export default function Chatbot({ openQuoteModal }) {
               }}
               style={{
                 flex: 1,
-                padding: '0.55rem',
-                backgroundColor: '#059669',
+                padding: '0.55rem 0.35rem',
+                backgroundColor: '#800020',
                 color: '#ffffff',
                 border: 'none',
                 borderRadius: '8px',
-                fontSize: '0.78rem',
+                fontSize: '0.74rem',
                 fontWeight: '700',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                gap: '0.35rem'
+                gap: '0.25rem'
               }}
             >
-              <FileText size={14} /> Request Quote
+              <FileText size={13} /> Quote
             </button>
             <a
               href={COMPANY_DETAILS.whatsappUrl}
@@ -359,40 +376,62 @@ export default function Chatbot({ openQuoteModal }) {
               rel="noopener noreferrer"
               style={{
                 flex: 1,
-                padding: '0.55rem',
-                backgroundColor: '#ffffff',
-                color: '#090d16',
-                border: '1px solid #cbd5e1',
+                padding: '0.55rem 0.35rem',
+                backgroundColor: '#ecfdf5',
+                color: '#047857',
+                border: '1px solid #a7f3d0',
                 borderRadius: '8px',
-                fontSize: '0.78rem',
+                fontSize: '0.74rem',
                 fontWeight: '700',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                gap: '0.35rem',
+                gap: '0.25rem',
                 textDecoration: 'none'
               }}
             >
-              <Phone size={14} color="#059669" /> WhatsApp
+              <Phone size={13} color="#059669" /> WhatsApp
+            </a>
+            <a
+              href={`mailto:${COMPANY_DETAILS.emailInfo}`}
+              style={{
+                flex: 1,
+                padding: '0.55rem 0.35rem',
+                backgroundColor: '#FDF2F4',
+                color: '#800020',
+                border: '1px solid #F0CBD3',
+                borderRadius: '8px',
+                fontSize: '0.74rem',
+                fontWeight: '700',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.25rem',
+                textDecoration: 'none'
+              }}
+              title="Click to open your email client"
+            >
+              <Mail size={13} color="#800020" /> Email
             </a>
             <button
               onClick={handleCopyEmail}
               style={{
-                padding: '0.55rem 0.75rem',
+                padding: '0.55rem 0.55rem',
                 backgroundColor: '#ffffff',
                 color: '#475569',
                 border: '1px solid #cbd5e1',
                 borderRadius: '8px',
-                fontSize: '0.78rem',
+                fontSize: '0.74rem',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
               }}
-              title="Copy sales email"
+              title="Copy sales email address"
             >
-              {copiedEmail ? <Check size={14} color="#059669" /> : <Copy size={14} />}
+              {copiedEmail ? <Check size={13} color="#059669" /> : <Copy size={13} />}
             </button>
           </div>
 

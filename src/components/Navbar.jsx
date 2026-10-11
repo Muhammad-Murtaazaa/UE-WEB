@@ -90,10 +90,30 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
             <a 
-              href="mailto:info@uzairsharifenterprises.com" 
-              style={{ color: '#FAF7F5', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.35rem' }}
+              href={`mailto:${COMPANY_DETAILS.emailInfo}`}
+              style={{ 
+                color: '#FAF7F5', 
+                textDecoration: 'none', 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: '0.4rem',
+                padding: '0.2rem 0.5rem',
+                borderRadius: '4px',
+                transition: 'all 0.2s ease',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = '#F0CBD3';
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.08)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = '#FAF7F5';
+                e.currentTarget.style.backgroundColor = 'transparent';
+              }}
+              title="Click to open your email client"
             >
-              <Mail size={12} color="#800020" /> info@uzairsharifenterprises.com
+              <Mail size={13} color="#F0CBD3" />
+              <span style={{ textDecoration: 'underline', textUnderlineOffset: '2px' }}>{COMPANY_DETAILS.emailInfo}</span>
             </a>
             <span style={{ color: '#5E5055' }}>•</span>
             <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', color: '#D1C4C8' }}>
@@ -254,6 +274,50 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
               >
                 <FileText size={18} /> Request a Quote
               </button>
+            </li>
+            <li style={{ paddingTop: '0.75rem', borderTop: '1px solid #EAE1DD', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <a
+                href={`mailto:${COMPANY_DETAILS.emailInfo}`}
+                onClick={() => setMobileMenuOpen(false)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.6rem',
+                  padding: '0.75rem 1rem',
+                  backgroundColor: '#FDF2F4',
+                  border: '1px solid #F0CBD3',
+                  borderRadius: '8px',
+                  color: '#800020',
+                  textDecoration: 'none',
+                  fontWeight: '700',
+                  fontSize: '0.86rem'
+                }}
+              >
+                <Mail size={16} color="#800020" />
+                <span>Email: {COMPANY_DETAILS.emailInfo}</span>
+              </a>
+              <a
+                href={COMPANY_DETAILS.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.6rem',
+                  padding: '0.75rem 1rem',
+                  backgroundColor: '#ECFDF5',
+                  border: '1px solid #A7F3D0',
+                  borderRadius: '8px',
+                  color: '#047857',
+                  textDecoration: 'none',
+                  fontWeight: '700',
+                  fontSize: '0.86rem'
+                }}
+              >
+                <Phone size={16} color="#047857" />
+                <span>WhatsApp: {COMPANY_DETAILS.whatsappRaw}</span>
+              </a>
             </li>
           </ul>
         </div>

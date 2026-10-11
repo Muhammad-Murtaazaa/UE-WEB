@@ -115,7 +115,34 @@ export default function ContactSection({ openQuoteModal }) {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '2.5rem' }}>
               
               {/* Email Card */}
-              <div className="subtle-card" style={{ padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', backgroundColor: '#FFFFFF', borderColor: '#EAE1DD' }}>
+              <a 
+                href={`mailto:${COMPANY_DETAILS.emailInfo}`}
+                className="subtle-card" 
+                style={{ 
+                  padding: '1.25rem 1.5rem', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  gap: '1.25rem', 
+                  backgroundColor: '#FFFFFF', 
+                  borderColor: '#EAE1DD',
+                  textDecoration: 'none',
+                  borderRadius: '12px',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.02)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = '#800020';
+                  e.currentTarget.style.boxShadow = '0 6px 16px rgba(128, 0, 32, 0.08)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = '#EAE1DD';
+                  e.currentTarget.style.boxShadow = '0 2px 6px rgba(0,0,0,0.02)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+                title="Click to open your email app and send an inquiry"
+              >
                 <div style={{ 
                   width: '46px', 
                   height: '46px', 
@@ -129,17 +156,23 @@ export default function ContactSection({ openQuoteModal }) {
                 }}>
                   <Mail size={22} color="#800020" />
                 </div>
-                <div>
-                  <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#8C7A82' }}>
-                    Official Business Email
+                <div style={{ flex: 1 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem' }}>
+                    <span style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#8C7A82' }}>
+                      Official Business Email
+                    </span>
+                    <span style={{ fontSize: '0.72rem', backgroundColor: '#FDF2F4', color: '#800020', padding: '0.15rem 0.5rem', borderRadius: '4px', fontWeight: '600' }}>
+                      Click to Email ↗
+                    </span>
                   </div>
-                  <div style={{ marginTop: '0.2rem' }}>
-                    <a href={`mailto:${COMPANY_DETAILS.emailInfo}`} style={{ color: '#1A0A10', fontWeight: '700', textDecoration: 'none', display: 'block', fontSize: '0.98rem' }}>
-                      {COMPANY_DETAILS.emailInfo}
-                    </a>
+                  <div style={{ marginTop: '0.2rem', color: '#1A0A10', fontWeight: '700', fontSize: '1rem', textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                    {COMPANY_DETAILS.emailInfo}
                   </div>
+                  <span style={{ fontSize: '0.75rem', color: '#64748B' }}>
+                    Opens your email client directly
+                  </span>
                 </div>
-              </div>
+              </a>
 
               {/* WhatsApp Card */}
               <div className="subtle-card" style={{ padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', backgroundColor: '#FFFFFF', borderColor: '#EAE1DD' }}>
