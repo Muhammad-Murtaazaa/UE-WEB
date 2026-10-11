@@ -419,8 +419,8 @@ export default function ProductCategoriesPreview({ onSelectCategory, openQuoteMo
                       <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#1A0A10', letterSpacing: '-0.01em' }}>
                         {category.name}
                       </h3>
-                      <span style={{ fontSize: '0.8rem', color: '#800020', fontWeight: '700' }}>
-                        {category.gsmRange}
+                      <span style={{ fontSize: '0.74rem', color: '#800020', fontWeight: '700', backgroundColor: '#FDF2F4', padding: '0.15rem 0.5rem', borderRadius: '4px', border: '1px solid #F0CBD3' }}>
+                        Custom Production
                       </span>
                     </div>
 
@@ -488,8 +488,8 @@ export default function ProductCategoriesPreview({ onSelectCategory, openQuoteMo
           /* Grid View Mode */
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', 
-            gap: '2.25rem' 
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 340px), 1fr))', 
+            gap: '2rem' 
           }}>
             {PRODUCTS_CATEGORIES.map((category, idx) => {
               const currentImgIdx = activeImageIndexes[category.id] || 0;
@@ -615,8 +615,8 @@ export default function ProductCategoriesPreview({ onSelectCategory, openQuoteMo
                       <h3 style={{ fontSize: '1.3rem', fontWeight: '800', color: '#1A0A10', letterSpacing: '-0.01em' }}>
                         {category.name}
                       </h3>
-                      <span style={{ fontSize: '0.8rem', color: '#800020', fontWeight: '700' }}>
-                        {category.gsmRange}
+                      <span style={{ fontSize: '0.74rem', color: '#800020', fontWeight: '700', backgroundColor: '#FDF2F4', padding: '0.15rem 0.5rem', borderRadius: '4px', border: '1px solid #F0CBD3' }}>
+                        Custom Production
                       </span>
                     </div>
 

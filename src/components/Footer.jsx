@@ -10,6 +10,7 @@ import {
   FileText
 } from 'lucide-react';
 import { COMPANY_DETAILS, PRODUCTS_CATEGORIES } from '../data/productsData';
+import BrandLogo from './BrandLogo';
 
 export default function Footer({ setActivePage, openQuoteModal }) {
   const navLinks = [
@@ -47,30 +48,8 @@ export default function Footer({ setActivePage, openQuoteModal }) {
           
           {/* Col 1: Corporate Identity */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
-              <div style={{
-                width: '38px',
-                height: '38px',
-                borderRadius: '8px',
-                backgroundColor: '#800020',
-                color: '#ffffff',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontWeight: '800',
-                fontSize: '1rem',
-                boxShadow: '0 0 15px rgba(128, 0, 32, 0.5)'
-              }}>
-                USE
-              </div>
-              <div>
-                <div style={{ fontWeight: '800', fontSize: '1.05rem', lineHeight: '1.2' }}>
-                  Uzair Sharif Enterprises
-                </div>
-                <div style={{ fontSize: '0.72rem', color: '#D1C4C8' }}>
-                  (SMC-Private) Limited
-                </div>
-              </div>
+            <div style={{ marginBottom: '1.25rem' }}>
+              <BrandLogo variant="light" size="md" />
             </div>
 
             <div style={{ fontSize: '0.88rem', fontWeight: '700', color: '#E8A8B8', marginBottom: '0.5rem' }}>

@@ -3,9 +3,9 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TrustIntro from './components/TrustIntro';
 import ProductCategoriesPreview from './components/ProductCategoriesPreview';
-import SourcingEstimator from './components/SourcingEstimator';
+import FabricSpecGuide from './components/FabricSpecGuide';
 import WhyChooseUs from './components/WhyChooseUs';
-import ProcessTimeline from './components/ProcessTimeline';
+import GlobalExportNetwork from './components/GlobalExportNetwork';
 import CustomizationShowcase from './components/CustomizationShowcase';
 import HomeCTA from './components/HomeCTA';
 import AboutSection from './components/AboutSection';
@@ -66,10 +66,10 @@ export default function App() {
               onSelectCategory={handleSelectCategoryFromHome} 
               openQuoteModal={openQuoteModal} 
             />
-            {/* Interactive Sourcing Estimator Tool */}
-            <SourcingEstimator openQuoteModal={openQuoteModal} />
+            {/* Fabric Sourcing & Technical Specification Hub */}
+            <FabricSpecGuide openQuoteModal={openQuoteModal} />
             <WhyChooseUs openQuoteModal={() => openQuoteModal('')} />
-            <ProcessTimeline openQuoteModal={() => openQuoteModal('')} />
+            <GlobalExportNetwork openQuoteModal={() => openQuoteModal('')} />
             <CustomizationShowcase openQuoteModal={() => openQuoteModal('')} />
             <HomeCTA openQuoteModal={() => openQuoteModal('')} />
           </div>

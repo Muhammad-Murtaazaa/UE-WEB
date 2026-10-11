@@ -14,6 +14,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { COMPANY_DETAILS } from '../data/productsData';
+import BrandLogo from './BrandLogo';
 
 export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -114,56 +115,11 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
         <div 
           onClick={() => handleNavClick('home')}
           style={{ 
-            display: 'flex', 
-            alignItems: 'center', 
-            gap: '0.75rem', 
             cursor: 'pointer',
             userSelect: 'none'
           }}
         >
-          <div style={{ 
-            width: '45px', 
-            height: '45px', 
-            borderRadius: '11px', 
-            backgroundColor: '#240713',
-            border: '1px solid #4F162C',
-            display: 'flex', 
-            alignItems: 'center', 
-            justifyContent: 'center',
-            boxShadow: '0 2px 8px rgba(36, 7, 19, 0.25)'
-          }}>
-            <span style={{ 
-              fontWeight: '800', 
-              fontSize: '1.12rem', 
-              color: '#FAF7F5',
-              letterSpacing: '-0.02em'
-            }}>
-              US<span style={{ color: '#A0183A' }}>E</span>
-            </span>
-          </div>
-          <div>
-            <div style={{ 
-              fontWeight: '800', 
-              fontSize: '1.22rem', 
-              color: '#1A0A10', 
-              lineHeight: '1.18',
-              letterSpacing: '-0.02em'
-            }}>
-              Uzair Sharif Enterprises
-            </div>
-            <div style={{ 
-              fontSize: '0.75rem', 
-              color: '#5E5055', 
-              fontWeight: '600',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.35rem'
-            }}>
-              <span>(SMC-Private) Limited</span>
-              <span style={{ color: '#D4C5C0' }}>•</span>
-              <span style={{ color: '#800020', fontWeight: '700' }}>Garments Export</span>
-            </div>
-          </div>
+          <BrandLogo variant="dark" size="md" />
         </div>
 
         {/* Desktop Navigation Links */}
@@ -217,7 +173,7 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
           <button 
             onClick={openQuoteModal}
-            className="btn-cobalt"
+            className="btn-cobalt desktop-quote-btn"
             style={{ 
               padding: '0.65rem 1.35rem', 
               fontSize: '0.88rem',
@@ -310,6 +266,11 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
             display: block !important;
           }
           .mobile-menu-btn {
+            display: none !important;
+          }
+        }
+        @media (max-width: 768px) {
+          .desktop-quote-btn {
             display: none !important;
           }
         }

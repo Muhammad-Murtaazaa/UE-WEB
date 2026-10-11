@@ -117,8 +117,8 @@ export default function CapabilitiesSection({ openQuoteModal }) {
         {/* Core Capabilities Grid */}
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', 
-          gap: '2rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', 
+          gap: '1.75rem',
           marginBottom: '5rem'
         }}>
           {capabilities.map((cap, idx) => {

@@ -199,7 +199,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
           margin: '0 auto'
         }}>
           {/* Live Top Announcement Pill */}
-          <div style={{ 
+          <div className="hero-announcement-pill" style={{ 
             display: 'inline-flex', 
             alignItems: 'center', 
             gap: '0.65rem', 
@@ -275,7 +275,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
           </p>
 
           {/* High-Visibility Clear CTA Buttons */}
-          <div style={{ 
+          <div className="hero-btn-group" style={{ 
             display: 'flex', 
             justifyContent: 'center', 
             alignItems: 'center', 
@@ -369,7 +369,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
           </div>
 
           {/* 4 Trust Verification Anchors */}
-          <div style={{
+          <div className="hero-trust-bar" style={{
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -387,7 +387,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.82rem', color: '#FAF7F5', fontWeight: '600' }}>
               <Clock size={15} color="#F0CBD3" />
-              <span>7–10 Days Sampling Turnaround</span>
+              <span>Fast Prototyping Dispatch</span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.82rem', color: '#FAF7F5', fontWeight: '600' }}>
               <ShieldCheck size={15} color="#F0CBD3" />
@@ -429,7 +429,7 @@ export default function Hero({ openQuoteModal, navigateToProducts }) {
           }} />
         </div>
 
-        <div className="container-custom" style={{ 
+        <div className="container-custom hero-bottom-bar" style={{ 
           display: 'flex', 
           justifyContent: 'space-between', 
           alignItems: 'center', 

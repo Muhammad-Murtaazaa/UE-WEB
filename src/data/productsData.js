@@ -3,18 +3,18 @@ export const PRODUCTS_CATEGORIES = [
     id: 't-shirts',
     name: 'T-Shirts',
     subtitle: 'Custom Single Jersey, Interlock & Heavyweight Knits',
-    description: 'Developed to exact buyer specifications. From lightweight 140 GSM summer tees to 300+ GSM luxury heavyweight streetwear silhouettes.',
+    description: 'Developed to exact buyer specifications. From lightweight breathable summer tees to luxury heavyweight streetwear silhouettes engineered to your target fabric density.',
     badge: 'Custom Production Only',
     images: [
       {
         url: '/images/products/t-shirts-1.jpg',
         fallbackUrl: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop',
-        caption: '100% Combed Cotton Crewneck — 180 GSM (Representative Sample)'
+        caption: '100% Combed Cotton Crewneck (Representative Sample)'
       },
       {
         url: '/images/products/t-shirts-2.jpg',
         fallbackUrl: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1000&auto=format&fit=crop',
-        caption: 'Heavyweight Drop Shoulder Oversized Fit — 260 GSM (Representative Sample)'
+        caption: 'Heavyweight Drop Shoulder Oversized Fit (Representative Sample)'
       },
       {
         url: '/images/products/t-shirts-3.jpg',
@@ -23,7 +23,7 @@ export const PRODUCTS_CATEGORIES = [
       }
     ],
     fabricOptions: ['100% Combed Cotton', 'Carded Cotton', '60/40 Cotton-Poly Blend', 'Organic BCI Cotton', 'Bamboo Cotton', 'Modal Blends'],
-    gsmRange: '140 GSM – 320 GSM',
+    gsmRange: 'Custom to Buyer Specs (All Weights Available)',
     fitOptions: ['Regular Fit', 'Slim Fit', 'Oversized / Boxy Fit', 'Drop Shoulder', 'Tailored European Fit'],
     customizations: ['Screen Printing (Water-based, Plastisol, Discharge)', 'High-Density Print', 'Direct-to-Garment (DTG)', 'Computerized Embroidery', 'Custom Neck Ribbing', 'Woven / Satin Neck Labels', 'Custom Hang Tags & Polybags']
   },
@@ -37,7 +37,7 @@ export const PRODUCTS_CATEGORIES = [
       {
         url: '/images/products/polo-shirts-1.jpg',
         fallbackUrl: '/images/products/polo-shirts-2.jpg',
-        caption: 'Classic Honeycomb Pique Polo — 220 GSM (Representative Sample)'
+        caption: 'Classic Honeycomb Pique Polo (Representative Sample)'
       },
       {
         url: '/images/products/polo-shirts-2.jpg',
@@ -51,7 +51,7 @@ export const PRODUCTS_CATEGORIES = [
       }
     ],
     fabricOptions: ['100% Combed Cotton Pique', 'Cotton/Polyester (65/35, 50/50)', 'Mercerized Cotton', 'Performance Dry-Fit Pique', 'Double Pique'],
-    gsmRange: '190 GSM – 260 GSM',
+    gsmRange: 'Custom to Buyer Specs (All Weights Available)',
     fitOptions: ['Classic Fit', 'Modern Slim Fit', 'Athletic Fit', 'Long Sleeve Placket'],
     customizations: ['Chest & Sleeve Embroidery', 'Custom Engraved Horn / Pearl Buttons', 'Jacquard Rib Collars & Cuffs', 'Side Vent Herringbone Taping', 'Woven Neck Labels']
   },
@@ -65,12 +65,12 @@ export const PRODUCTS_CATEGORIES = [
       {
         url: '/images/products/hoodies-sweatshirts-1.jpg',
         fallbackUrl: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=1000&auto=format&fit=crop',
-        caption: 'Heavyweight 400 GSM Brushed Fleece Pullover Hoodie (Representative Sample)'
+        caption: 'Heavyweight Brushed Fleece Pullover Hoodie (Representative Sample)'
       },
       {
         url: '/images/products/hoodies-sweatshirts-2.jpg',
         fallbackUrl: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1000&auto=format&fit=crop',
-        caption: 'Minimalist Clean Crewneck Sweatshirt — 350 GSM French Terry (Representative Sample)'
+        caption: 'Minimalist Clean Crewneck Sweatshirt — French Terry (Representative Sample)'
       },
       {
         url: '/images/products/hoodies-sweatshirts-3.jpg',
@@ -79,7 +79,7 @@ export const PRODUCTS_CATEGORIES = [
       }
     ],
     fabricOptions: ['100% Cotton Fleece', 'Cotton/Polyester Fleece (80/20, 70/30)', 'French Terry (Loopback)', 'Carbon Peach Finish Fleece', 'Organic Brushed Cotton'],
-    gsmRange: '280 GSM – 450 GSM (Ultra Heavyweight)',
+    gsmRange: 'Custom to Buyer Specs (All Weights Available)',
     fitOptions: ['Relaxed Fit', 'Boxy Streetwear Fit', 'Drop Shoulder', 'Standard Athletic Fit'],
     customizations: ['Double-layer Hood Construction', 'Custom Color Drawcords & Metal Aglets', 'Chenille & Applique Embroidery', 'Puff Print / Screen Print', 'Heavy 2x2 Spandex Ribbed Cuffs & Hem']
   },
@@ -107,7 +107,7 @@ export const PRODUCTS_CATEGORIES = [
       }
     ],
     fabricOptions: ['Nylon Taslan / Oxford', '100% Polyester Microfiber', 'Cotton Twill Canvas', 'Water-Repellent DWR Coated Polyester', 'Quilted Taffeta Lining'],
-    gsmRange: '120 GSM – 280 GSM (Shell) + Custom Insulation/Lining',
+    gsmRange: 'Custom to Buyer Specs (All Weights Available)',
     fitOptions: ['Bomber Silhouette', 'Coach / Utility Cut', 'Athletic Windrunner', 'Harrington Cut'],
     customizations: ['Custom Printed / Dyed Inner Linings', 'Branded Metal Snap Buttons & Zippers', 'Silicon / Rubberized Patch Badging', 'Reflective Piping / Prints', 'Custom Pullers & Elastic Cords']
   },
@@ -135,7 +135,7 @@ export const PRODUCTS_CATEGORIES = [
       }
     ],
     fabricOptions: ['Heavyweight Cotton/Poly Fleece', 'French Terry', 'Cotton Twill (Rigid & Stretch)', 'Ripstop Poly-Cotton', 'Poly-Cotton Spandex Blends'],
-    gsmRange: '220 GSM – 380 GSM',
+    gsmRange: 'Custom to Buyer Specs (All Weights Available)',
     fitOptions: ['Tapered Jogger', 'Straight Leg Casual', 'Slim Chino Fit', 'Relaxed Wide-Leg Streetwear'],
     customizations: ['Concealed Zipper Pockets', 'Custom Elastic Ribbed Waistband with Flat Drawcord', 'Reinforced Knee & Crotch Gusseting', 'Custom Woven Pocket Labels', 'Bar-Tacked Stress Points']
   },
@@ -163,7 +163,7 @@ export const PRODUCTS_CATEGORIES = [
       }
     ],
     fabricOptions: ['100% Cotton Rigid Denim', 'Cotton-Spandex Stretch Denim (98/2, 97/3)', 'Slub & Cross-Hatch Denim', 'Raw Indigo Selvedge', 'Recycled Cotton Denim Blends'],
-    gsmRange: '10 oz – 14.5 oz Denim',
+    gsmRange: 'Custom to Buyer Specs (All Denim Weights Available)',
     fitOptions: ['Slim Straight', 'Relaxed Dad Fit', 'Skinny Fit', 'Tapered Fit', 'Classic Bootcut'],
     customizations: ['Enzyme Wash, Stone Wash, Bleach Wash, Acid Wash', 'Whiskering, Hand Scraping & Destroy Effects', 'Custom Embossed Genuine/PU Leather Back Patches', 'Custom Engraved Shank Buttons & Rivets', 'Signature Back Pocket Arcuate Embroidery']
   },
@@ -191,7 +191,7 @@ export const PRODUCTS_CATEGORIES = [
       }
     ],
     fabricOptions: ['100% Polyester Micro-Mesh / Interlock', 'Poly-Spandex 4-Way Stretch (88/12, 85/15)', 'Nylon-Spandex Compression', 'Dry-Tech Moisture Wicking Knit', 'Anti-Bacterial / Odor-Resistant Finish'],
-    gsmRange: '130 GSM – 240 GSM',
+    gsmRange: 'Custom to Buyer Specs (All Weights Available)',
     fitOptions: ['Athletic Compression Fit', 'Ergonomic Raglan Cut', 'Semi-Fitted Training Cut', 'Regular Track Fit'],
     customizations: ['Flatlock Seam Construction (Zero Friction)', 'Heat Transfer Reflective Brand Logos', 'Sublimation Printing / Panel Cut & Sew', 'Custom Jacquard Waistbands', 'Laser-Cut Ventilation Eyelets']
   },
@@ -219,7 +219,7 @@ export const PRODUCTS_CATEGORIES = [
       }
     ],
     fabricOptions: ['Poly-Cotton Twill (65/35, 60/40)', '100% Cotton Heavy Twill (Drill)', 'Ripstop Work Fabric', 'Flame-Retardant Finish (Buyer Spec)', 'Water & Oil Repellent Treated Fabric'],
-    gsmRange: '200 GSM – 320 GSM',
+    gsmRange: 'Custom to Buyer Specs (All Weights Available)',
     fitOptions: ['Action-Back Industrial Work Cut', 'Reinforced Cargo Cut', 'Standard Field Uniform', 'Coverall / Overall Fit'],
     customizations: ['Triple-Needle Stitching on Main Seams', 'Cordura Reinforced Knee Pad Pockets', 'Hi-Vis EN 20471 Compliant Reflective Tapes', 'Durable Melamine / Metal Snap Buttons', 'Heavy Duty Pen Pockets & Tool Loops']
   },
@@ -247,7 +247,7 @@ export const PRODUCTS_CATEGORIES = [
       }
     ],
     fabricOptions: ['100% Organic Combed Cotton', 'OEKO-TEX Compliant Knits (Buyer coordinated)', 'Bamboo-Cotton Extra Soft', 'Cotton Interlock & Baby Rib', 'Breathable Summer Knits'],
-    gsmRange: '140 GSM – 260 GSM',
+    gsmRange: 'Custom to Buyer Specs (All Weights Available)',
     fitOptions: ['Toddler (2T - 5T)', 'Junior Youth (6 - 14 Years)', 'Comfort Playwear Cut', 'Snug Fit Pajama Styles'],
     customizations: ['Nickel-Free Brass Popper Snaps', 'Water-Based Eco Soft Touch Inks', 'Tagless Heat Transfer Neck Labels (No Scratch)', 'Enclosed Flat Seam Construction', 'Child Safety Drawstring Standards']
   }

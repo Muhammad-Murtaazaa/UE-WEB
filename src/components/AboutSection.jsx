@@ -47,8 +47,8 @@ export default function AboutSection({ openQuoteModal }) {
         {/* Core Corporate Narrative */}
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
-          gap: '3.5rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', 
+          gap: '2.5rem',
           alignItems: 'center',
           marginBottom: '5rem'
         }}>
@@ -90,17 +90,17 @@ export default function AboutSection({ openQuoteModal }) {
               backgroundColor: '#FFFFFF'
             }}>
               <img 
-                src="/images/hero/hero-milling.jpg" 
-                alt="Textile Weaving & Quality Inspection in Pakistan"
+                src="/images/about/export-containers.jpg" 
+                alt="Pakistan Textile Export & Global Shipping Logistics"
                 onError={(e) => {
-                  const fallback = "https://images.unsplash.com/photo-1574634534894-89d7576c8259?q=80&w=1000&auto=format&fit=crop";
+                  const fallback = "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1000&auto=format&fit=crop";
                   if (e.currentTarget.src !== fallback) e.currentTarget.src = fallback;
                 }}
                 style={{ width: '100%', height: '380px', objectFit: 'cover', display: 'block' }}
               />
               <div style={{ padding: '1rem 1.25rem', backgroundColor: '#FFFFFF', borderTop: '1px solid #EAE1DD' }}>
-                <span style={{ fontSize: '0.78rem', color: '#8C7A82' }}>
-                  Representative quality assessment environment in Pakistan.
+                <span style={{ fontSize: '0.82rem', color: '#1A0A10', fontWeight: '600' }}>
+                  Global Maritime & Air Logistics Hub — Containerized Textile Exports from Pakistan.
                 </span>
               </div>
             </div>
@@ -110,8 +110,8 @@ export default function AboutSection({ openQuoteModal }) {
         {/* Mission & Vision Bento Cards */}
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
-          gap: '2rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', 
+          gap: '1.75rem',
           marginBottom: '5rem'
         }}>
           {/* Mission */}

@@ -246,8 +246,8 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
         {/* Categories Digital Cards Grid */}
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', 
-          gap: '2.5rem' 
+          gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 340px), 1fr))', 
+          gap: '2rem' 
         }}>
           {filteredCategories.map((category) => (
             <div 
@@ -377,8 +377,8 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                   <h2 style={{ fontSize: '1.35rem', fontWeight: '800', color: '#1A0A10', letterSpacing: '-0.01em' }}>
                     {category.name}
                   </h2>
-                  <span style={{ fontSize: '0.82rem', fontWeight: '700', color: '#800020' }}>
-                    {category.gsmRange}
+                  <span style={{ fontSize: '0.74rem', fontWeight: '700', color: '#800020', backgroundColor: '#FDF2F4', padding: '0.2rem 0.6rem', borderRadius: '4px', border: '1px solid #F0CBD3' }}>
+                    Custom Production
                   </span>
                 </div>
 
@@ -628,10 +628,10 @@ export default function ProductsCatalogue({ initialCategoryId = 'all', openQuote
                 <div>
                   <div style={{ marginBottom: '1.25rem' }}>
                     <div style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#8C7D82', letterSpacing: '0.04em' }}>
-                      Weight / GSM Range
+                      Fabric Weight & GSM
                     </div>
-                    <div style={{ fontSize: '1.2rem', fontWeight: '800', color: '#800020' }}>
-                      {modalProduct.gsmRange}
+                    <div style={{ fontSize: '1.05rem', fontWeight: '800', color: '#800020' }}>
+                      Custom to Buyer Specs (Any GSM Produced)
                     </div>
                   </div>
 

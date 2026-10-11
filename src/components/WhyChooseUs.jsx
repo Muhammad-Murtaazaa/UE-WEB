@@ -112,8 +112,8 @@ export default function WhyChooseUs({ openQuoteModal }) {
         {/* 6 Key Points Grid with Stagger Reveal and Interactive Card Animations */}
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', 
-          gap: '2rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', 
+          gap: '1.75rem',
           marginBottom: '3rem'
         }}>
           {points.map((item, idx) => {

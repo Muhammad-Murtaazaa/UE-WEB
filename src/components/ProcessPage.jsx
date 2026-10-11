@@ -36,7 +36,7 @@ export default function ProcessPage({ openQuoteModal }) {
       title: 'Quotation',
       subtitle: 'Specification-based transparent costing',
       details: 'We calculate unit manufacturing, embellishment, packaging, and export logistics costs to issue an itemized quotation.',
-      inputs: ['Clear FOB or CIF unit price offer', 'Minimum order threshold per colorway', 'Sampling fee schedule & lead time', 'Estimated bulk production turnaround'],
+      inputs: ['Clear FOB or CIF unit price offer', 'Minimum order threshold per colorway', 'Sampling schedule & prototyping terms', 'Bulk production milestone planning'],
       icon: Calculator
     },
     {

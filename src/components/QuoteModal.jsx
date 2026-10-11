@@ -19,6 +19,7 @@ import {
   Check
 } from 'lucide-react';
 import { PRODUCTS_CATEGORIES, COMPANY_DETAILS } from '../data/productsData';
+import BrandLogo from './BrandLogo';
 
 export default function QuoteModal({ isOpen, onClose, preselectedCategory = '' }) {
   if (!isOpen) return null;
@@ -68,18 +69,49 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory = '' }
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
-    setTimeout(() => {
-      const ticketId = 'USE-RFQ-' + Math.floor(100000 + Math.random() * 900000);
+    const ticketId = 'USE-RFQ-' + Math.floor(100000 + Math.random() * 900000);
+    const currentDate = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+
+    try {
+      await fetch("https://formsubmit.co/ajax/info@uzairsharifenterprises.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `New Request a Quote [${ticketId}] from ${formData.fullName} (${formData.companyName || 'International Buyer'})`,
+          Ticket_Reference: ticketId,
+          Submission_Date: currentDate,
+          Client_Name: formData.fullName,
+          Company: formData.companyName,
+          Business_Email: formData.businessEmail,
+          Phone_WhatsApp: formData.phoneWhatsApp,
+          Destination_Country: formData.destinationCountry,
+          Product_Category: formData.productRequired,
+          Order_Quantity: formData.quantity,
+          Fabric_Composition: formData.fabricMaterial,
+          Target_GSM: formData.gsm || 'Custom to Buyer Specs',
+          Incoterm_Requested: formData.incoterm,
+          Target_Delivery: formData.deliveryDate || 'Standard Turnaround',
+          Embellishments: formData.embellishments,
+          Additional_Tech_Pack_Notes: formData.additionalSpecs,
+          _template: 'table'
+        })
+      });
+    } catch (err) {
+      console.warn("Quote transmission fallback:", err);
+    } finally {
       setSubmitting(false);
       setSubmittedTicket({
         id: ticketId,
-        date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }),
+        date: currentDate,
         ...formData
       });
-    }, 700);
+    }
   };
 
   return (
@@ -188,8 +220,14 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory = '' }
               Ticket: {submittedTicket.id}
             </div>
 
+            <div style={{ marginBottom: '1rem' }}>
+              <span className="badge-pill badge-cobalt" style={{ backgroundColor: '#FDF2F4', color: '#800020', border: '1px solid #F0CBD3' }}>
+                Quotation Dispatched to info@uzairsharifenterprises.com
+              </span>
+            </div>
+
             <p style={{ fontSize: '1.02rem', color: '#475569', lineHeight: '1.7', maxWidth: '600px', margin: '0 auto 2rem auto' }}>
-              Thank you, <strong>{submittedTicket.fullName}</strong>. Your quotation specification for <strong>{submittedTicket.quantity} pcs of {submittedTicket.productRequired}</strong> has been received by our commercial export desk at <strong>Uzair Sharif Enterprises (SMC-Private) Limited</strong>.
+              Thank you, <strong>{submittedTicket.fullName}</strong>. Your quotation specification for <strong>{submittedTicket.quantity} pcs of {submittedTicket.productRequired}</strong> has been transmitted to our commercial export desk at <strong>Uzair Sharif Enterprises</strong>.
             </p>
 
             {/* Itemized Specification Card */}

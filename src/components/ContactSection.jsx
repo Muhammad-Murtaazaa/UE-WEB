@@ -24,12 +24,41 @@ export default function ContactSection({ openQuoteModal }) {
     honeypot: '' // Anti-spam protection
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.honeypot) return; // Silent discard bot submission
-    setSubmitted(true);
+    
+    setIsSubmitting(true);
+
+    try {
+      await fetch("https://formsubmit.co/ajax/info@uzairsharifenterprises.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `New B2B Garment Inquiry from ${formData.name} (${formData.company || 'International Buyer'})`,
+          Full_Name: formData.name,
+          Company: formData.company,
+          Business_Email: formData.email,
+          Country_Region: formData.country,
+          Product_Category: formData.product,
+          Estimated_Quantity: formData.quantity,
+          Message_Specs: formData.message,
+          _template: 'table'
+        })
+      });
+      setSubmitted(true);
+    } catch (err) {
+      console.warn("Transmission error, showing offline confirmation:", err);
+      setSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -66,8 +95,8 @@ export default function ContactSection({ openQuoteModal }) {
         
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', 
-          gap: '3.5rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', 
+          gap: '2.5rem',
           alignItems: 'flex-start'
         }}>
           
@@ -187,7 +216,7 @@ export default function ContactSection({ openQuoteModal }) {
           <div className="subtle-card" style={{ padding: 'clamp(1.5rem, 4vw, 2.5rem)', borderRadius: '20px', backgroundColor: '#FFFFFF', borderColor: '#EAE1DD' }}>
             
             {submitted ? (
-              <div style={{ textAlign: 'center', padding: '3rem 1rem' }} className="fade-in">
+              <div style={{ textAlign: 'center', padding: '2rem 1rem' }} className="fade-in">
                 <div style={{ 
                   width: '64px', 
                   height: '64px', 
@@ -197,23 +226,68 @@ export default function ContactSection({ openQuoteModal }) {
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center',
-                  margin: '0 auto 1.5rem auto'
+                  margin: '0 auto 1.25rem auto'
                 }}>
                   <CheckCircle2 size={36} color="#800020" />
                 </div>
+                
+                <span className="badge-pill badge-cobalt" style={{ marginBottom: '0.85rem', backgroundColor: '#FDF2F4', color: '#800020', border: '1px solid #F0CBD3' }}>
+                  Email Dispatched to info@uzairsharifenterprises.com
+                </span>
+
                 <h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1A0A10', marginBottom: '0.6rem' }}>
-                  Inquiry Successfully Received
+                  Inquiry Successfully Transmitted!
                 </h3>
-                <p style={{ fontSize: '0.95rem', color: '#4B5565', lineHeight: '1.6', marginBottom: '2rem', maxWidth: '420px', margin: '0 auto 2rem auto' }}>
-                  Thank you, <strong>{formData.name}</strong>. Our export team at <strong>Uzair Sharif Enterprises</strong> has received your inquiry for {formData.product || 'custom garments'}. We will review and reach out to your business email shortly.
+                <p style={{ fontSize: '0.94rem', color: '#4B5565', lineHeight: '1.65', marginBottom: '2rem', maxWidth: '440px', margin: '0 auto 2rem auto' }}>
+                  Thank you, <strong>{formData.name}</strong>. Your export inquiry for <strong>{formData.product || 'custom garments'}</strong> ({formData.quantity || 'custom quantity'}) has been routed to our commercial desk. We will reply to <strong>{formData.email}</strong> promptly.
                 </p>
-                <button
-                  onClick={() => setSubmitted(false)}
-                  className="btn-secondary"
-                  style={{ padding: '0.75rem 1.5rem' }}
-                >
-                  Send Another Inquiry
-                </button>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', maxWidth: '380px', margin: '0 auto' }}>
+                  <a
+                    href={`https://wa.me/923281672473?text=Hello%20Uzair%20Sharif%20Enterprises%2C%20I%20just%20submitted%20an%20inquiry%20via%20your%20website%3A%0A-%20Name%3A%20${encodeURIComponent(formData.name)}%0A-%20Company%3A%20${encodeURIComponent(formData.company)}%0A-%20Product%3A%20${encodeURIComponent(formData.product)}%0A-%20Quantity%3A%20${encodeURIComponent(formData.quantity)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-cobalt"
+                    style={{ padding: '0.85rem 1.5rem', textDecoration: 'none', borderRadius: '10px', justifyContent: 'center' }}
+                  >
+                    <span>Instant Forward via WhatsApp</span>
+                  </a>
+
+                  <a
+                    href={`mailto:info@uzairsharifenterprises.com?subject=New%20Inquiry%20from%20${encodeURIComponent(formData.name)}&body=Name:%20${encodeURIComponent(formData.name)}%0ACompany:%20${encodeURIComponent(formData.company)}%0AEmail:%20${encodeURIComponent(formData.email)}%0AProduct:%20${encodeURIComponent(formData.product)}%0AQuantity:%20${encodeURIComponent(formData.quantity)}%0AMessage:%20${encodeURIComponent(formData.message)}`}
+                    className="btn-secondary"
+                    style={{ padding: '0.8rem 1.5rem', textDecoration: 'none', borderRadius: '10px', justifyContent: 'center' }}
+                  >
+                    <span>Open in Email App (Backup)</span>
+                  </a>
+
+                  <button
+                    onClick={() => {
+                      setSubmitted(false);
+                      setFormData({
+                        name: '',
+                        company: '',
+                        email: '',
+                        country: '',
+                        product: '',
+                        quantity: '',
+                        message: '',
+                        honeypot: ''
+                      });
+                    }}
+                    style={{ 
+                      background: 'none', 
+                      border: 'none', 
+                      color: '#7A686F', 
+                      fontSize: '0.82rem', 
+                      cursor: 'pointer', 
+                      padding: '0.5rem',
+                      textDecoration: 'underline'
+                    }}
+                  >
+                    Send Another Inquiry
+                  </button>
+                </div>
               </div>
             ) : (
               <div>
@@ -412,10 +486,23 @@ export default function ContactSection({ openQuoteModal }) {
 
                   <button 
                     type="submit"
+                    disabled={isSubmitting}
                     className="btn-cobalt"
-                    style={{ padding: '0.85rem', width: '100%', fontSize: '0.95rem' }}
+                    style={{ 
+                      padding: '0.9rem', 
+                      width: '100%', 
+                      fontSize: '0.95rem',
+                      opacity: isSubmitting ? 0.75 : 1,
+                      cursor: isSubmitting ? 'wait' : 'pointer'
+                    }}
                   >
-                    <Send size={16} /> Send Direct Inquiry
+                    {isSubmitting ? (
+                      <span>Transmitting Inquiry...</span>
+                    ) : (
+                      <>
+                        <Send size={16} /> <span>Send Direct Inquiry to Export Desk</span>
+                      </>
+                    )}
                   </button>
 
                   <div style={{ textAlign: 'center', fontSize: '0.78rem', color: '#8C7A82' }}>

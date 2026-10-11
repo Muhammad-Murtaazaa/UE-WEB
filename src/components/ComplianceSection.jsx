@@ -132,8 +132,8 @@ export default function ComplianceSection({ openQuoteModal }) {
         {/* 5 Compliance Areas Grid */}
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', 
-          gap: '2rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', 
+          gap: '1.75rem',
           marginBottom: '4.5rem'
         }}>
           {complianceAreas.map((area, idx) => {
