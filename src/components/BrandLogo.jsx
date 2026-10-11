@@ -35,7 +35,7 @@ export default function BrandLogo({
         padding: '2px'
       }}>
         <img 
-          src="/LOGO.png" 
+          src="/logo-maroon.png?v=maroon" 
           alt="Uzair Sharif Enterprises"
           style={{
             width: '100%',
